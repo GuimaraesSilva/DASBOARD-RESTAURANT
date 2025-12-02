@@ -1,0 +1,39 @@
+{
+    "reviews": [
+        {
+            "id": 1,
+            "customer_id": 2,
+            "rating": 5,
+            "comment": "Comida excelente e serviço muito rápido!",
+            "created_at": "2025-01-28T18:00:00"
+        },
+        {
+            "id": 2,
+            "customer_id": 1,
+            "rating": 4,
+            "comment": "Boa experiência, voltarei em breve.",
+            "created_at": "2025-01-26T21:10:00"
+        },
+        {
+            "id": 3,
+            "customer_id": 3,
+            "rating": 3,
+            "comment": "Sabor bom mas demorou um pouco.",
+            "created_at": "2025-01-25T13:20:00"
+        },
+        {
+            "id": 4,
+            "customer_id": 4,
+            "rating": 5,
+            "comment": "Ambiente fantástico!",
+            "created_at": "2025-02-01T20:00:00"
+        },
+        {
+            "id": 5,
+            "customer_id": 7,
+            "rating": 4,
+            "comment": "Gostei bastante, recomendo.",
+            "created_at": "2025-01-30T12:00:00"
+        }
+    ]
+}

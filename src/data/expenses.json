@@ -1,0 +1,28 @@
+{
+    "expenses": [
+        {
+            "id": 1,
+            "category": "Ingredientes",
+            "amount": 4500,
+            "month": "2025-01"
+        },
+        {
+            "id": 2,
+            "category": "Salários",
+            "amount": 5300,
+            "month": "2025-01"
+        },
+        {
+            "id": 3,
+            "category": "Água e Luz",
+            "amount": 830,
+            "month": "2025-01"
+        },
+        {
+            "id": 4,
+            "category": "Manutenção",
+            "amount": 300,
+            "month": "2025-01"
+        }
+    ]
+}

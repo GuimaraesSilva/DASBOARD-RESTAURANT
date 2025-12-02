@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍽️ Restaurant Analytics Dashboard
 
-## Getting Started
+Um dashboard completo de analytics para restaurante, desenvolvido em **Next.js**, com gráficos, métricas avançadas e visualização de dados em tempo real (via mock API).  
+O objetivo deste projeto é demonstrar conhecimento em **frontend profissional**, incluindo **UI/UX**, consumo de dados, responsividade e componentes visuais modernos.
 
-First, run the development server:
+---
+
+## ✨ Funcionalidades Principais
+
+### 📊 Dashboard de Estatísticas
+- Vendas diárias, semanais e mensais  
+- Faturação total  
+- Produtos mais vendidos  
+- Lucro por categoria (Carne, Peixe, Fast Food, Bebidas)  
+- Horas com mais movimento  
+
+### 🍽️ Gestão de Restaurante
+- Listagem de produtos  
+- Visualização de stock e custo  
+- Análise por categoria  
+- Margens de lucro  
+
+### 🧑‍🤝‍🧑 Clientes
+- Número de visitas por cliente  
+- Histórico de pedidos  
+- Avaliações (ratings e comentários)  
+
+### 📅 Reservas
+- Tabela de reservas  
+- Estado de cada reserva: confirmado, pendente, cancelado  
+- Distribuição por horário
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Next.js 14 (App Router)**  
+- **React 18**  
+- **TypeScript**  
+- **Tailwind CSS / ShadCN UI**  
+- **Recharts** para gráficos  
+- **Mock API** com ficheiro JSON local  
+
+---
+
+## 📁 Estrutura de Dados
+
+O projeto utiliza um dataset realista composto por:
+- `products`
+- `orders`
+- `order_items`
+- `customers`
+- `reservations`
+- `reviews`
+
+Incluí dados financeiros, lucros, categorias, horários e muito mais — ideal para criação de gráficos.
+
+---
+
+## 🚀 Como Executar
 
 ```bash
+git clone <url-do-repo>
+cd restaurant-analytics-dashboard
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação estará disponível em:  
+**http://localhost:3000**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Objetivo do Projeto
 
-## Learn More
+Este projeto foi criado para demonstrar:
+- Boas práticas de frontend  
+- Organização profissional de código  
+- Integração com dados reais  
+- Criação de interfaces de visualização  
+- Capacidade de desenvolver sistemas modernos em Next.js  
 
-To learn more about Next.js, take a look at the following resources:
+Ideal para mostrar a recrutadores e empresas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Licença
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT — Livre para utilizar e modificar.

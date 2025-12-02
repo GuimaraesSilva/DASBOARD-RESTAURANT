@@ -1,0 +1,28 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "name": "Ricardo Silva",
+            "role": "Chef",
+            "salary": 1500
+        },
+        {
+            "id": 2,
+            "name": "Mariana Costa",
+            "role": "Cozinheira",
+            "salary": 1100
+        },
+        {
+            "id": 3,
+            "name": "Tiago Pereira",
+            "role": "Empregado de Mesa",
+            "salary": 900
+        },
+        {
+            "id": 4,
+            "name": "André Ferreira",
+            "role": "Gerente",
+            "salary": 1800
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "reservations": [
+        {
+            "id": 401,
+            "customer_id": 1,
+            "date": "2025-02-05",
+            "time": "19:00",
+            "people": 2,
+            "status": "confirmed"
+        },
+        {
+            "id": 402,
+            "customer_id": 2,
+            "date": "2025-02-05",
+            "time": "20:30",
+            "people": 4,
+            "status": "pending"
+        },
+        {
+            "id": 403,
+            "customer_id": 3,
+            "date": "2025-02-06",
+            "time": "12:30",
+            "people": 3,
+            "status": "cancelled"
+        },
+        {
+            "id": 404,
+            "customer_id": 6,
+            "date": "2025-02-06",
+            "time": "19:45",
+            "people": 2,
+            "status": "confirmed"
+        },
+        {
+            "id": 405,
+            "customer_id": 7,
+            "date": "2025-02-07",
+            "time": "21:00",
+            "people": 5,
+            "status": "confirmed"
+        }
+    ]
+}
