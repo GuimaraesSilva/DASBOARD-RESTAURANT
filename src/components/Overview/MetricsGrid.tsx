@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { MetricCard } from './MetricCard';
-import type { MetricCardProps } from '@/types/metric';
-
-interface MetricsGridProps {
-  metrics: MetricCardProps[];
-}
-
-export const MetricsGrid: React.FC<MetricsGridProps> = ({ metrics }) => {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-      {metrics.map((metric, index) => (
-        <MetricCard key={index} {...metric} />
-      ))}
-    </div>
-  );
-};
-=======
 import { MetricCard } from "./MetricCard";
 import { DashboardData } from "@/types/overview";
 import { 
@@ -38,38 +19,32 @@ export function MetricsGrid({ dashboardData }: MetricsGridProps) {
         title="Receita Total"
         value={`€${dashboardData.metrics.totalRevenue.toFixed(2)}`}
         change={dashboardData.changes.totalRevenue}
-        changeLabel="vs mês anterior"
-        icon={<DollarSign className="w-6 h-6 text-[#3C3838]" />}
+        icon={DollarSign}
       />
       <MetricCard
         title="Pedidos"
         value={dashboardData.metrics.orders.toString()}
         change={dashboardData.changes.orders}
-        changeLabel="vs mês anterior"
-        icon={<ShoppingCart className="w-6 h-6 text-[#3C3838]" />}
+        icon={ShoppingCart}
       />
       <MetricCard
         title="Ticket Médio"
         value={`€${dashboardData.metrics.averageTicket.toFixed(2)}`}
         change={dashboardData.changes.averageTicket}
-        changeLabel="vs mês anterior"
-        icon={<TrendingUp className="w-6 h-6 text-[#3C3838]" />}
+        icon={TrendingUp}
       />
       <MetricCard
         title="Taxa de Ocupação"
         value={`${dashboardData.metrics.occupancyRate.toFixed(1)}%`}
         change={dashboardData.changes.occupancyRate}
-        changeLabel="vs mês anterior"
-        icon={<Users className="w-6 h-6 text-[#3C3838]" />}
+        icon={Users}
       />
       <MetricCard
         title="Avaliação Média"
         value={dashboardData.metrics.averageRating.toFixed(1)}
         change={dashboardData.changes.averageRating}
-        changeLabel="vs mês anterior"
-        icon={<Star className="w-6 h-6 text-[#3C3838]" />}
+        icon={Star}
       />
     </div>
   );
 }
->>>>>>> 10fec4c (feat: add overview charts and metrics components)
