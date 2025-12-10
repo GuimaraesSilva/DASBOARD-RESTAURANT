@@ -1,0 +1,244 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Ribeye Steak",
+      "category": "Carne",
+      "price": 22.00,
+      "stock": 35,
+      "cost": 10.00
+    },
+    {
+      "id": 2,
+      "name": "T-Bone Steak",
+      "category": "Carne",
+      "price": 26.00,
+      "stock": 28,
+      "cost": 12.00
+    },
+    {
+      "id": 3,
+      "name": "Picanha",
+      "category": "Carne",
+      "price": 19.00,
+      "stock": 40,
+      "cost": 8.50
+    },
+    {
+      "id": 4,
+      "name": "Filet Mignon",
+      "category": "Carne",
+      "price": 24.00,
+      "stock": 22,
+      "cost": 11.00
+    },
+    {
+      "id": 5,
+      "name": "Hambúrguer Angus",
+      "category": "Carne",
+      "price": 13.00,
+      "stock": 50,
+      "cost": 5.00
+    },
+    {
+      "id": 6,
+      "name": "Batatas Fritas",
+      "category": "Acompanhamento",
+      "price": 4.00,
+      "stock": 80,
+      "cost": 1.20
+    },
+    {
+      "id": 7,
+      "name": "Coca-Cola",
+      "category": "Bebidas",
+      "price": 2.50,
+      "stock": 120,
+      "cost": 0.60
+    },
+    {
+      "id": 8,
+      "name": "Água 50cl",
+      "category": "Bebidas",
+      "price": 1.20,
+      "stock": 200,
+      "cost": 0.10
+    },
+    {
+      "id": 9,
+      "name": "Vinho Malbec (Copo)",
+      "category": "Bebidas",
+      "price": 4.00,
+      "stock": 60,
+      "cost": 1.50
+    },
+    {
+      "id": 10,
+      "name": "Cerveja Artesanal",
+      "category": "Bebidas",
+      "price": 3.00,
+      "stock": 90,
+      "cost": 1.00
+    },
+    {
+      "id": 11,
+      "name": "Salada Caesar",
+      "category": "Acompanhamento",
+      "price": 5.50,
+      "stock": 30,
+      "cost": 2.00
+    },
+    {
+      "id": 12,
+      "name": "Sopa de Cebola",
+      "category": "Entrada",
+      "price": 3.50,
+      "stock": 40,
+      "cost": 1.00
+    },
+    {
+      "id": 13,
+      "name": "Brownie",
+      "category": "Sobremesas",
+      "price": 4.50,
+      "stock": 20,
+      "cost": 1.50
+    },
+    {
+      "id": 14,
+      "name": "Frango Grelhado",
+      "category": "Carne",
+      "price": 16.00,
+      "stock": 32,
+      "cost": 7.00
+    },
+    {
+      "id": 15,
+      "name": "Costela BBQ",
+      "category": "Carne",
+      "price": 21.00,
+      "stock": 25,
+      "cost": 9.50
+    },
+    {
+      "id": 16,
+      "name": "Salada Mediterrânea",
+      "category": "Acompanhamento",
+      "price": 6.00,
+      "stock": 25,
+      "cost": 2.50
+    },
+    {
+      "id": 17,
+      "name": "Batata Assada",
+      "category": "Acompanhamento",
+      "price": 4.50,
+      "stock": 40,
+      "cost": 1.30
+    },
+    {
+      "id": 18,
+      "name": "Vinho Branco (Copo)",
+      "category": "Bebidas",
+      "price": 4.00,
+      "stock": 50,
+      "cost": 1.40
+    },
+    {
+      "id": 19,
+      "name": "Sumo de Laranja",
+      "category": "Bebidas",
+      "price": 2.80,
+      "stock": 70,
+      "cost": 0.80
+    },
+    {
+      "id": 20,
+      "name": "Cheesecake",
+      "category": "Sobremesas",
+      "price": 5.00,
+      "stock": 18,
+      "cost": 1.80
+    },
+    {
+      "id": 21,
+      "name": "Gelado de Baunilha",
+      "category": "Sobremesas",
+      "price": 3.50,
+      "stock": 25,
+      "cost": 1.00
+    },
+    {
+      "id": 22,
+      "name": "Sopa de Tomate",
+      "category": "Entrada",
+      "price": 3.00,
+      "stock": 35,
+      "cost": 0.90
+    },
+    {
+      "id": 23,
+      "name": "Bruschetta",
+      "category": "Entrada",
+      "price": 4.00,
+      "stock": 30,
+      "cost": 1.20
+    },
+    {
+      "id": 24,
+      "name": "Hambúrguer Vegetariano",
+      "category": "Carne",
+      "price": 12.00,
+      "stock": 20,
+      "cost": 4.50
+    },
+    {
+      "id": 25,
+      "name": "Espetada Mista",
+      "category": "Carne",
+      "price": 18.00,
+      "stock": 15,
+      "cost": 8.00
+    },
+    {
+      "id": 26,
+      "name": "Arroz de Cogumelos",
+      "category": "Acompanhamento",
+      "price": 5.00,
+      "stock": 22,
+      "cost": 1.70
+    },
+    {
+      "id": 27,
+      "name": "Vinho Tinto Reserva (Copo)",
+      "category": "Bebidas",
+      "price": 5.00,
+      "stock": 40,
+      "cost": 2.00
+    },
+    {
+      "id": 28,
+      "name": "Cerveja Lager",
+      "category": "Bebidas",
+      "price": 2.80,
+      "stock": 100,
+      "cost": 0.90
+    },
+    {
+      "id": 29,
+      "name": "Tarte de Maçã",
+      "category": "Sobremesas",
+      "price": 4.00,
+      "stock": 15,
+      "cost": 1.40
+    },
+    {
+      "id": 30,
+      "name": "Salada de Frutas",
+      "category": "Sobremesas",
+      "price": 3.80,
+      "stock": 20,
+      "cost": 1.20
+    }
+  ]
+}

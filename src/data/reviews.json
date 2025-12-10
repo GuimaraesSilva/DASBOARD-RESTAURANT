@@ -1,0 +1,214 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "customer_id": 2,
+      "rating": 5,
+      "comment": "Os melhores cortes de carne que já provei!",
+      "created_at": "2025-01-28T18:00:00"
+    },
+    {
+      "id": 2,
+      "customer_id": 1,
+      "rating": 4,
+      "comment": "Ambiente típico de steakhouse, carne suculenta.",
+      "created_at": "2025-01-26T21:10:00"
+    },
+    {
+      "id": 3,
+      "customer_id": 3,
+      "rating": 5,
+      "comment": "O T-Bone estava perfeito, recomendo!",
+      "created_at": "2025-01-25T13:20:00"
+    },
+    {
+      "id": 4,
+      "customer_id": 4,
+      "rating": 5,
+      "comment": "Excelente seleção de vinhos para acompanhar os steaks.",
+      "created_at": "2025-02-01T20:00:00"
+    },
+    {
+      "id": 5,
+      "customer_id": 7,
+      "rating": 4,
+      "comment": "Batatas fritas crocantes e carne no ponto!",
+      "created_at": "2025-01-30T12:00:00"
+    },
+    {
+      "id": 6,
+      "customer_id": 5,
+      "rating": 3,
+      "comment": "Serviço rápido, mas sobremesa podia ser melhor.",
+      "created_at": "2025-02-02T14:00:00"
+    },
+    {
+      "id": 7,
+      "customer_id": 6,
+      "rating": 5,
+      "comment": "Adorei o brownie, muito saboroso!",
+      "created_at": "2025-02-03T19:30:00"
+    },
+    {
+      "id": 8,
+      "customer_id": 2,
+      "rating": 4,
+      "comment": "Boa carta de vinhos e ambiente acolhedor.",
+      "created_at": "2025-02-04T20:15:00"
+    },
+    {
+      "id": 9,
+      "customer_id": 1,
+      "rating": 5,
+      "comment": "Staff muito simpático e atencioso.",
+      "created_at": "2025-02-05T18:45:00"
+    },
+    {
+      "id": 10,
+      "customer_id": 3,
+      "rating": 4,
+      "comment": "A picanha estava excelente!",
+      "created_at": "2025-02-06T21:00:00"
+    },
+    {
+      "id": 11,
+      "customer_id": 4,
+      "rating": 5,
+      "comment": "Melhor cheesecake da cidade.",
+      "created_at": "2025-02-07T13:10:00"
+    },
+    {
+      "id": 12,
+      "customer_id": 5,
+      "rating": 3,
+      "comment": "Cerveja artesanal muito boa, mas podia ter mais opções.",
+      "created_at": "2025-02-08T19:00:00"
+    },
+    {
+      "id": 13,
+      "customer_id": 6,
+      "rating": 4,
+      "comment": "Gostei do hambúrguer vegetariano.",
+      "created_at": "2025-02-09T20:30:00"
+    },
+    {
+      "id": 14,
+      "customer_id": 7,
+      "rating": 5,
+      "comment": "Frango grelhado no ponto certo!",
+      "created_at": "2025-02-10T12:00:00"
+    },
+    {
+      "id": 15,
+      "customer_id": 2,
+      "rating": 4,
+      "comment": "Salada Caesar fresca e saborosa.",
+      "created_at": "2025-02-11T18:00:00"
+    },
+    {
+      "id": 16,
+      "customer_id": 1,
+      "rating": 5,
+      "comment": "Espetada mista muito bem temperada.",
+      "created_at": "2025-02-12T21:10:00"
+    },
+    {
+      "id": 17,
+      "customer_id": 3,
+      "rating": 4,
+      "comment": "Batata assada deliciosa.",
+      "created_at": "2025-02-13T13:20:00"
+    },
+    {
+      "id": 18,
+      "customer_id": 4,
+      "rating": 5,
+      "comment": "Sumo de laranja natural e refrescante.",
+      "created_at": "2025-02-14T20:00:00"
+    },
+    {
+      "id": 19,
+      "customer_id": 5,
+      "rating": 3,
+      "comment": "Sopa de cebola podia estar mais quente.",
+      "created_at": "2025-02-15T12:00:00"
+    },
+    {
+      "id": 20,
+      "customer_id": 6,
+      "rating": 5,
+      "comment": "Gelado de baunilha cremoso.",
+      "created_at": "2025-02-16T19:30:00"
+    },
+    {
+      "id": 21,
+      "customer_id": 7,
+      "rating": 4,
+      "comment": "Arroz de cogumelos bem feito.",
+      "created_at": "2025-02-17T20:15:00"
+    },
+    {
+      "id": 22,
+      "customer_id": 2,
+      "rating": 5,
+      "comment": "Costela BBQ muito saborosa.",
+      "created_at": "2025-02-18T18:45:00"
+    },
+    {
+      "id": 23,
+      "customer_id": 1,
+      "rating": 4,
+      "comment": "Vinho branco excelente.",
+      "created_at": "2025-02-19T21:00:00"
+    },
+    {
+      "id": 24,
+      "customer_id": 3,
+      "rating": 5,
+      "comment": "Tarte de maçã caseira, recomendo.",
+      "created_at": "2025-02-20T13:10:00"
+    },
+    {
+      "id": 25,
+      "customer_id": 4,
+      "rating": 3,
+      "comment": "Sopa de tomate estava boa.",
+      "created_at": "2025-02-21T19:00:00"
+    },
+    {
+      "id": 26,
+      "customer_id": 5,
+      "rating": 4,
+      "comment": "Bruschetta crocante e saborosa.",
+      "created_at": "2025-02-22T20:30:00"
+    },
+    {
+      "id": 27,
+      "customer_id": 6,
+      "rating": 5,
+      "comment": "Vinho tinto reserva muito bom.",
+      "created_at": "2025-02-23T12:00:00"
+    },
+    {
+      "id": 28,
+      "customer_id": 7,
+      "rating": 4,
+      "comment": "Salada mediterrânea fresca.",
+      "created_at": "2025-02-24T18:00:00"
+    },
+    {
+      "id": 29,
+      "customer_id": 2,
+      "rating": 5,
+      "comment": "Hambúrguer Angus suculento.",
+      "created_at": "2025-02-25T21:10:00"
+    },
+    {
+      "id": 30,
+      "customer_id": 1,
+      "rating": 4,
+      "comment": "Salada de frutas leve e deliciosa.",
+      "created_at": "2025-02-26T13:20:00"
+    }
+  ]
+}

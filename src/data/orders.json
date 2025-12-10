@@ -1,0 +1,198 @@
+{
+    "orders": [
+        {
+            "id": 1001,
+            "customer_id": 1,
+            "total": 38.00,
+            "payment_method": "MBWay",
+            "status": "completed",
+            "created_at": "2025-02-01T12:45:00"
+        },
+        {
+            "id": 1002,
+            "customer_id": 2,
+            "total": 54.00,
+            "payment_method": "Multibanco",
+            "status": "completed",
+            "created_at": "2025-02-01T13:10:00"
+        },
+        {
+            "id": 1003,
+            "customer_id": 1,
+            "total": 23.50,
+            "payment_method": "Numerário",
+            "status": "completed",
+            "created_at": "2025-02-01T19:30:00"
+        },
+        {
+            "id": 1004,
+            "customer_id": 3,
+            "total": 32.00,
+            "payment_method": "MBWay",
+            "status": "completed",
+            "created_at": "2025-02-02T18:20:00"
+        },
+        {
+            "id": 1005,
+            "customer_id": 4,
+            "total": 48.00,
+            "payment_method": "Visa",
+            "status": "completed",
+            "created_at": "2025-02-02T20:15:00"
+        },
+        {
+            "id": 1006,
+            "customer_id": 5,
+            "total": 17.00,
+            "payment_method": "MBWay",
+            "status": "completed",
+            "created_at": "2025-02-02T13:05:00"
+        },
+        {
+            "id": 1007,
+            "customer_id": 2,
+            "total": 62.00,
+            "payment_method": "MBWay",
+            "status": "completed",
+            "created_at": "2025-02-03T14:40:00"
+        },
+        {
+            "id": 1008,
+            "customer_id": 7,
+            "total": 29.00,
+            "payment_method": "Visa",
+            "status": "completed",
+            "created_at": "2025-02-03T21:00:00"
+        },
+        {
+            "id": 1009,
+            "customer_id": 6,
+            "total": 15.00,
+            "payment_method": "Numerário",
+            "status": "completed",
+            "created_at": "2025-02-04T12:10:00"
+        }
+    ],
+    "order_items": [
+        {
+            "order_id": 1001,
+            "product_id": 1,
+            "quantity": 1,
+            "subtotal": 22.00
+        },
+        {
+            "order_id": 1001,
+            "product_id": 6,
+            "quantity": 2,
+            "subtotal": 8.00
+        },
+        {
+            "order_id": 1001,
+            "product_id": 7,
+            "quantity": 1,
+            "subtotal": 2.50
+        },
+        {
+            "order_id": 1002,
+            "product_id": 2,
+            "quantity": 2,
+            "subtotal": 52.00
+        },
+        {
+            "order_id": 1002,
+            "product_id": 8,
+            "quantity": 2,
+            "subtotal": 2.40
+        },
+        {
+            "order_id": 1003,
+            "product_id": 5,
+            "quantity": 1,
+            "subtotal": 13.00
+        },
+        {
+            "order_id": 1003,
+            "product_id": 6,
+            "quantity": 2,
+            "subtotal": 8.00
+        },
+        {
+            "order_id": 1004,
+            "product_id": 3,
+            "quantity": 1,
+            "subtotal": 19.00
+        },
+        {
+            "order_id": 1004,
+            "product_id": 11,
+            "quantity": 1,
+            "subtotal": 5.50
+        },
+        {
+            "order_id": 1004,
+            "product_id": 7,
+            "quantity": 1,
+            "subtotal": 2.50
+        },
+        {
+            "order_id": 1005,
+            "product_id": 4,
+            "quantity": 2,
+            "subtotal": 48.00
+        },
+        {
+            "order_id": 1006,
+            "product_id": 12,
+            "quantity": 1,
+            "subtotal": 3.50
+        },
+        {
+            "order_id": 1006,
+            "product_id": 8,
+            "quantity": 2,
+            "subtotal": 2.40
+        },
+        {
+            "order_id": 1006,
+            "product_id": 7,
+            "quantity": 1,
+            "subtotal": 2.50
+        },
+        {
+            "order_id": 1007,
+            "product_id": 2,
+            "quantity": 2,
+            "subtotal": 52.00
+        },
+        {
+            "order_id": 1007,
+            "product_id": 9,
+            "quantity": 2,
+            "subtotal": 8.00
+        },
+        {
+            "order_id": 1008,
+            "product_id": 5,
+            "quantity": 2,
+            "subtotal": 26.00
+        },
+        {
+            "order_id": 1008,
+            "product_id": 10,
+            "quantity": 1,
+            "subtotal": 3.00
+        },
+        {
+            "order_id": 1009,
+            "product_id": 13,
+            "quantity": 2,
+            "subtotal": 9.00
+        },
+        {
+            "order_id": 1009,
+            "product_id": 8,
+            "quantity": 5,
+            "subtotal": 6.00
+        }
+    ]
+}

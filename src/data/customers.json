@@ -1,0 +1,354 @@
+{
+    "customers": [
+        {
+            "id": 1,
+            "name": "João Santos",
+            "email": "joao@example.com",
+            "phone": "+351912345678",
+            "visits": 7
+        },
+        {
+            "id": 2,
+            "name": "Carla Mendes",
+            "email": "carla@example.com",
+            "phone": "+351917654321",
+            "visits": 14
+        },
+        {
+            "id": 3,
+            "name": "Miguel Rocha",
+            "email": "miguel@example.com",
+            "phone": "+351915667788",
+            "visits": 4
+        },
+        {
+            "id": 4,
+            "name": "Ana Ribeiro",
+            "email": "ana@example.com",
+            "phone": "+351918223344",
+            "visits": 10
+        },
+        {
+            "id": 5,
+            "name": "Pedro Alves",
+            "email": "pedro@example.com",
+            "phone": "+351916554433",
+            "visits": 2
+        },
+        {
+            "id": 6,
+            "name": "Sara Cunha",
+            "email": "sara@example.com",
+            "phone": "+351919887766",
+            "visits": 5
+        },
+        {
+            "id": 7,
+            "name": "Bruno Lopes",
+            "email": "bruno@example.com",
+            "phone": "+351918887766",
+            "visits": 12
+        },
+        {
+            "id": 8,
+            "name": "Rita Martins",
+            "email": "rita@example.com",
+            "phone": "+351912345679",
+            "visits": 8
+        },
+        {
+            "id": 9,
+            "name": "Tiago Costa",
+            "email": "tiago@example.com",
+            "phone": "+351917654322",
+            "visits": 3
+        },
+        {
+            "id": 10,
+            "name": "Beatriz Silva",
+            "email": "beatriz@example.com",
+            "phone": "+351915667789",
+            "visits": 6
+        },
+        {
+            "id": 11,
+            "name": "Carlos Pinto",
+            "email": "carlos@example.com",
+            "phone": "+351918223345",
+            "visits": 9
+        },
+        {
+            "id": 12,
+            "name": "Mariana Sousa",
+            "email": "mariana@example.com",
+            "phone": "+351916554434",
+            "visits": 11
+        },
+        {
+            "id": 13,
+            "name": "André Ferreira",
+            "email": "andre@example.com",
+            "phone": "+351919887767",
+            "visits": 7
+        },
+        {
+            "id": 14,
+            "name": "Sofia Almeida",
+            "email": "sofia@example.com",
+            "phone": "+351918887767",
+            "visits": 13
+        },
+        {
+            "id": 15,
+            "name": "João Carvalho",
+            "email": "joaoc@example.com",
+            "phone": "+351912345680",
+            "visits": 4
+        },
+        {
+            "id": 16,
+            "name": "Ana Sousa",
+            "email": "anas@example.com",
+            "phone": "+351917654323",
+            "visits": 8
+        },
+        {
+            "id": 17,
+            "name": "Pedro Gonçalves",
+            "email": "pedrog@example.com",
+            "phone": "+351915667790",
+            "visits": 5
+        },
+        {
+            "id": 18,
+            "name": "Rita Lopes",
+            "email": "rital@example.com",
+            "phone": "+351918223346",
+            "visits": 10
+        },
+        {
+            "id": 19,
+            "name": "Miguel Ramos",
+            "email": "miguelr@example.com",
+            "phone": "+351916554435",
+            "visits": 2
+        },
+        {
+            "id": 20,
+            "name": "Luís Figueiredo",
+            "email": "luis@example.com",
+            "phone": "+351919887768",
+            "visits": 6
+        },
+        {
+            "id": 21,
+            "name": "Carolina Dias",
+            "email": "carolina@example.com",
+            "phone": "+351918887768",
+            "visits": 12
+        },
+        {
+            "id": 22,
+            "name": "Fábio Teixeira",
+            "email": "fabio@example.com",
+            "phone": "+351912345681",
+            "visits": 7
+        },
+        {
+            "id": 23,
+            "name": "Patrícia Mendes",
+            "email": "patricia@example.com",
+            "phone": "+351917654324",
+            "visits": 9
+        },
+        {
+            "id": 24,
+            "name": "Bruno Castro",
+            "email": "brunoc@example.com",
+            "phone": "+351915667791",
+            "visits": 3
+        },
+        {
+            "id": 25,
+            "name": "Inês Rocha",
+            "email": "ines@example.com",
+            "phone": "+351918223347",
+            "visits": 8
+        },
+        {
+            "id": 26,
+            "name": "Gustavo Lima",
+            "email": "gustavo@example.com",
+            "phone": "+351916554436",
+            "visits": 5
+        },
+        {
+            "id": 27,
+            "name": "Helena Nunes",
+            "email": "helena@example.com",
+            "phone": "+351919887769",
+            "visits": 11
+        },
+        {
+            "id": 28,
+            "name": "Joana Marques",
+            "email": "joanam@example.com",
+            "phone": "+351918887769",
+            "visits": 4
+        },
+        {
+            "id": 29,
+            "name": "Ricardo Silva",
+            "email": "ricardos@example.com",
+            "phone": "+351912345682",
+            "visits": 6
+        },
+        {
+            "id": 30,
+            "name": "Marta Oliveira",
+            "email": "marta@example.com",
+            "phone": "+351917654325",
+            "visits": 10
+        },
+        {
+            "id": 31,
+            "name": "Paulo Correia",
+            "email": "paulo@example.com",
+            "phone": "+351915667792",
+            "visits": 7
+        },
+        {
+            "id": 32,
+            "name": "Susana Cardoso",
+            "email": "susana@example.com",
+            "phone": "+351918223348",
+            "visits": 9
+        },
+        {
+            "id": 33,
+            "name": "Fernando Pires",
+            "email": "fernando@example.com",
+            "phone": "+351916554437",
+            "visits": 2
+        },
+        {
+            "id": 34,
+            "name": "Cátia Barros",
+            "email": "catia@example.com",
+            "phone": "+351919887770",
+            "visits": 8
+        },
+        {
+            "id": 35,
+            "name": "Diogo Matos",
+            "email": "diogo@example.com",
+            "phone": "+351918887770",
+            "visits": 5
+        },
+        {
+            "id": 36,
+            "name": "Vera Costa",
+            "email": "vera@example.com",
+            "phone": "+351912345683",
+            "visits": 12
+        },
+        {
+            "id": 37,
+            "name": "Rafael Tavares",
+            "email": "rafael@example.com",
+            "phone": "+351917654326",
+            "visits": 6
+        },
+        {
+            "id": 38,
+            "name": "Cláudia Fonseca",
+            "email": "claudia@example.com",
+            "phone": "+351915667793",
+            "visits": 10
+        },
+        {
+            "id": 39,
+            "name": "Eduardo Neves",
+            "email": "eduardo@example.com",
+            "phone": "+351918223349",
+            "visits": 7
+        },
+        {
+            "id": 40,
+            "name": "Isabel Antunes",
+            "email": "isabel@example.com",
+            "phone": "+351916554438",
+            "visits": 9
+        },
+        {
+            "id": 41,
+            "name": "Alexandre Gomes",
+            "email": "alexandre@example.com",
+            "phone": "+351919887771",
+            "visits": 3
+        },
+        {
+            "id": 42,
+            "name": "Tatiana Faria",
+            "email": "tatiana@example.com",
+            "phone": "+351918887771",
+            "visits": 8
+        },
+        {
+            "id": 43,
+            "name": "Nelson Monteiro",
+            "email": "nelson@example.com",
+            "phone": "+351912345684",
+            "visits": 5
+        },
+        {
+            "id": 44,
+            "name": "Sandra Ramos",
+            "email": "sandra@example.com",
+            "phone": "+351917654327",
+            "visits": 11
+        },
+        {
+            "id": 45,
+            "name": "João Lima",
+            "email": "joaol@example.com",
+            "phone": "+351915667794",
+            "visits": 4
+        },
+        {
+            "id": 46,
+            "name": "Filipa Duarte",
+            "email": "filipa@example.com",
+            "phone": "+351918223350",
+            "visits": 6
+        },
+        {
+            "id": 47,
+            "name": "Henrique Borges",
+            "email": "henrique@example.com",
+            "phone": "+351916554439",
+            "visits": 10
+        },
+        {
+            "id": 48,
+            "name": "Mónica Leite",
+            "email": "monica@example.com",
+            "phone": "+351919887772",
+            "visits": 7
+        },
+        {
+            "id": 49,
+            "name": "Artur Vieira",
+            "email": "artur@example.com",
+            "phone": "+351918887772",
+            "visits": 9
+        },
+        {
+            "id": 50,
+            "name": "Luciana Freitas",
+            "email": "luciana@example.com",
+            "phone": "+351912345685",
+            "visits": 12
+        }
+    ]
+}
