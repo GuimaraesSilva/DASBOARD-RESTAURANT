@@ -1,9 +1,11 @@
+import { LucideIcon } from 'lucide-react';
+
 export interface MetricCardProps {
   title: string;
   value: string | number;
   change?: string;
   changeType?: 'positive' | 'negative';
-  icon: any;
+  icon: LucideIcon;
 }
 
 export interface Product {

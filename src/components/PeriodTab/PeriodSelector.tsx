@@ -3,13 +3,15 @@
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { usePeriod } from "./PeriodProvider";
 
+type Period = "today" | "week" | "month" | "year";
+
 export function PeriodSelector() {
   const { period, setPeriod } = usePeriod();
 
   return (
     <Tabs 
       value={period} 
-      onValueChange={(value) => setPeriod(value as "today" | "week" | "month" | "year")}
+      onValueChange={(value: string) => setPeriod(value as "today" | "week" | "month" | "year")}
       className="w-fit"
     >
       <TabsList className="bg-[#FFFCF8]/10 backdrop-blur-sm border border-[#CDDBC8]/50 p-1 gap-1.5">
