@@ -5,4 +5,6 @@ export interface Product {
   price: number;
   stock: number;
   cost_price: number;
+  sales: number;
+  revenue: number;
 }
