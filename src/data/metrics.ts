@@ -238,23 +238,38 @@ export function getTopProducts(period: string = 'today'): TopProduct[] {
     filteredOrderIds.includes(item.order_id)
   );
   
-  const productSales = new Map<number, number>();
+  // Calcular receita proporcional baseada nos totais reais dos pedidos
+  const productData = new Map<number, { quantity: number; revenue: number }>();
   
-  filteredOrderItems.forEach((item: any) => {
-    const currentSales = productSales.get(item.product_id) || 0;
-    productSales.set(item.product_id, currentSales + item.quantity);
+  filteredOrders.forEach((order: any) => {
+    const orderItems = orderItemsList.filter((item: any) => item.order_id === order.id);
+    const itemsSubtotal = orderItems.reduce((sum: number, item: any) => sum + item.subtotal, 0);
+    
+    if (itemsSubtotal === 0) return;
+    
+    orderItems.forEach((item: any) => {
+      const current = productData.get(item.product_id) || { quantity: 0, revenue: 0 };
+      const itemProportion = item.subtotal / itemsSubtotal;
+      const itemRealRevenue = order.total * itemProportion;
+      
+      productData.set(item.product_id, {
+        quantity: current.quantity + item.quantity,
+        revenue: current.revenue + itemRealRevenue
+      });
+    });
   });
 
-  const topProductIds = Array.from(productSales.entries())
-    .sort((a, b) => b[1] - a[1])
+  const topProductIds = Array.from(productData.entries())
+    .sort((a, b) => b[1].quantity - a[1].quantity)
     .slice(0, 5)
-    .map(([productId, sales]) => ({
+    .map(([productId, data]) => ({
       productId,
-      sales
+      sales: data.quantity,
+      revenue: data.revenue
     }));
 
   return topProductIds
-    .map(({ productId, sales }) => {
+    .map(({ productId, sales, revenue }) => {
       const product = productsList.find((p: any) => p.id === productId);
       if (!product) return null;
       
@@ -263,7 +278,7 @@ export function getTopProducts(period: string = 'today'): TopProduct[] {
         name: product.name,
         category: product.category,
         sales: sales,
-        revenue: sales * product.price,
+        revenue: revenue,
       };
     })
     .filter((item): item is TopProduct => item !== null);

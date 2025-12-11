@@ -2,18 +2,17 @@
 
 import { Header } from "@/components/Header/Header";
 import { Navbar } from "@/components/Navbar/Navbar";
-import { PeriodProvider } from "@/components/PeriodTab/PeriodProvider";
 import { useState } from "react";
 
-function ProductsContent() {
+export default function Products() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="w-full h-screen bg-[#CDDBC8] p-3 md:p-6">
+    <div className="w-full h-screen bg-[#CDDBC8] p-4">
       <div className="flex flex-col md:grid md:grid-cols-6 md:grid-rows-[auto_1fr] gap-4 h-full">
         <div className="md:row-span-2">
-          <Navbar 
-            sidebarOpen={sidebarOpen} 
+          <Navbar
+            sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
           />
         </div>
@@ -23,13 +22,5 @@ function ProductsContent() {
         <div className="flex-1 md:col-span-5 bg-[#FFFCF8] rounded-md p-6">Products content</div>
       </div>
     </div>
-  );
-}
-
-export default function Products() {
-  return (
-    <PeriodProvider>
-      <ProductsContent />
-    </PeriodProvider>
   );
 }

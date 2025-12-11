@@ -88,13 +88,25 @@ export function calculateOverview(): DashboardData {
     : 0;
 
   // Top produtos (por quantidade de vendas)
+  // Calcular receita proporcional baseada nos totais reais dos pedidos
   const productSales = new Map<number, { quantity: number; revenue: number }>();
   
-  ordersData.order_items.forEach(item => {
-    const current = productSales.get(item.product_id) || { quantity: 0, revenue: 0 };
-    productSales.set(item.product_id, {
-      quantity: current.quantity + item.quantity,
-      revenue: current.revenue + item.subtotal
+  ordersData.orders.forEach(order => {
+    const orderItems = ordersData.order_items.filter(item => item.order_id === order.id);
+    const itemsSubtotal = orderItems.reduce((sum, item) => sum + item.subtotal, 0);
+    
+    if (itemsSubtotal === 0) return;
+    
+    orderItems.forEach(item => {
+      const current = productSales.get(item.product_id) || { quantity: 0, revenue: 0 };
+      // Calcular receita proporcional ao total real do pedido
+      const itemProportion = item.subtotal / itemsSubtotal;
+      const itemRealRevenue = order.total * itemProportion;
+      
+      productSales.set(item.product_id, {
+        quantity: current.quantity + item.quantity,
+        revenue: current.revenue + itemRealRevenue
+      });
     });
   });
 
@@ -151,7 +163,7 @@ export function calculateOverview(): DashboardData {
   const colorMap: { [key: string]: string } = {
     'MBWay': '#1B2B1F',
     'Multibanco': '#C3CEC4',
-    'Numerário': '#8F7F78',
+    'Numérico': '#BDA69F',
     'Visa': '#3B2F2C',
     'Mastercard': '#536657',
   };
@@ -196,12 +208,17 @@ export interface BusinessOverviewData {
 export function calculateBusinessOverview(): BusinessOverviewData[] {
   const monthlyRevenue = new Map<string, number>();
   
-  // Agrupar receitas por mês
+  // Debug: verificar quantos pedidos estão a ser processados
+  console.log('Total de pedidos:', ordersData.orders.length);
+  
   ordersData.orders.forEach(order => {
-    const month = order.created_at.substring(0, 7); // "2025-02"
+    const month = order.created_at.substring(0, 7);
+    console.log('Pedido:', order.id, 'Mês:', month, 'Total:', order.total);
     const current = monthlyRevenue.get(month) || 0;
     monthlyRevenue.set(month, current + order.total);
   });
+  
+  console.log('Receitas por mês:', Object.fromEntries(monthlyRevenue));
 
   // Agrupar despesas por mês
   const monthlyExpenses = new Map<string, number>();

@@ -13,7 +13,15 @@ interface MetricsGridProps {
 }
 
 export function MetricsGrid({ dashboardData }: MetricsGridProps) {
+  const formatCurrency = (value: number): string => {
+    return new Intl.NumberFormat('pt-PT', {
+      style: 'currency',
+      currency: 'EUR'
+    }).format(value);
+  };
+
   const formatChange = (change: number): string => {
+    if (!isFinite(change)) return '0%';
     return `${change > 0 ? '+' : ''}${change.toFixed(1)}%`;
   };
 
@@ -21,11 +29,21 @@ export function MetricsGrid({ dashboardData }: MetricsGridProps) {
     return change >= 0 ? 'positive' : 'negative';
   };
 
+  const formatPercentage = (value: number): string => {
+    if (!isFinite(value)) return '0%';
+    return `${value.toFixed(1)}%`;
+  };
+
+  const formatRating = (value: number): string => {
+    if (!isFinite(value) || value < 0 || value > 5) return '0.0';
+    return value.toFixed(1);
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
       <MetricCard
         title="Receita Total"
-        value={`€${dashboardData.metrics.totalRevenue.toFixed(2)}`}
+        value={formatCurrency(dashboardData.metrics.totalRevenue)}
         change={formatChange(dashboardData.changes.totalRevenue)}
         changeType={getChangeType(dashboardData.changes.totalRevenue)}
         icon={Euro}
@@ -39,21 +57,21 @@ export function MetricsGrid({ dashboardData }: MetricsGridProps) {
       />
       <MetricCard
         title="Ticket Médio"
-        value={`€${dashboardData.metrics.averageTicket.toFixed(2)}`}
+        value={formatCurrency(dashboardData.metrics.averageTicket)}
         change={formatChange(dashboardData.changes.averageTicket)}
         changeType={getChangeType(dashboardData.changes.averageTicket)}
         icon={TrendingUp}
       />
       <MetricCard
         title="Taxa de Ocupação"
-        value={`${dashboardData.metrics.occupancyRate.toFixed(1)}%`}
+        value={formatPercentage(dashboardData.metrics.occupancyRate)}
         change={formatChange(dashboardData.changes.occupancyRate)}
         changeType={getChangeType(dashboardData.changes.occupancyRate)}
         icon={Users}
       />
       <MetricCard
         title="Avaliação Média"
-        value={dashboardData.metrics.averageRating.toFixed(1)}
+        value={formatRating(dashboardData.metrics.averageRating)}
         change={formatChange(dashboardData.changes.averageRating)}
         changeType={getChangeType(dashboardData.changes.averageRating)}
         icon={Star}

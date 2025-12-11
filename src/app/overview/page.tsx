@@ -1,10 +1,9 @@
-'use client';
+"use client";
 
 import { Header } from "@/components/Header/Header";
 import { Navbar } from "@/components/Navbar/Navbar";
 import { MetricsGrid } from "@/components/Overview/MetricsGrid";
-import { TopProducts } from "@/components/Overview/Top/TopProducts";
-import { TopClients } from "@/components/Overview/Top/TopClients";
+import { CustomersCard } from "@/components/Overview/Top/CustomerCard";
 import { useState, useEffect } from "react";
 import { DashboardData } from "@/types/overview";
 import { calculateOverview } from "@/lib/calculationsOverview";
@@ -13,6 +12,11 @@ import { SalesByCategoryChart } from "@/components/Overview/Charts/SalesByCatego
 import { ReviewsRatingChart } from "@/components/Overview/Charts/ReviewsRatingChart";
 import { ReservationsStatusChart } from "@/components/Overview/Charts/ReservationsStatusChart";
 import { BusinessOverviewChart } from "@/components/Overview/Charts/BusinessOverviewChart";
+import { ProductsCard } from "@/components/Overview/Top/ProductsCard";
+
+export interface MetricsGridProps {
+  dashboardData: DashboardData;
+}
 
 export default function Overview() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -24,19 +28,15 @@ export default function Overview() {
   }, []);
 
   if (!dashboardData) {
-    return (
-      <div className="w-full h-screen bg-[#CDDBC8] flex items-center justify-center">
-        <p>A carregar dados...</p>
-      </div>
-    );
+    return null; // O LoadingProvider vai mostrar o loading
   }
 
   return (
     <div className="w-full h-screen bg-[#CDDBC8] p-4">
       <div className="flex flex-col md:grid md:grid-cols-6 md:grid-rows-[auto_1fr] gap-4 h-full">
         <div className="md:row-span-2">
-          <Navbar 
-            sidebarOpen={sidebarOpen} 
+          <Navbar
+            sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
           />
         </div>
@@ -45,20 +45,16 @@ export default function Overview() {
         </div>
         <div className="flex-1 md:col-span-5 bg-[#F5F5F5] rounded-md overflow-y-auto scrollbar-hide">
           <div className="p-4 space-y-4">
-            {/* Métricas principais */}
             <MetricsGrid dashboardData={dashboardData} />
-            
-            {/* Top produtos e clientes */}
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <TopProducts products={dashboardData.topProducts} />
+              <ProductsCard products={dashboardData.topProducts} />
               <PaymentMethodsChart data={dashboardData.paymentMethods} />
-              <TopClients clients={dashboardData.topClients} />
+              <CustomersCard customers={dashboardData.topClients} />
             </div>
 
-            
             <BusinessOverviewChart />
 
-            {/* Gráficos de análise */}
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               <ReviewsRatingChart />
               <div className="md:col-span-2">
@@ -75,6 +71,3 @@ export default function Overview() {
   );
 }
 
-export interface MetricsGridProps {
-  dashboardData: DashboardData;
-}

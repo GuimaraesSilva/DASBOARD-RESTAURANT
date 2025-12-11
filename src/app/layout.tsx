@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
+import { LoadingProvider } from "@/components/Load/LoadingProvider";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const rubik = Rubik({
+  variable: "--font-rubik",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -20,10 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} antialiased`}
-      >
-        {children}
+      <body className={`${rubik.variable} antialiased`}>
+        <LoadingProvider>
+          {children}
+        </LoadingProvider>
       </body>
     </html>
   );

@@ -6,7 +6,6 @@ import { Label, Pie, PieChart, Cell } from "recharts"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -37,9 +36,9 @@ const chartConfig = {
     label: "Multibanco",
     color: "#C3CEC4", // Verde claro
   },
-  Numerário: {
+  Numérico: {
     label: "Numerário",
-    color: "#8F7F78", // Bege/Rosa
+    color: "#BDA69F", // Bege
   },
   Visa: {
     label: "Visa",
@@ -88,7 +87,10 @@ export function PaymentMethodsChart({ data }: PaymentMethodsChartProps) {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <ChartLegend content={<ChartLegendContent />} />
+            <ChartLegend 
+              content={<ChartLegendContent nameKey="method" />}
+              verticalAlign="bottom"
+            />
             <Pie
               data={data}
               dataKey="transactions"
@@ -115,7 +117,8 @@ export function PaymentMethodsChart({ data }: PaymentMethodsChartProps) {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy}
-                          className="fill-foreground text-3xl font-bold"
+                          className="text-3xl font-bold"
+                          fill="#000000"
                         >
                           {totalTransactions.toLocaleString()}
                         </tspan>

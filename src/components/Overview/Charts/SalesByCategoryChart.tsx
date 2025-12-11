@@ -37,17 +37,39 @@ const categoryColors: Record<string, string> = {
 }
 
 export function SalesByCategoryChart() {
-  // Calcular vendas por categoria
-  const salesByCategory = ordersData.order_items.reduce((acc, item) => {
-    const product = productsData.products.find(p => p.id === item.product_id)
-    if (product) {
-      if (!acc[product.category]) {
-        acc[product.category] = 0
+  // Calcular vendas por categoria baseado nos pedidos reais
+  // Primeiro, criar um mapa de categoria por produto para melhor performance
+  const productCategoryMap = new Map<number, string>()
+  productsData.products.forEach(product => {
+    productCategoryMap.set(product.id, product.category)
+  })
+
+  // Calcular a proporção de cada item dentro de cada pedido
+  const salesByCategory: Record<string, number> = {}
+  
+  ordersData.orders.forEach(order => {
+    // Obter todos os itens deste pedido
+    const orderItems = ordersData.order_items.filter(item => item.order_id === order.id)
+    
+    // Calcular o subtotal dos itens (sem impostos/taxas)
+    const itemsSubtotal = orderItems.reduce((sum, item) => sum + item.subtotal, 0)
+    
+    // Se o subtotal dos itens for 0, pular este pedido
+    if (itemsSubtotal === 0) return
+    
+    // Distribuir o total do pedido proporcionalmente entre as categorias
+    orderItems.forEach(item => {
+      const category = productCategoryMap.get(item.product_id)
+      if (category) {
+        // Calcular a proporção deste item no pedido
+        const itemProportion = item.subtotal / itemsSubtotal
+        // Aplicar a proporção ao total real do pedido (que inclui impostos)
+        const itemRealValue = order.total * itemProportion
+        
+        salesByCategory[category] = (salesByCategory[category] || 0) + itemRealValue
       }
-      acc[product.category] += item.subtotal
-    }
-    return acc
-  }, {} as Record<string, number>)
+    })
+  })
 
   const chartData = Object.entries(salesByCategory).map(([category, revenue]) => ({
     category,

@@ -10,7 +10,7 @@ interface TabsSelectorProps {
 }
 
 export default function TabsSelector({
-  defaultTab = "Today",
+  defaultTab = "Year",
   onTabChange,
 }: TabsSelectorProps) {
   const [activeTab, setActiveTab] = useState<Tab>(defaultTab);

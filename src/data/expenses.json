@@ -3,7 +3,7 @@
         {
             "id": 1,
             "category": "Carnes Nobres",
-            "amount": 5200,
+            "amount": 2800,
             "month": "2025-01",
             "description": "Compra de carne premium para o mês",
             "payment_method": "Transferência Bancária",
@@ -12,16 +12,16 @@
         {
             "id": 2,
             "category": "Salários",
-            "amount": 5300,
+            "amount": 3200,
             "month": "2025-01",
-            "description": "Pagamento de salários dos funcionários",
+            "description": "Pagamento de Salários dos funcionários",
             "payment_method": "Transferência Bancária",
-            "supplier": "Funcionários"
+            "supplier": "funcionários"
         },
         {
             "id": 3,
             "category": "Vinhos e Bebidas",
-            "amount": 1200,
+            "amount": 650,
             "month": "2025-01",
             "description": "Reposição de vinhos e bebidas",
             "payment_method": "Cartão de Crédito",
@@ -30,7 +30,7 @@
         {
             "id": 4,
             "category": "Acompanhamentos",
-            "amount": 900,
+            "amount": 480,
             "month": "2025-01",
             "description": "Compra de batatas, arroz e saladas",
             "payment_method": "Numerário",
@@ -39,7 +39,7 @@
         {
             "id": 5,
             "category": "Manutenção",
-            "amount": 300,
+            "amount": 180,
             "month": "2025-01",
             "description": "Reparação de equipamentos de cozinha",
             "payment_method": "Transferência Bancária",
@@ -48,7 +48,7 @@
         {
             "id": 6,
             "category": "Energia",
-            "amount": 850,
+            "amount": 420,
             "month": "2025-01",
             "description": "Conta de eletricidade",
             "payment_method": "Débito Direto",
@@ -57,7 +57,7 @@
         {
             "id": 7,
             "category": "Água",
-            "amount": 210,
+            "amount": 110,
             "month": "2025-01",
             "description": "Conta de água",
             "payment_method": "Débito Direto",
@@ -66,7 +66,7 @@
         {
             "id": 8,
             "category": "Produtos de Limpeza",
-            "amount": 180,
+            "amount": 95,
             "month": "2025-01",
             "description": "Detergentes e desinfetantes",
             "payment_method": "Cartão de Crédito",
@@ -75,7 +75,7 @@
         {
             "id": 9,
             "category": "Marketing",
-            "amount": 600,
+            "amount": 320,
             "month": "2025-01",
             "description": "Campanha nas redes sociais",
             "payment_method": "Cartão de Crédito",
@@ -84,7 +84,7 @@
         {
             "id": 10,
             "category": "Carnes Nobres",
-            "amount": 5400,
+            "amount": 2900,
             "month": "2025-02",
             "description": "Compra de carne premium para o mês",
             "payment_method": "Transferência Bancária",
@@ -93,16 +93,16 @@
         {
             "id": 11,
             "category": "Salários",
-            "amount": 5300,
+            "amount": 3200,
             "month": "2025-02",
-            "description": "Pagamento de salários dos funcionários",
+            "description": "Pagamento de Salários dos funcionários",
             "payment_method": "Transferência Bancária",
-            "supplier": "Funcionários"
+            "supplier": "funcionários"
         },
         {
             "id": 12,
             "category": "Vinhos e Bebidas",
-            "amount": 1300,
+            "amount": 700,
             "month": "2025-02",
             "description": "Reposição de vinhos e bebidas",
             "payment_method": "Cartão de Crédito",
@@ -111,7 +111,7 @@
         {
             "id": 13,
             "category": "Acompanhamentos",
-            "amount": 950,
+            "amount": 510,
             "month": "2025-02",
             "description": "Compra de batatas, arroz e saladas",
             "payment_method": "Numerário",
@@ -120,7 +120,7 @@
         {
             "id": 14,
             "category": "Manutenção",
-            "amount": 350,
+            "amount": 210,
             "month": "2025-02",
             "description": "Reparação de frigorífico",
             "payment_method": "Transferência Bancária",
@@ -129,7 +129,7 @@
         {
             "id": 15,
             "category": "Energia",
-            "amount": 870,
+            "amount": 430,
             "month": "2025-02",
             "description": "Conta de eletricidade",
             "payment_method": "Débito Direto",
@@ -138,7 +138,7 @@
         {
             "id": 16,
             "category": "Água",
-            "amount": 215,
+            "amount": 115,
             "month": "2025-02",
             "description": "Conta de água",
             "payment_method": "Débito Direto",
@@ -147,7 +147,7 @@
         {
             "id": 17,
             "category": "Produtos de Limpeza",
-            "amount": 190,
+            "amount": 100,
             "month": "2025-02",
             "description": "Detergentes e desinfetantes",
             "payment_method": "Cartão de Crédito",
@@ -156,7 +156,7 @@
         {
             "id": 18,
             "category": "Marketing",
-            "amount": 650,
+            "amount": 350,
             "month": "2025-02",
             "description": "Campanha nas redes sociais",
             "payment_method": "Cartão de Crédito",
@@ -165,7 +165,7 @@
         {
             "id": 19,
             "category": "Carnes Nobres",
-            "amount": 5100,
+            "amount": 2750,
             "month": "2025-03",
             "description": "Compra de carne premium para o mês",
             "payment_method": "Transferência Bancária",
@@ -174,16 +174,16 @@
         {
             "id": 20,
             "category": "Salários",
-            "amount": 5400,
+            "amount": 3250,
             "month": "2025-03",
-            "description": "Pagamento de salários dos funcionários",
+            "description": "Pagamento de Salários dos funcionários",
             "payment_method": "Transferência Bancária",
-            "supplier": "Funcionários"
+            "supplier": "funcionários"
         },
         {
             "id": 21,
             "category": "Vinhos e Bebidas",
-            "amount": 1250,
+            "amount": 675,
             "month": "2025-03",
             "description": "Reposição de vinhos e bebidas",
             "payment_method": "Cartão de Crédito",
@@ -192,7 +192,7 @@
         {
             "id": 22,
             "category": "Acompanhamentos",
-            "amount": 920,
+            "amount": 495,
             "month": "2025-03",
             "description": "Compra de batatas, arroz e saladas",
             "payment_method": "Numerário",
@@ -201,7 +201,7 @@
         {
             "id": 23,
             "category": "Manutenção",
-            "amount": 400,
+            "amount": 240,
             "month": "2025-03",
             "description": "Reparação de forno",
             "payment_method": "Transferência Bancária",
@@ -210,7 +210,7 @@
         {
             "id": 24,
             "category": "Energia",
-            "amount": 860,
+            "amount": 425,
             "month": "2025-03",
             "description": "Conta de eletricidade",
             "payment_method": "Débito Direto",
@@ -219,7 +219,7 @@
         {
             "id": 25,
             "category": "Água",
-            "amount": 220,
+            "amount": 120,
             "month": "2025-03",
             "description": "Conta de água",
             "payment_method": "Débito Direto",
@@ -228,7 +228,7 @@
         {
             "id": 26,
             "category": "Produtos de Limpeza",
-            "amount": 200,
+            "amount": 105,
             "month": "2025-03",
             "description": "Detergentes e desinfetantes",
             "payment_method": "Cartão de Crédito",
@@ -237,7 +237,7 @@
         {
             "id": 27,
             "category": "Marketing",
-            "amount": 700,
+            "amount": 380,
             "month": "2025-03",
             "description": "Campanha nas redes sociais",
             "payment_method": "Cartão de Crédito",
@@ -264,11 +264,740 @@
         {
             "id": 30,
             "category": "Formação",
-            "amount": 400,
+            "amount": 250,
             "month": "2025-03",
             "description": "Workshop de cozinha para funcionários",
             "payment_method": "Cartão de Crédito",
             "supplier": "Chef Academy"
+        },
+        {
+            "id": 31,
+            "category": "Carnes Nobres",
+            "amount": 2915,
+            "month": "2025-04",
+            "description": "Compra de carne premium para o mês",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Talho Silva"
+        },
+        {
+            "id": 32,
+            "category": "Salários",
+            "amount": 3340,
+            "month": "2025-04",
+            "description": "Pagamento de Salários dos funcionários",
+            "payment_method": "Débito Direto",
+            "supplier": "funcionários"
+        },
+        {
+            "id": 33,
+            "category": "Vinhos e Bebidas",
+            "amount": 778,
+            "month": "2025-04",
+            "description": "Reposição de vinhos e bebidas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Adega Mendes"
+        },
+        {
+            "id": 34,
+            "category": "Acompanhamentos",
+            "amount": 483,
+            "month": "2025-04",
+            "description": "Compra de batatas, arroz e saladas",
+            "payment_method": "Débito Direto",
+            "supplier": "Mercado Central"
+        },
+        {
+            "id": 35,
+            "category": "Manutenção",
+            "amount": 185,
+            "month": "2025-04",
+            "description": "Reparação de equipamentos",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Manutec"
+        },
+        {
+            "id": 36,
+            "category": "Energia",
+            "amount": 413,
+            "month": "2025-04",
+            "description": "Conta de eletricidade",
+            "payment_method": "Transferência Bancária",
+            "supplier": "EDP"
+        },
+        {
+            "id": 37,
+            "category": "Água",
+            "amount": 98,
+            "month": "2025-04",
+            "description": "Conta de água",
+            "payment_method": "Numerário",
+            "supplier": "Águas do Norte"
+        },
+        {
+            "id": 38,
+            "category": "Produtos de Limpeza",
+            "amount": 91,
+            "month": "2025-04",
+            "description": "Detergentes e desinfetantes",
+            "payment_method": "Transferência Bancária",
+            "supplier": "LimpaTudo"
+        },
+        {
+            "id": 39,
+            "category": "Marketing",
+            "amount": 326,
+            "month": "2025-04",
+            "description": "Campanha nas redes sociais",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Agência Digital"
+        },
+        {
+            "id": 40,
+            "category": "Carnes Nobres",
+            "amount": 3095,
+            "month": "2025-05",
+            "description": "Compra de carne premium para o mês",
+            "payment_method": "Débito Direto",
+            "supplier": "Talho Silva"
+        },
+        {
+            "id": 41,
+            "category": "Salários",
+            "amount": 3199,
+            "month": "2025-05",
+            "description": "Pagamento de Salários dos funcionários",
+            "payment_method": "Numerário",
+            "supplier": "funcionários"
+        },
+        {
+            "id": 42,
+            "category": "Vinhos e Bebidas",
+            "amount": 621,
+            "month": "2025-05",
+            "description": "Reposição de vinhos e bebidas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Adega Mendes"
+        },
+        {
+            "id": 43,
+            "category": "Acompanhamentos",
+            "amount": 496,
+            "month": "2025-05",
+            "description": "Compra de batatas, arroz e saladas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Mercado Central"
+        },
+        {
+            "id": 44,
+            "category": "Manutenção",
+            "amount": 200,
+            "month": "2025-05",
+            "description": "Reparação de equipamentos",
+            "payment_method": "Débito Direto",
+            "supplier": "Manutec"
+        },
+        {
+            "id": 45,
+            "category": "Energia",
+            "amount": 386,
+            "month": "2025-05",
+            "description": "Conta de eletricidade",
+            "payment_method": "Débito Direto",
+            "supplier": "EDP"
+        },
+        {
+            "id": 46,
+            "category": "Água",
+            "amount": 116,
+            "month": "2025-05",
+            "description": "Conta de água",
+            "payment_method": "Débito Direto",
+            "supplier": "Águas do Norte"
+        },
+        {
+            "id": 47,
+            "category": "Produtos de Limpeza",
+            "amount": 108,
+            "month": "2025-05",
+            "description": "Detergentes e desinfetantes",
+            "payment_method": "Numerário",
+            "supplier": "LimpaTudo"
+        },
+        {
+            "id": 48,
+            "category": "Marketing",
+            "amount": 291,
+            "month": "2025-05",
+            "description": "Campanha nas redes sociais",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Agência Digital"
+        },
+        {
+            "id": 49,
+            "category": "Carnes Nobres",
+            "amount": 3032,
+            "month": "2025-06",
+            "description": "Compra de carne premium para o mês",
+            "payment_method": "Débito Direto",
+            "supplier": "Talho Silva"
+        },
+        {
+            "id": 50,
+            "category": "Salários",
+            "amount": 3226,
+            "month": "2025-06",
+            "description": "Pagamento de Salários dos funcionários",
+            "payment_method": "Numerário",
+            "supplier": "funcionários"
+        },
+        {
+            "id": 51,
+            "category": "Vinhos e Bebidas",
+            "amount": 706,
+            "month": "2025-06",
+            "description": "Reposição de vinhos e bebidas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Adega Mendes"
+        },
+        {
+            "id": 52,
+            "category": "Acompanhamentos",
+            "amount": 527,
+            "month": "2025-06",
+            "description": "Compra de batatas, arroz e saladas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Mercado Central"
+        },
+        {
+            "id": 53,
+            "category": "Manutenção",
+            "amount": 261,
+            "month": "2025-06",
+            "description": "Reparação de equipamentos",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Manutec"
+        },
+        {
+            "id": 54,
+            "category": "Energia",
+            "amount": 425,
+            "month": "2025-06",
+            "description": "Conta de eletricidade",
+            "payment_method": "Transferência Bancária",
+            "supplier": "EDP"
+        },
+        {
+            "id": 55,
+            "category": "Água",
+            "amount": 110,
+            "month": "2025-06",
+            "description": "Conta de água",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Águas do Norte"
+        },
+        {
+            "id": 56,
+            "category": "Produtos de Limpeza",
+            "amount": 124,
+            "month": "2025-06",
+            "description": "Detergentes e desinfetantes",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "LimpaTudo"
+        },
+        {
+            "id": 57,
+            "category": "Marketing",
+            "amount": 398,
+            "month": "2025-06",
+            "description": "Campanha nas redes sociais",
+            "payment_method": "Numerário",
+            "supplier": "Agência Digital"
+        },
+        {
+            "id": 58,
+            "category": "Carnes Nobres",
+            "amount": 3104,
+            "month": "2025-07",
+            "description": "Compra de carne premium para o mês",
+            "payment_method": "Débito Direto",
+            "supplier": "Talho Silva"
+        },
+        {
+            "id": 59,
+            "category": "Salários",
+            "amount": 3323,
+            "month": "2025-07",
+            "description": "Pagamento de Salários dos funcionários",
+            "payment_method": "Numerário",
+            "supplier": "funcionários"
+        },
+        {
+            "id": 60,
+            "category": "Vinhos e Bebidas",
+            "amount": 774,
+            "month": "2025-07",
+            "description": "Reposição de vinhos e bebidas",
+            "payment_method": "Numerário",
+            "supplier": "Adega Mendes"
+        },
+        {
+            "id": 61,
+            "category": "Acompanhamentos",
+            "amount": 460,
+            "month": "2025-07",
+            "description": "Compra de batatas, arroz e saladas",
+            "payment_method": "Débito Direto",
+            "supplier": "Mercado Central"
+        },
+        {
+            "id": 62,
+            "category": "Manutenção",
+            "amount": 300,
+            "month": "2025-07",
+            "description": "Reparação de equipamentos",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Manutec"
+        },
+        {
+            "id": 63,
+            "category": "Energia",
+            "amount": 465,
+            "month": "2025-07",
+            "description": "Conta de eletricidade",
+            "payment_method": "Débito Direto",
+            "supplier": "EDP"
+        },
+        {
+            "id": 64,
+            "category": "Água",
+            "amount": 103,
+            "month": "2025-07",
+            "description": "Conta de água",
+            "payment_method": "Numerário",
+            "supplier": "Águas do Norte"
+        },
+        {
+            "id": 65,
+            "category": "Produtos de Limpeza",
+            "amount": 117,
+            "month": "2025-07",
+            "description": "Detergentes e desinfetantes",
+            "payment_method": "Transferência Bancária",
+            "supplier": "LimpaTudo"
+        },
+        {
+            "id": 66,
+            "category": "Marketing",
+            "amount": 349,
+            "month": "2025-07",
+            "description": "Campanha nas redes sociais",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Agência Digital"
+        },
+        {
+            "id": 67,
+            "category": "Carnes Nobres",
+            "amount": 3118,
+            "month": "2025-08",
+            "description": "Compra de carne premium para o mês",
+            "payment_method": "Numerário",
+            "supplier": "Talho Silva"
+        },
+        {
+            "id": 68,
+            "category": "Salários",
+            "amount": 3282,
+            "month": "2025-08",
+            "description": "Pagamento de Salários dos funcionários",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "funcionários"
+        },
+        {
+            "id": 69,
+            "category": "Vinhos e Bebidas",
+            "amount": 688,
+            "month": "2025-08",
+            "description": "Reposição de vinhos e bebidas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Adega Mendes"
+        },
+        {
+            "id": 70,
+            "category": "Acompanhamentos",
+            "amount": 448,
+            "month": "2025-08",
+            "description": "Compra de batatas, arroz e saladas",
+            "payment_method": "Débito Direto",
+            "supplier": "Mercado Central"
+        },
+        {
+            "id": 71,
+            "category": "Manutenção",
+            "amount": 186,
+            "month": "2025-08",
+            "description": "Reparação de equipamentos",
+            "payment_method": "Débito Direto",
+            "supplier": "Manutec"
+        },
+        {
+            "id": 72,
+            "category": "Energia",
+            "amount": 446,
+            "month": "2025-08",
+            "description": "Conta de eletricidade",
+            "payment_method": "Débito Direto",
+            "supplier": "EDP"
+        },
+        {
+            "id": 73,
+            "category": "Água",
+            "amount": 119,
+            "month": "2025-08",
+            "description": "Conta de água",
+            "payment_method": "Numerário",
+            "supplier": "Águas do Norte"
+        },
+        {
+            "id": 74,
+            "category": "Produtos de Limpeza",
+            "amount": 101,
+            "month": "2025-08",
+            "description": "Detergentes e desinfetantes",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "LimpaTudo"
+        },
+        {
+            "id": 75,
+            "category": "Marketing",
+            "amount": 279,
+            "month": "2025-08",
+            "description": "Campanha nas redes sociais",
+            "payment_method": "Numerário",
+            "supplier": "Agência Digital"
+        },
+        {
+            "id": 76,
+            "category": "Carnes Nobres",
+            "amount": 3203,
+            "month": "2025-09",
+            "description": "Compra de carne premium para o mês",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Talho Silva"
+        },
+        {
+            "id": 77,
+            "category": "Salários",
+            "amount": 3207,
+            "month": "2025-09",
+            "description": "Pagamento de Salários dos funcionários",
+            "payment_method": "Numerário",
+            "supplier": "funcionários"
+        },
+        {
+            "id": 78,
+            "category": "Vinhos e Bebidas",
+            "amount": 657,
+            "month": "2025-09",
+            "description": "Reposição de vinhos e bebidas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Adega Mendes"
+        },
+        {
+            "id": 79,
+            "category": "Acompanhamentos",
+            "amount": 474,
+            "month": "2025-09",
+            "description": "Compra de batatas, arroz e saladas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Mercado Central"
+        },
+        {
+            "id": 80,
+            "category": "Manutenção",
+            "amount": 177,
+            "month": "2025-09",
+            "description": "Reparação de equipamentos",
+            "payment_method": "Numerário",
+            "supplier": "Manutec"
+        },
+        {
+            "id": 81,
+            "category": "Energia",
+            "amount": 458,
+            "month": "2025-09",
+            "description": "Conta de eletricidade",
+            "payment_method": "Transferência Bancária",
+            "supplier": "EDP"
+        },
+        {
+            "id": 82,
+            "category": "Água",
+            "amount": 119,
+            "month": "2025-09",
+            "description": "Conta de água",
+            "payment_method": "Numerário",
+            "supplier": "Águas do Norte"
+        },
+        {
+            "id": 83,
+            "category": "Produtos de Limpeza",
+            "amount": 123,
+            "month": "2025-09",
+            "description": "Detergentes e desinfetantes",
+            "payment_method": "Transferência Bancária",
+            "supplier": "LimpaTudo"
+        },
+        {
+            "id": 84,
+            "category": "Marketing",
+            "amount": 391,
+            "month": "2025-09",
+            "description": "Campanha nas redes sociais",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Agência Digital"
+        },
+        {
+            "id": 85,
+            "category": "Carnes Nobres",
+            "amount": 2997,
+            "month": "2025-10",
+            "description": "Compra de carne premium para o mês",
+            "payment_method": "Débito Direto",
+            "supplier": "Talho Silva"
+        },
+        {
+            "id": 86,
+            "category": "Salários",
+            "amount": 3142,
+            "month": "2025-10",
+            "description": "Pagamento de Salários dos funcionários",
+            "payment_method": "Numerário",
+            "supplier": "funcionários"
+        },
+        {
+            "id": 87,
+            "category": "Vinhos e Bebidas",
+            "amount": 695,
+            "month": "2025-10",
+            "description": "Reposição de vinhos e bebidas",
+            "payment_method": "Numerário",
+            "supplier": "Adega Mendes"
+        },
+        {
+            "id": 88,
+            "category": "Acompanhamentos",
+            "amount": 504,
+            "month": "2025-10",
+            "description": "Compra de batatas, arroz e saladas",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Mercado Central"
+        },
+        {
+            "id": 89,
+            "category": "Manutenção",
+            "amount": 136,
+            "month": "2025-10",
+            "description": "Reparação de equipamentos",
+            "payment_method": "Numerário",
+            "supplier": "Manutec"
+        },
+        {
+            "id": 90,
+            "category": "Energia",
+            "amount": 440,
+            "month": "2025-10",
+            "description": "Conta de eletricidade",
+            "payment_method": "Numerário",
+            "supplier": "EDP"
+        },
+        {
+            "id": 91,
+            "category": "Água",
+            "amount": 111,
+            "month": "2025-10",
+            "description": "Conta de água",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Águas do Norte"
+        },
+        {
+            "id": 92,
+            "category": "Produtos de Limpeza",
+            "amount": 121,
+            "month": "2025-10",
+            "description": "Detergentes e desinfetantes",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "LimpaTudo"
+        },
+        {
+            "id": 93,
+            "category": "Marketing",
+            "amount": 293,
+            "month": "2025-10",
+            "description": "Campanha nas redes sociais",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Agência Digital"
+        },
+        {
+            "id": 94,
+            "category": "Carnes Nobres",
+            "amount": 3250,
+            "month": "2025-11",
+            "description": "Compra de carne premium para o mês",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Talho Silva"
+        },
+        {
+            "id": 95,
+            "category": "Salários",
+            "amount": 3142,
+            "month": "2025-11",
+            "description": "Pagamento de Salários dos funcionários",
+            "payment_method": "Débito Direto",
+            "supplier": "funcionários"
+        },
+        {
+            "id": 96,
+            "category": "Vinhos e Bebidas",
+            "amount": 1307,
+            "month": "2025-11",
+            "description": "Reposição de vinhos e bebidas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Adega Mendes"
+        },
+        {
+            "id": 97,
+            "category": "Acompanhamentos",
+            "amount": 965,
+            "month": "2025-11",
+            "description": "Compra de batatas, arroz e saladas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Mercado Central"
+        },
+        {
+            "id": 98,
+            "category": "Manutenção",
+            "amount": 314,
+            "month": "2025-11",
+            "description": "Reparação de equipamentos",
+            "payment_method": "Débito Direto",
+            "supplier": "Manutec"
+        },
+        {
+            "id": 99,
+            "category": "Energia",
+            "amount": 739,
+            "month": "2025-11",
+            "description": "Conta de eletricidade",
+            "payment_method": "Débito Direto",
+            "supplier": "EDP"
+        },
+        {
+            "id": 100,
+            "category": "Água",
+            "amount": 200,
+            "month": "2025-11",
+            "description": "Conta de água",
+            "payment_method": "Débito Direto",
+            "supplier": "Águas do Norte"
+        },
+        {
+            "id": 101,
+            "category": "Produtos de Limpeza",
+            "amount": 185,
+            "month": "2025-11",
+            "description": "Detergentes e desinfetantes",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "LimpaTudo"
+        },
+        {
+            "id": 102,
+            "category": "Marketing",
+            "amount": 701,
+            "month": "2025-11",
+            "description": "Campanha nas redes sociais",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Agência Digital"
+        },
+        {
+            "id": 103,
+            "category": "Carnes Nobres",
+            "amount": 5194,
+            "month": "2025-12",
+            "description": "Compra de carne premium para o mês",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Talho Silva"
+        },
+        {
+            "id": 104,
+            "category": "Salários",
+            "amount": 3142,
+            "month": "2025-12",
+            "description": "Pagamento de Salários dos funcionários",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "funcionários"
+        },
+        {
+            "id": 105,
+            "category": "Vinhos e Bebidas",
+            "amount": 1332,
+            "month": "2025-12",
+            "description": "Reposição de vinhos e bebidas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Adega Mendes"
+        },
+        {
+            "id": 106,
+            "category": "Acompanhamentos",
+            "amount": 951,
+            "month": "2025-12",
+            "description": "Compra de batatas, arroz e saladas",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "Mercado Central"
+        },
+        {
+            "id": 107,
+            "category": "Manutenção",
+            "amount": 229,
+            "month": "2025-12",
+            "description": "Reparação de equipamentos",
+            "payment_method": "Transferência Bancária",
+            "supplier": "Manutec"
+        },
+        {
+            "id": 108,
+            "category": "Energia",
+            "amount": 747,
+            "month": "2025-12",
+            "description": "Conta de eletricidade",
+            "payment_method": "Numerário",
+            "supplier": "EDP"
+        },
+        {
+            "id": 109,
+            "category": "Água",
+            "amount": 237,
+            "month": "2025-12",
+            "description": "Conta de água",
+            "payment_method": "Numerário",
+            "supplier": "Águas do Norte"
+        },
+        {
+            "id": 110,
+            "category": "Produtos de Limpeza",
+            "amount": 170,
+            "month": "2025-12",
+            "description": "Detergentes e desinfetantes",
+            "payment_method": "Cartão de Crédito",
+            "supplier": "LimpaTudo"
+        },
+        {
+            "id": 111,
+            "category": "Marketing",
+            "amount": 540,
+            "month": "2025-12",
+            "description": "Campanha nas redes sociais",
+            "payment_method": "Numerário",
+            "supplier": "Agência Digital"
         }
     ]
 }

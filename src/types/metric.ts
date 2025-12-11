@@ -12,6 +12,7 @@ export interface Product {
   name: string;
   sales: number;
   revenue: string | number;
+  price?: number;
 }
 
 export interface Customer {
