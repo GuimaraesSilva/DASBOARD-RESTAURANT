@@ -66,7 +66,7 @@ export function ReservationsStatusChart() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-xl font-bold">Status das Reservas</CardTitle>
+        <CardTitle className="text-xl font-bold">Reservation Status</CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -88,10 +88,10 @@ export function ReservationsStatusChart() {
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          {confirmedPercentage}% de reservas confirmadas <Calendar className="h-4 w-4" />
+          {confirmedPercentage}% of confirmed reservations <Calendar className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Total: {totalReservations} reservas
+          Total: {totalReservations} reservations
         </div>
       </CardFooter>
     </Card>

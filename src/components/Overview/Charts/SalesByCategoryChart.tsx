@@ -82,7 +82,7 @@ export function SalesByCategoryChart() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-xl font-bold">Vendas por Categoria</CardTitle>
+        <CardTitle className="text-xl font-bold">Sales by Category</CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -104,10 +104,10 @@ export function SalesByCategoryChart() {
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Total de receita: €{totalRevenue.toFixed(2)} <TrendingUp className="h-4 w-4" />
+          Total revenue: €{totalRevenue.toFixed(2)} <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Baseado em {ordersData.orders.length} pedidos
+          Based on {ordersData.orders.length} orders
         </div>
       </CardFooter>
     </Card>

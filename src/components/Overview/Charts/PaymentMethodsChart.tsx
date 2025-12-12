@@ -26,18 +26,18 @@ interface PaymentMethodsChartProps {
 
 const chartConfig = {
   transactions: {
-    label: "Transações",
+    label: "Transactions",
   },
   MBWay: {
     label: "MBWay",
     color: "#1B2B1F", // Verde escuro
   },
   Multibanco: {
-    label: "Multibanco",
+    label: "ATM",
     color: "#C3CEC4", // Verde claro
   },
   Numérico: {
-    label: "Numerário",
+    label: "Cash",
     color: "#BDA69F", // Bege
   },
   Visa: {
@@ -75,7 +75,7 @@ export function PaymentMethodsChart({ data }: PaymentMethodsChartProps) {
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center">
-        <CardTitle className="text-xl font-bold">Métodos de Pagamento</CardTitle>
+        <CardTitle className="text-xl font-bold">Payment Methods</CardTitle>
       </CardHeader>
       <CardContent className="flex">
         <ChartContainer
@@ -127,7 +127,7 @@ export function PaymentMethodsChart({ data }: PaymentMethodsChartProps) {
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Transações
+                          Transactions
                         </tspan>
                       </text>
                     )
@@ -141,11 +141,11 @@ export function PaymentMethodsChart({ data }: PaymentMethodsChartProps) {
       <CardFooter className="flex-col gap-2 text-sm">
         {topMethod && (
           <div className="flex items-center gap-2 leading-none font-medium">
-            {topMethod.method} é o método mais utilizado <TrendingUp className="h-4 w-4" />
+            {topMethod.method} is the most used method <TrendingUp className="h-4 w-4" />
           </div>
         )}
         <div className="text-muted-foreground leading-none">
-          Mostrando métodos de pagamento utilizados
+          Showing used payment methods in orders
         </div>
       </CardFooter>
     </Card>

@@ -23,7 +23,7 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
       const timer = setTimeout(() => {
         setIsLoading(false);
         setIsFirstLoad(false);
-      }, 1250);
+      }, 0);
       return () => clearTimeout(timer);
     }
   }, [isFirstLoad]);

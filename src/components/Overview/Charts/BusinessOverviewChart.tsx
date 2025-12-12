@@ -46,13 +46,13 @@ export function BusinessOverviewChart() {
       <CardHeader>
         <div className="flex items-center justify-between">
           <div>
-            <CardTitle>Visão Geral do Negócio</CardTitle>
+            <CardTitle>Business Overview</CardTitle>
             <CardDescription>
-              Análise mensal de receitas e despesas
+              Monthly analysis of revenue and expenses
             </CardDescription>
           </div>
           <div className="text-right">
-            <div className="text-sm text-muted-foreground mb-1">Lucro Total</div>
+            <div className="text-sm text-muted-foreground mb-1">Total Profit</div>
             <div className={`text-2xl font-bold ${totalProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
               €{totalProfit.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </div>
@@ -60,22 +60,22 @@ export function BusinessOverviewChart() {
               {profitTrend === 'up' ? (
                 <>
                   <TrendingUp className="h-4 w-4 text-green-500" />
-                  <span className="text-green-500">Tendência positiva</span>
+                  <span className="text-green-500">Positive Trend </span>
                 </>
               ) : profitTrend === 'down' ? (
                 <>
                   <TrendingDown className="h-4 w-4 text-red-500" />
-                  <span className="text-red-500">Tendência negativa</span>
+                  <span className="text-red-500">Negative Trend</span>
                 </>
               ) : (
                 <>
                   <Minus className="h-4 w-4 text-gray-500" />
-                  <span className="text-gray-500">Estável</span>
+                  <span className="text-gray-500">Stable</span>
                 </>
               )}
             </div>
             <div className="text-xs text-muted-foreground mt-1">
-              Margem de Lucro: {profitMargin.toFixed(1)}%
+              Profit Margin: {profitMargin.toFixed(1)}%
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ export function BusinessOverviewChart() {
                         <div className="flex items-center justify-between gap-4">
                           <span className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-full bg-[#536657]" />
-                            Receitas
+                            Revenue
                           </span>
                           <span className="font-medium">
                             €{monthData.revenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
@@ -120,7 +120,7 @@ export function BusinessOverviewChart() {
                         <div className="flex items-center justify-between gap-4">
                           <span className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-full bg-[#89726B]" />
-                            Despesas
+                            Expenses
                           </span>
                           <span className="font-medium">
                             €{monthData.expenses.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
@@ -157,30 +157,30 @@ export function BusinessOverviewChart() {
         
         <div className="mt-6 grid grid-cols-3 gap-4">
           <div className="space-y-1">
-            <p className="text-sm text-muted-foreground">Total de Receitas</p>
+            <p className="text-sm text-muted-foreground">Total Revenue</p>
             <p className="text-2xl font-bold text-[#536657]">
               €{totalRevenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </p>
             <p className="text-xs text-muted-foreground">
-              {data.length} {data.length === 1 ? 'mês' : 'meses'}
+              {data.length} {data.length === 1 ? 'month' : 'months'}
             </p>
           </div>
           <div className="space-y-1">
-            <p className="text-sm text-muted-foreground">Total de Despesas</p>
+            <p className="text-sm text-muted-foreground">Total Expenses</p>
             <p className="text-2xl font-bold text-[#89726B]">
               €{totalExpenses.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </p>
             <p className="text-xs text-muted-foreground">
-              {totalRevenue > 0 ? ((totalExpenses / totalRevenue) * 100).toFixed(1) : 0}% das receitas
+              {totalRevenue > 0 ? ((totalExpenses / totalRevenue) * 100).toFixed(1) : 0}% of revenue
             </p>
           </div>
           <div className="space-y-1">
-            <p className="text-sm text-muted-foreground">Lucro Líquido</p>
+            <p className="text-sm text-muted-foreground">Net Profit</p>
             <p className={`text-2xl font-bold ${totalProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
               €{totalProfit.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </p>
             <p className="text-xs text-muted-foreground">
-              Margem: {profitMargin.toFixed(1)}%
+              Margin: {profitMargin.toFixed(1)}%
             </p>
           </div>
         </div>
@@ -190,11 +190,11 @@ export function BusinessOverviewChart() {
           <Table>
             <TableHeader>
               <TableRow className="bg-[#F0F4EF]">
-                <TableHead className="text-left">Mês</TableHead>
-                <TableHead className="text-right">Receitas</TableHead>
-                <TableHead className="text-right">Despesas</TableHead>
-                <TableHead className="text-right">Lucro / Perda</TableHead>
-                <TableHead className="text-right">Margem</TableHead>
+                <TableHead className="text-left">Month</TableHead>
+                <TableHead className="text-right">Revenue</TableHead>
+                <TableHead className="text-right">Expenses</TableHead>
+                <TableHead className="text-right">Profit / Loss</TableHead>
+                <TableHead className="text-right">Margin</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -202,13 +202,13 @@ export function BusinessOverviewChart() {
                 <TableRow key={index}>
                   <TableCell>{item.month}</TableCell>
                   <TableCell className="text-right text-[#536657] font-medium">
-                    €{item.revenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
+                    {item.revenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}€
                   </TableCell>
                   <TableCell className="text-right text-[#89726B] font-medium">
-                    €{item.expenses.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
+                    {item.expenses.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}€
                   </TableCell>
                   <TableCell className={`text-right font-medium ${item.profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                    €{item.profit.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
+                    {item.profit.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}€
                   </TableCell>
                   <TableCell className="text-right">
                     {item.revenue > 0 ? ((item.profit / item.revenue) * 100).toFixed(1) : '0.0'}%

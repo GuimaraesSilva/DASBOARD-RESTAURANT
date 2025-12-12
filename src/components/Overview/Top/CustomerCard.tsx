@@ -20,7 +20,7 @@ export const CustomersCard: React.FC<CustomersCardProps> = ({ customers }) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-xl text-[#3C3838]">Top Clientes</CardTitle>
+        <CardTitle className="text-xl text-[#3C3838]">Top Clients</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-3">
@@ -40,7 +40,7 @@ export const CustomersCard: React.FC<CustomersCardProps> = ({ customers }) => {
               </div>
               <div className="text-right">
                 <span className="font-semibold text-[#3C3838] block">{customer.visits}</span>
-                <span className="text-sm text-[#3C3838]/70">visitas</span>
+                <span className="text-sm text-[#3C3838]/70">visits</span>
               </div>
             </div>
           ))}

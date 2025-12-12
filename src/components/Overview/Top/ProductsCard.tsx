@@ -13,7 +13,7 @@ export const ProductsCard: React.FC<ProductsCardProps> = ({ products }) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-xl text-[#3C3838]">Top Produtos</CardTitle>
+        <CardTitle className="text-xl text-[#3C3838]">Top Products</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-3">
@@ -25,9 +25,9 @@ export const ProductsCard: React.FC<ProductsCardProps> = ({ products }) => {
               >
                 <div className="flex-1">
                   <p className="font-semibold text-[#3C3838]">{product.name}</p>
-                  <p className="text-sm font-semibold text-[#3C3838]/80">{product.sales} vendas</p>
+                  <p className="text-sm font-semibold text-[#3C3838]/80">{product.sales} sales</p>
                   {product.price && (
-                    <p className="text-xs font-semibold text-[#3C3838]/70">Preço: €{product.price.toFixed(2).replace('.', ',')}/unidade</p>
+                    <p className="text-xs font-semibold text-[#3C3838]/70">Price: €{product.price.toFixed(2).replace('.', ',')}/unit</p>
                   )}
                 </div>
                 <div className="text-right">
@@ -36,12 +36,12 @@ export const ProductsCard: React.FC<ProductsCardProps> = ({ products }) => {
                       ? `€${product.revenue.toFixed(2).replace('.', ',')}` 
                       : product.revenue}
                   </span>
-                  <span className="text-xs font-semibold text-[#3C3838]/70">receita total</span>
+                  <span className="text-xs font-semibold text-[#3C3838]/70">total revenue</span>
                 </div>
               </div>
             ))
           ) : (
-            <p className="text-gray-500 text-center py-4">Nenhum produto disponível</p>
+            <p className="text-gray-500 text-center py-4">No products available</p>
           )}
         </div>
       </CardContent>

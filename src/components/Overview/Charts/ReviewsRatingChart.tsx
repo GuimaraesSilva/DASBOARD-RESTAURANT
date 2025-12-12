@@ -75,7 +75,7 @@ export function ReviewsRatingChart() {
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle className="text-xl font-bold">Avaliações</CardTitle>
+        <CardTitle className="text-xl font-bold">Reviews</CardTitle>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -116,7 +116,7 @@ export function ReviewsRatingChart() {
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Média
+                          Average
                         </tspan>
                       </text>
                     )
@@ -129,10 +129,10 @@ export function ReviewsRatingChart() {
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="flex items-center gap-2 font-medium leading-none">
-          {averageRating} de 5 estrelas <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+          {averageRating} out of 5 stars <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Baseado em {totalReviews} avaliações
+          Based on {totalReviews} reviews
         </div>
       </CardFooter>
     </Card>
