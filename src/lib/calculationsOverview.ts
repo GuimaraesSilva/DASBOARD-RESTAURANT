@@ -7,8 +7,171 @@ import expensesData from '@/data/expenses.json';
 import { DashboardData } from '@/types/overview';
 import { PaymentMethod } from '@/types/payment';
 import { Product } from '@/types/products';
-import { Client } from '@/types/clients';
 import { MonthlyData } from '@/types/month';
+import { Customer } from '@/types/metric';
+
+// ============================================
+// FUNÇÕES AUXILIARES
+// ============================================
+
+type Period = "daily" | "weekly" | "monthly";
+
+function getMultiplier(period: Period): number {
+  return period === "monthly" ? 30 : period === "weekly" ? 7 : 1;
+}
+
+// Função auxiliar para calcular percentagem de mudança
+export const calculateChange = (current: number, previous: number): { change: string; type: 'positive' | 'negative' } => {
+  if (previous === 0) return { change: '0%', type: 'positive' };
+  const percentChange = ((current - previous) / previous) * 100;
+  return {
+    change: `${Math.abs(percentChange).toFixed(1)}%`,
+    type: percentChange >= 0 ? 'positive' : 'negative'
+  };
+};
+
+// Calcular vendas totais de um período
+export const calculateTotalSales = (orders: any[]): number => {
+  return orders.reduce((sum, order) => sum + order.total, 0);
+};
+
+// Calcular ticket médio
+export const calculateAverageTicket = (orders: any[]): number => {
+  if (orders.length === 0) return 0;
+  return calculateTotalSales(orders) / orders.length;
+};
+
+// Calcular taxa de ocupação baseada em reservas
+export const calculateOccupancyRate = (reservations: any[]): number => {
+  const totalReservations = reservations.length;
+  const confirmedReservations = reservations.filter(r => r.status === 'confirmed').length;
+  
+  if (totalReservations === 0) return 0;
+  return (confirmedReservations / totalReservations) * 100;
+};
+
+// Calcular avaliação média
+export const calculateAverageRating = (reviews: any[]): number => {
+  if (reviews.length === 0) return 0;
+  const sum = reviews.reduce((acc, review) => acc + review.rating, 0);
+  return sum / reviews.length;
+};
+
+// ============================================
+// FUNÇÕES DE TOP PRODUTOS E CLIENTES
+// ============================================
+
+// Obter top produtos por receita
+export const getTopProductsByRevenue = (orderItems: any[], products: any[], limit: number = 3) => {
+  const productSales = new Map();
+  
+  orderItems.forEach(item => {
+    const product = products.find(p => p.id === item.product_id);
+    if (product) {
+      const existing = productSales.get(item.product_id) || { name: product.name, sales: 0, revenue: 0 };
+      productSales.set(item.product_id, {
+        name: product.name,
+        sales: existing.sales + item.quantity,
+        revenue: existing.revenue + item.subtotal
+      });
+    }
+  });
+  
+  return Array.from(productSales.values())
+    .sort((a, b) => b.revenue - a.revenue)
+    .slice(0, limit)
+    .map(p => ({
+      name: p.name,
+      sales: p.sales,
+      revenue: `€${p.revenue.toFixed(2)}`
+    }));
+};
+
+// Obter clientes VIP (mais visitas)
+export const getTopCustomersByVisits = (customers: any[], limit: number = 3) => {
+  return customers
+    .sort((a, b) => b.visits - a.visits)
+    .slice(0, limit)
+    .map(c => ({
+      id: c.id,
+      name: c.name,
+      email: c.email,
+      phone: c.phone,
+      visits: c.visits,
+      last_visit_date: c.last_visit_date,
+      reservations: c.reservations
+    }));
+};
+
+// Obter top produtos com multiplicador de período
+export function getTopProducts(period: Period = "daily", limit: number = 5) {
+  const multiplier = getMultiplier(period);
+  
+  const productSales = ordersData.order_items.reduce((acc: any, item: any) => {
+    const product = productsData.products.find((p: any) => p.id === item.product_id);
+    if (product) {
+      acc[product.id] = (acc[product.id] || 0) + (item.quantity || 0);
+    }
+    return acc;
+  }, {} as Record<number, number>);
+
+  return Object.entries(productSales)
+    .map(([id, quantity]) => {
+      const product = productsData.products.find((p: any) => p.id === Number(id));
+      return product ? {
+        ...product,
+        quantity: (quantity as number) * multiplier
+      } : null;
+    })
+    .filter((p): p is NonNullable<typeof p> => p !== null)
+    .sort((a, b) => b.quantity - a.quantity)
+    .slice(0, limit);
+}
+
+// Obter clientes VIP com multiplicador de período
+export function getVIPCustomers(period: Period = "daily", limit: number = 5) {
+  const multiplier = getMultiplier(period);
+  
+  const customerOrders = ordersData.orders.reduce((acc: any, order: any) => {
+    acc[order.customer_id] = (acc[order.customer_id] || 0) + 1;
+    return acc;
+  }, {} as Record<number, number>);
+
+  return Object.entries(customerOrders)
+    .map(([id, orders]) => {
+      const customer = customersData.customers.find(c => c.id === Number(id));
+      return customer ? {
+        ...customer,
+        totalOrders: (orders as number) * multiplier
+      } : null;
+    })
+    .filter((c): c is NonNullable<typeof c> => c !== null)
+    .sort((a, b) => b.totalOrders - a.totalOrders)
+    .slice(0, limit);
+}
+
+// ============================================
+// MÉTRICAS DO DASHBOARD
+// ============================================
+
+export function getDashboardMetrics(period: Period = "daily") {
+  const multiplier = getMultiplier(period);
+  
+  const totalSales = ordersData.orders.reduce((sum: number, order: any) => sum + (order.total || 0), 0);
+  const totalOrders = ordersData.orders.length;
+  const avgOrderValue = totalOrders > 0 ? totalSales / totalOrders : 0;
+  
+  return {
+    totalRevenue: totalSales * multiplier,
+    totalOrders: totalOrders * multiplier,
+    avgOrderValue: avgOrderValue,
+    period: period,
+  };
+}
+
+// ============================================
+// CÁLCULOS PARA OVERVIEW
+// ============================================
 
 export function calculateMonthlyTrends(): MonthlyData[] {
   // Agrupar pedidos por mês
@@ -130,23 +293,25 @@ export function calculateOverview(): DashboardData {
     .sort((a, b) => b.sales - a.sales)
     .slice(0, 3);
 
-  // Top clientes (por número de visitas)
-  const topClients: Client[] = customersData.customers
-    .sort((a, b) => b.visits - a.visits)
+  // Top Clients baseado em total de reservas feitas (made)
+  const topClients: Customer [] = customersData.customers
+    .filter(customer => customer.reservations.made > 0) // Filtrar clientes sem reservas
+    .sort((a, b) => {
+      // Ordenar primeiro por reservas feitas, depois por visitas
+      const reservationDiff = b.reservations.made - a.reservations.made;
+      if (reservationDiff !== 0) return reservationDiff;
+      return b.visits - a.visits;
+    })
     .slice(0, 3)
-    .map(customer => {
-      const nameParts = customer.name.split(' ');
-      const initials = nameParts.length >= 2
-        ? `${nameParts[0][0]}${nameParts[1][0]}`
-        : nameParts[0][0];
-      
-      return {
-        name: customer.name,
-        email: customer.email,
-        visits: customer.visits,
-        initials: initials.toUpperCase()
-      };
-    });
+    .map(customer => ({
+      id: customer.id,
+      name: customer.name,
+      email: customer.email,
+      phone: customer.phone,
+      visits: customer.visits,
+      last_visit_date: customer.last_visit_date,
+      reservations: customer.reservations
+    }));
 
   // Métodos de pagamento (agregação por método)
   const paymentMethodsMap = new Map<string, { transactions: number; revenue: number }>();
@@ -169,7 +334,7 @@ export function calculateOverview(): DashboardData {
   };
 
   const paymentMethods: PaymentMethod[] = Array.from(paymentMethodsMap.entries())
-    .map(([method, data], index) => ({
+    .map(([method, data]) => ({
       method,
       transactions: data.transactions,
       revenue: data.revenue,
@@ -198,6 +363,10 @@ export function calculateOverview(): DashboardData {
   };
 }
 
+// ============================================
+// BUSINESS OVERVIEW
+// ============================================
+
 export interface BusinessOverviewData {
   month: string;
   revenue: number;
@@ -208,17 +377,11 @@ export interface BusinessOverviewData {
 export function calculateBusinessOverview(): BusinessOverviewData[] {
   const monthlyRevenue = new Map<string, number>();
   
-  // Debug: verificar quantos pedidos estão a ser processados
-  console.log('Total de pedidos:', ordersData.orders.length);
-  
   ordersData.orders.forEach(order => {
     const month = order.created_at.substring(0, 7);
-    console.log('Pedido:', order.id, 'Mês:', month, 'Total:', order.total);
     const current = monthlyRevenue.get(month) || 0;
     monthlyRevenue.set(month, current + order.total);
   });
-  
-  console.log('Receitas por mês:', Object.fromEntries(monthlyRevenue));
 
   // Agrupar despesas por mês
   const monthlyExpenses = new Map<string, number>();

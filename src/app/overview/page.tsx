@@ -46,15 +46,12 @@ export default function Overview() {
         <div className="flex-1 md:col-span-5 bg-[#F5F5F5] rounded-md overflow-y-auto scrollbar-hide">
           <div className="p-4 space-y-4">
             <MetricsGrid dashboardData={dashboardData} />
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <ProductsCard products={dashboardData.topProducts} />
               <PaymentMethodsChart data={dashboardData.paymentMethods} />
               <CustomersCard customers={dashboardData.topClients} />
             </div>
-
             <BusinessOverviewChart />
-
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               <ReviewsRatingChart />
               <div className="md:col-span-2">

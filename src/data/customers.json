@@ -1,354 +1,2604 @@
 {
-    "customers": [
-        {
-            "id": 1,
-            "name": "João Santos",
-            "email": "joao@example.com",
-            "phone": "+351912345678",
-            "visits": 7
-        },
-        {
-            "id": 2,
-            "name": "Carla Mendes",
-            "email": "carla@example.com",
-            "phone": "+351917654321",
-            "visits": 14
-        },
-        {
-            "id": 3,
-            "name": "Miguel Rocha",
-            "email": "miguel@example.com",
-            "phone": "+351915667788",
-            "visits": 4
-        },
-        {
-            "id": 4,
-            "name": "Ana Ribeiro",
-            "email": "ana@example.com",
-            "phone": "+351918223344",
-            "visits": 10
-        },
-        {
-            "id": 5,
-            "name": "Pedro Alves",
-            "email": "pedro@example.com",
-            "phone": "+351916554433",
-            "visits": 2
-        },
-        {
-            "id": 6,
-            "name": "Sara Cunha",
-            "email": "sara@example.com",
-            "phone": "+351919887766",
-            "visits": 5
-        },
-        {
-            "id": 7,
-            "name": "Bruno Lopes",
-            "email": "bruno@example.com",
-            "phone": "+351918887766",
-            "visits": 12
-        },
-        {
-            "id": 8,
-            "name": "Rita Martins",
-            "email": "rita@example.com",
-            "phone": "+351912345679",
-            "visits": 8
-        },
-        {
-            "id": 9,
-            "name": "Tiago Costa",
-            "email": "tiago@example.com",
-            "phone": "+351917654322",
-            "visits": 3
-        },
-        {
-            "id": 10,
-            "name": "Beatriz Silva",
-            "email": "beatriz@example.com",
-            "phone": "+351915667789",
-            "visits": 6
-        },
-        {
-            "id": 11,
-            "name": "Carlos Pinto",
-            "email": "carlos@example.com",
-            "phone": "+351918223345",
-            "visits": 9
-        },
-        {
-            "id": 12,
-            "name": "Mariana Sousa",
-            "email": "mariana@example.com",
-            "phone": "+351916554434",
-            "visits": 11
-        },
-        {
-            "id": 13,
-            "name": "André Ferreira",
-            "email": "andre@example.com",
-            "phone": "+351919887767",
-            "visits": 7
-        },
-        {
-            "id": 14,
-            "name": "Sofia Almeida",
-            "email": "sofia@example.com",
-            "phone": "+351918887767",
-            "visits": 13
-        },
-        {
-            "id": 15,
-            "name": "João Carvalho",
-            "email": "joaoc@example.com",
-            "phone": "+351912345680",
-            "visits": 4
-        },
-        {
-            "id": 16,
-            "name": "Ana Sousa",
-            "email": "anas@example.com",
-            "phone": "+351917654323",
-            "visits": 8
-        },
-        {
-            "id": 17,
-            "name": "Pedro Gonçalves",
-            "email": "pedrog@example.com",
-            "phone": "+351915667790",
-            "visits": 5
-        },
-        {
-            "id": 18,
-            "name": "Rita Lopes",
-            "email": "rital@example.com",
-            "phone": "+351918223346",
-            "visits": 10
-        },
-        {
-            "id": 19,
-            "name": "Miguel Ramos",
-            "email": "miguelr@example.com",
-            "phone": "+351916554435",
-            "visits": 2
-        },
-        {
-            "id": 20,
-            "name": "Luís Figueiredo",
-            "email": "luis@example.com",
-            "phone": "+351919887768",
-            "visits": 6
-        },
-        {
-            "id": 21,
-            "name": "Carolina Dias",
-            "email": "carolina@example.com",
-            "phone": "+351918887768",
-            "visits": 12
-        },
-        {
-            "id": 22,
-            "name": "Fábio Teixeira",
-            "email": "fabio@example.com",
-            "phone": "+351912345681",
-            "visits": 7
-        },
-        {
-            "id": 23,
-            "name": "Patrícia Mendes",
-            "email": "patricia@example.com",
-            "phone": "+351917654324",
-            "visits": 9
-        },
-        {
-            "id": 24,
-            "name": "Bruno Castro",
-            "email": "brunoc@example.com",
-            "phone": "+351915667791",
-            "visits": 3
-        },
-        {
-            "id": 25,
-            "name": "Inês Rocha",
-            "email": "ines@example.com",
-            "phone": "+351918223347",
-            "visits": 8
-        },
-        {
-            "id": 26,
-            "name": "Gustavo Lima",
-            "email": "gustavo@example.com",
-            "phone": "+351916554436",
-            "visits": 5
-        },
-        {
-            "id": 27,
-            "name": "Helena Nunes",
-            "email": "helena@example.com",
-            "phone": "+351919887769",
-            "visits": 11
-        },
-        {
-            "id": 28,
-            "name": "Joana Marques",
-            "email": "joanam@example.com",
-            "phone": "+351918887769",
-            "visits": 4
-        },
-        {
-            "id": 29,
-            "name": "Ricardo Silva",
-            "email": "ricardos@example.com",
-            "phone": "+351912345682",
-            "visits": 6
-        },
-        {
-            "id": 30,
-            "name": "Marta Oliveira",
-            "email": "marta@example.com",
-            "phone": "+351917654325",
-            "visits": 10
-        },
-        {
-            "id": 31,
-            "name": "Paulo Correia",
-            "email": "paulo@example.com",
-            "phone": "+351915667792",
-            "visits": 7
-        },
-        {
-            "id": 32,
-            "name": "Susana Cardoso",
-            "email": "susana@example.com",
-            "phone": "+351918223348",
-            "visits": 9
-        },
-        {
-            "id": 33,
-            "name": "Fernando Pires",
-            "email": "fernando@example.com",
-            "phone": "+351916554437",
-            "visits": 2
-        },
-        {
-            "id": 34,
-            "name": "Cátia Barros",
-            "email": "catia@example.com",
-            "phone": "+351919887770",
-            "visits": 8
-        },
-        {
-            "id": 35,
-            "name": "Diogo Matos",
-            "email": "diogo@example.com",
-            "phone": "+351918887770",
-            "visits": 5
-        },
-        {
-            "id": 36,
-            "name": "Vera Costa",
-            "email": "vera@example.com",
-            "phone": "+351912345683",
-            "visits": 12
-        },
-        {
-            "id": 37,
-            "name": "Rafael Tavares",
-            "email": "rafael@example.com",
-            "phone": "+351917654326",
-            "visits": 6
-        },
-        {
-            "id": 38,
-            "name": "Cláudia Fonseca",
-            "email": "claudia@example.com",
-            "phone": "+351915667793",
-            "visits": 10
-        },
-        {
-            "id": 39,
-            "name": "Eduardo Neves",
-            "email": "eduardo@example.com",
-            "phone": "+351918223349",
-            "visits": 7
-        },
-        {
-            "id": 40,
-            "name": "Isabel Antunes",
-            "email": "isabel@example.com",
-            "phone": "+351916554438",
-            "visits": 9
-        },
-        {
-            "id": 41,
-            "name": "Alexandre Gomes",
-            "email": "alexandre@example.com",
-            "phone": "+351919887771",
-            "visits": 3
-        },
-        {
-            "id": 42,
-            "name": "Tatiana Faria",
-            "email": "tatiana@example.com",
-            "phone": "+351918887771",
-            "visits": 8
-        },
-        {
-            "id": 43,
-            "name": "Nelson Monteiro",
-            "email": "nelson@example.com",
-            "phone": "+351912345684",
-            "visits": 5
-        },
-        {
-            "id": 44,
-            "name": "Sandra Ramos",
-            "email": "sandra@example.com",
-            "phone": "+351917654327",
-            "visits": 11
-        },
-        {
-            "id": 45,
-            "name": "João Lima",
-            "email": "joaol@example.com",
-            "phone": "+351915667794",
-            "visits": 4
-        },
-        {
-            "id": 46,
-            "name": "Filipa Duarte",
-            "email": "filipa@example.com",
-            "phone": "+351918223350",
-            "visits": 6
-        },
-        {
-            "id": 47,
-            "name": "Henrique Borges",
-            "email": "henrique@example.com",
-            "phone": "+351916554439",
-            "visits": 10
-        },
-        {
-            "id": 48,
-            "name": "Mónica Leite",
-            "email": "monica@example.com",
-            "phone": "+351919887772",
-            "visits": 7
-        },
-        {
-            "id": 49,
-            "name": "Artur Vieira",
-            "email": "artur@example.com",
-            "phone": "+351918887772",
-            "visits": 9
-        },
-        {
-            "id": 50,
-            "name": "Luciana Freitas",
-            "email": "luciana@example.com",
-            "phone": "+351912345685",
-            "visits": 12
-        }
-    ]
+  "customers": [
+    {
+      "id": 1,
+      "name": "João Santos",
+      "email": "joao@example.com",
+      "phone": "+351912345678",
+      "visits": 7,
+      "last_visit_date": "2025-01-19",
+      "reservations": {
+        "made": 6,
+        "cancelled": 0,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 2,
+      "name": "Carla Mendes",
+      "email": "carla@example.com",
+      "phone": "+351917654321",
+      "visits": 14,
+      "last_visit_date": "2025-08-09",
+      "reservations": {
+        "made": 15,
+        "cancelled": 1,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 3,
+      "name": "Miguel Rocha",
+      "email": "miguel@example.com",
+      "phone": "+351915667788",
+      "visits": 4,
+      "last_visit_date": "2024-12-31",
+      "reservations": {
+        "made": 10,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 4,
+      "name": "Ana Ribeiro",
+      "email": "ana@example.com",
+      "phone": "+351918223344",
+      "visits": 10,
+      "last_visit_date": "2025-11-26",
+      "reservations": {
+        "made": 8,
+        "cancelled": 0,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 5,
+      "name": "Pedro Alves",
+      "email": "pedro@example.com",
+      "phone": "+351916554433",
+      "visits": 2,
+      "last_visit_date": "2025-08-15",
+      "reservations": {
+        "made": 8,
+        "cancelled": 4,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 6,
+      "name": "Sara Cunha",
+      "email": "sara@example.com",
+      "phone": "+351919887766",
+      "visits": 5,
+      "last_visit_date": "2025-02-28",
+      "reservations": {
+        "made": 6,
+        "cancelled": 5,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 7,
+      "name": "Bruno Lopes",
+      "email": "bruno@example.com",
+      "phone": "+351918887766",
+      "visits": 12,
+      "last_visit_date": "2025-08-22",
+      "reservations": {
+        "made": 17,
+        "cancelled": 4,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 8,
+      "name": "Rita Martins",
+      "email": "rita@example.com",
+      "phone": "+351912345679",
+      "visits": 8,
+      "last_visit_date": "2025-12-09",
+      "reservations": {
+        "made": 8,
+        "cancelled": 5,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 9,
+      "name": "Tiago Costa",
+      "email": "tiago@example.com",
+      "phone": "+351917654322",
+      "visits": 3,
+      "last_visit_date": "2025-06-21",
+      "reservations": {
+        "made": 5,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 10,
+      "name": "Beatriz Silva",
+      "email": "beatriz@example.com",
+      "phone": "+351915667789",
+      "visits": 6,
+      "last_visit_date": "2025-06-23",
+      "reservations": {
+        "made": 5,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 11,
+      "name": "Carlos Pinto",
+      "email": "carlos@example.com",
+      "phone": "+351918223345",
+      "visits": 9,
+      "last_visit_date": "2025-10-24",
+      "reservations": {
+        "made": 12,
+        "cancelled": 2,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 12,
+      "name": "Mariana Sousa",
+      "email": "mariana@example.com",
+      "phone": "+351916554434",
+      "visits": 11,
+      "last_visit_date": "2025-11-20",
+      "reservations": {
+        "made": 16,
+        "cancelled": 4,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 13,
+      "name": "André Ferreira",
+      "email": "andre@example.com",
+      "phone": "+351919887767",
+      "visits": 7,
+      "last_visit_date": "2025-06-02",
+      "reservations": {
+        "made": 6,
+        "cancelled": 4,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 14,
+      "name": "Sofia Almeida",
+      "email": "sofia@example.com",
+      "phone": "+351918887767",
+      "visits": 13,
+      "last_visit_date": "2025-01-25",
+      "reservations": {
+        "made": 16,
+        "cancelled": 4,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 15,
+      "name": "João Carvalho",
+      "email": "joaoc@example.com",
+      "phone": "+351912345680",
+      "visits": 4,
+      "last_visit_date": "2024-12-17",
+      "reservations": {
+        "made": 3,
+        "cancelled": 0,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 16,
+      "name": "Ana Sousa",
+      "email": "anas@example.com",
+      "phone": "+351917654323",
+      "visits": 8,
+      "last_visit_date": "2025-07-17",
+      "reservations": {
+        "made": 7,
+        "cancelled": 1,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 17,
+      "name": "Pedro Gonçalves",
+      "email": "pedrog@example.com",
+      "phone": "+351915667790",
+      "visits": 5,
+      "last_visit_date": "2025-06-01",
+      "reservations": {
+        "made": 7,
+        "cancelled": 3,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 18,
+      "name": "Rita Lopes",
+      "email": "rital@example.com",
+      "phone": "+351918223346",
+      "visits": 10,
+      "last_visit_date": "2025-09-20",
+      "reservations": {
+        "made": 13,
+        "cancelled": 2,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 19,
+      "name": "Miguel Ramos",
+      "email": "miguelr@example.com",
+      "phone": "+351916554435",
+      "visits": 2,
+      "last_visit_date": "2025-01-03",
+      "reservations": {
+        "made": 4,
+        "cancelled": 0,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 20,
+      "name": "Luís Figueiredo",
+      "email": "luis@example.com",
+      "phone": "+351919887768",
+      "visits": 6,
+      "last_visit_date": "2025-03-14",
+      "reservations": {
+        "made": 7,
+        "cancelled": 1,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 21,
+      "name": "Carolina Dias",
+      "email": "carolina@example.com",
+      "phone": "+351918887768",
+      "visits": 12,
+      "last_visit_date": "2025-06-01",
+      "reservations": {
+        "made": 14,
+        "cancelled": 5,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 22,
+      "name": "Fábio Teixeira",
+      "email": "fabio@example.com",
+      "phone": "+351912345681",
+      "visits": 7,
+      "last_visit_date": "2024-12-27",
+      "reservations": {
+        "made": 10,
+        "cancelled": 0,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 23,
+      "name": "Patrícia Mendes",
+      "email": "patricia@example.com",
+      "phone": "+351917654324",
+      "visits": 9,
+      "last_visit_date": "2025-11-26",
+      "reservations": {
+        "made": 12,
+        "cancelled": 3,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 24,
+      "name": "Bruno Castro",
+      "email": "brunoc@example.com",
+      "phone": "+351915667791",
+      "visits": 3,
+      "last_visit_date": "2025-11-09",
+      "reservations": {
+        "made": 4,
+        "cancelled": 4,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 25,
+      "name": "Inês Rocha",
+      "email": "ines@example.com",
+      "phone": "+351918223347",
+      "visits": 8,
+      "last_visit_date": "2025-08-26",
+      "reservations": {
+        "made": 13,
+        "cancelled": 3,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 26,
+      "name": "Gustavo Lima",
+      "email": "gustavo@example.com",
+      "phone": "+351916554436",
+      "visits": 5,
+      "last_visit_date": "2025-09-30",
+      "reservations": {
+        "made": 7,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 27,
+      "name": "Helena Nunes",
+      "email": "helena@example.com",
+      "phone": "+351919887769",
+      "visits": 11,
+      "last_visit_date": "2025-02-28",
+      "reservations": {
+        "made": 17,
+        "cancelled": 2,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 28,
+      "name": "Joana Marques",
+      "email": "joanam@example.com",
+      "phone": "+351918887769",
+      "visits": 4,
+      "last_visit_date": "2025-02-17",
+      "reservations": {
+        "made": 8,
+        "cancelled": 2,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 29,
+      "name": "Ricardo Silva",
+      "email": "ricardos@example.com",
+      "phone": "+351912345682",
+      "visits": 6,
+      "last_visit_date": "2025-10-03",
+      "reservations": {
+        "made": 12,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 30,
+      "name": "Marta Oliveira",
+      "email": "marta@example.com",
+      "phone": "+351917654325",
+      "visits": 10,
+      "last_visit_date": "2025-11-18",
+      "reservations": {
+        "made": 9,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 31,
+      "name": "Paulo Correia",
+      "email": "paulo@example.com",
+      "phone": "+351915667792",
+      "visits": 7,
+      "last_visit_date": "2024-12-29",
+      "reservations": {
+        "made": 11,
+        "cancelled": 4,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 32,
+      "name": "Susana Cardoso",
+      "email": "susana@example.com",
+      "phone": "+351918223348",
+      "visits": 9,
+      "last_visit_date": "2025-05-29",
+      "reservations": {
+        "made": 13,
+        "cancelled": 4,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 33,
+      "name": "Fernando Pires",
+      "email": "fernando@example.com",
+      "phone": "+351916554437",
+      "visits": 2,
+      "last_visit_date": "2025-03-17",
+      "reservations": {
+        "made": 4,
+        "cancelled": 4,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 34,
+      "name": "Cátia Barros",
+      "email": "catia@example.com",
+      "phone": "+351919887770",
+      "visits": 8,
+      "last_visit_date": "2024-12-29",
+      "reservations": {
+        "made": 7,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 35,
+      "name": "Diogo Matos",
+      "email": "diogo@example.com",
+      "phone": "+351918887770",
+      "visits": 5,
+      "last_visit_date": "2025-07-29",
+      "reservations": {
+        "made": 8,
+        "cancelled": 0,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 36,
+      "name": "Vera Costa",
+      "email": "vera@example.com",
+      "phone": "+351912345683",
+      "visits": 12,
+      "last_visit_date": "2025-05-04",
+      "reservations": {
+        "made": 12,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 37,
+      "name": "Rafael Tavares",
+      "email": "rafael@example.com",
+      "phone": "+351917654326",
+      "visits": 6,
+      "last_visit_date": "2025-07-31",
+      "reservations": {
+        "made": 12,
+        "cancelled": 1,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 38,
+      "name": "Cláudia Fonseca",
+      "email": "claudia@example.com",
+      "phone": "+351915667793",
+      "visits": 10,
+      "last_visit_date": "2025-01-26",
+      "reservations": {
+        "made": 12,
+        "cancelled": 5,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 39,
+      "name": "Eduardo Neves",
+      "email": "eduardo@example.com",
+      "phone": "+351918223349",
+      "visits": 7,
+      "last_visit_date": "2025-09-25",
+      "reservations": {
+        "made": 10,
+        "cancelled": 1,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 40,
+      "name": "Isabel Antunes",
+      "email": "isabel@example.com",
+      "phone": "+351916554438",
+      "visits": 9,
+      "last_visit_date": "2025-02-09",
+      "reservations": {
+        "made": 12,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 41,
+      "name": "Alexandre Gomes",
+      "email": "alexandre@example.com",
+      "phone": "+351919887771",
+      "visits": 3,
+      "last_visit_date": "2025-10-16",
+      "reservations": {
+        "made": 6,
+        "cancelled": 2,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 42,
+      "name": "Tatiana Faria",
+      "email": "tatiana@example.com",
+      "phone": "+351918887771",
+      "visits": 8,
+      "last_visit_date": "2025-11-13",
+      "reservations": {
+        "made": 9,
+        "cancelled": 4,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 43,
+      "name": "Nelson Monteiro",
+      "email": "nelson@example.com",
+      "phone": "+351912345684",
+      "visits": 5,
+      "last_visit_date": "2025-10-30",
+      "reservations": {
+        "made": 10,
+        "cancelled": 0,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 44,
+      "name": "Sandra Ramos",
+      "email": "sandra@example.com",
+      "phone": "+351917654327",
+      "visits": 11,
+      "last_visit_date": "2025-10-08",
+      "reservations": {
+        "made": 16,
+        "cancelled": 4,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 45,
+      "name": "João Lima",
+      "email": "joaol@example.com",
+      "phone": "+351915667794",
+      "visits": 4,
+      "last_visit_date": "2025-07-30",
+      "reservations": {
+        "made": 10,
+        "cancelled": 4,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 46,
+      "name": "Filipa Duarte",
+      "email": "filipa@example.com",
+      "phone": "+351918223350",
+      "visits": 6,
+      "last_visit_date": "2025-08-26",
+      "reservations": {
+        "made": 12,
+        "cancelled": 5,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 47,
+      "name": "Henrique Borges",
+      "email": "henrique@example.com",
+      "phone": "+351916554439",
+      "visits": 10,
+      "last_visit_date": "2024-12-12",
+      "reservations": {
+        "made": 12,
+        "cancelled": 3,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 48,
+      "name": "Mónica Leite",
+      "email": "monica@example.com",
+      "phone": "+351919887772",
+      "visits": 7,
+      "last_visit_date": "2025-05-02",
+      "reservations": {
+        "made": 13,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 49,
+      "name": "Artur Vieira",
+      "email": "artur@example.com",
+      "phone": "+351918887772",
+      "visits": 9,
+      "last_visit_date": "2025-08-08",
+      "reservations": {
+        "made": 10,
+        "cancelled": 0,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 50,
+      "name": "Luciana Freitas",
+      "email": "luciana@example.com",
+      "phone": "+351912345685",
+      "visits": 12,
+      "last_visit_date": "2025-12-02",
+      "reservations": {
+        "made": 18,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 51,
+      "name": "João Oliveira",
+      "email": "joaooliveira51@example.com",
+      "phone": "+351903105183",
+      "visits": 25,
+      "last_visit_date": "2025-07-23",
+      "reservations": {
+        "made": 25,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 52,
+      "name": "Patrícia Ramos",
+      "email": "patriciaramos52@example.com",
+      "phone": "+351973763116",
+      "visits": 18,
+      "last_visit_date": "2025-06-14",
+      "reservations": {
+        "made": 22,
+        "cancelled": 3,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 53,
+      "name": "Gabriela Coelho",
+      "email": "gabrielacoelho53@example.com",
+      "phone": "+351910651333",
+      "visits": 1,
+      "last_visit_date": "2025-03-13",
+      "reservations": {
+        "made": 6,
+        "cancelled": 1,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 54,
+      "name": "Mariana Pinto",
+      "email": "marianapinto54@example.com",
+      "phone": "+351931781080",
+      "visits": 14,
+      "last_visit_date": "2025-10-26",
+      "reservations": {
+        "made": 15,
+        "cancelled": 1,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 55,
+      "name": "Tatiana Monteiro",
+      "email": "tatianamonteiro55@example.com",
+      "phone": "+351960260647",
+      "visits": 6,
+      "last_visit_date": "2025-07-19",
+      "reservations": {
+        "made": 10,
+        "cancelled": 5,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 56,
+      "name": "Beatriz Gomes",
+      "email": "beatrizgomes56@example.com",
+      "phone": "+351930980500",
+      "visits": 9,
+      "last_visit_date": "2025-02-16",
+      "reservations": {
+        "made": 14,
+        "cancelled": 4,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 57,
+      "name": "Ana Fonseca",
+      "email": "anafonseca57@example.com",
+      "phone": "+351921913619",
+      "visits": 2,
+      "last_visit_date": "2025-08-08",
+      "reservations": {
+        "made": 0,
+        "cancelled": 0,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 58,
+      "name": "Lara Castro",
+      "email": "laracastro58@example.com",
+      "phone": "+351985435346",
+      "visits": 23,
+      "last_visit_date": "2025-10-06",
+      "reservations": {
+        "made": 23,
+        "cancelled": 3,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 59,
+      "name": "Teresa Batista",
+      "email": "teresabatista59@example.com",
+      "phone": "+351907991183",
+      "visits": 2,
+      "last_visit_date": "2025-03-28",
+      "reservations": {
+        "made": 4,
+        "cancelled": 1,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 60,
+      "name": "Rui Oliveira",
+      "email": "ruioliveira60@example.com",
+      "phone": "+351954278498",
+      "visits": 7,
+      "last_visit_date": "2025-12-08",
+      "reservations": {
+        "made": 13,
+        "cancelled": 2,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 61,
+      "name": "Rui Jesus",
+      "email": "ruijesus61@example.com",
+      "phone": "+351911824493",
+      "visits": 8,
+      "last_visit_date": "2025-06-20",
+      "reservations": {
+        "made": 9,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 62,
+      "name": "Nelson Tavares",
+      "email": "nelsontavares62@example.com",
+      "phone": "+351901640052",
+      "visits": 8,
+      "last_visit_date": "2025-01-20",
+      "reservations": {
+        "made": 10,
+        "cancelled": 1,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 63,
+      "name": "Henrique Azevedo",
+      "email": "henriqueazevedo63@example.com",
+      "phone": "+351980112805",
+      "visits": 13,
+      "last_visit_date": "2025-02-17",
+      "reservations": {
+        "made": 19,
+        "cancelled": 1,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 64,
+      "name": "Tiago Ferreira",
+      "email": "tiagoferreira64@example.com",
+      "phone": "+351950533158",
+      "visits": 9,
+      "last_visit_date": "2025-05-18",
+      "reservations": {
+        "made": 9,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 65,
+      "name": "Francisca Gonçalves",
+      "email": "franciscagoncalves65@example.com",
+      "phone": "+351902563421",
+      "visits": 13,
+      "last_visit_date": "2025-05-31",
+      "reservations": {
+        "made": 11,
+        "cancelled": 3,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 66,
+      "name": "André Antunes",
+      "email": "andreantunes66@example.com",
+      "phone": "+351943303654",
+      "visits": 11,
+      "last_visit_date": "2025-11-07",
+      "reservations": {
+        "made": 13,
+        "cancelled": 2,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 67,
+      "name": "Nuno Borges",
+      "email": "nunoborges67@example.com",
+      "phone": "+351901429401",
+      "visits": 10,
+      "last_visit_date": "2025-02-10",
+      "reservations": {
+        "made": 14,
+        "cancelled": 2,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 68,
+      "name": "Cláudia Dias",
+      "email": "claudiadias68@example.com",
+      "phone": "+351916934060",
+      "visits": 16,
+      "last_visit_date": "2025-03-21",
+      "reservations": {
+        "made": 22,
+        "cancelled": 5,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 69,
+      "name": "Cátia Vieira",
+      "email": "catiavieira69@example.com",
+      "phone": "+351959514846",
+      "visits": 2,
+      "last_visit_date": "2025-06-28",
+      "reservations": {
+        "made": 6,
+        "cancelled": 5,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 70,
+      "name": "Henrique Jesus",
+      "email": "henriquejesus70@example.com",
+      "phone": "+351966299468",
+      "visits": 6,
+      "last_visit_date": "2025-12-12",
+      "reservations": {
+        "made": 8,
+        "cancelled": 2,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 71,
+      "name": "Cláudia Castro",
+      "email": "claudiacastro71@example.com",
+      "phone": "+351957773872",
+      "visits": 19,
+      "last_visit_date": "2025-01-09",
+      "reservations": {
+        "made": 18,
+        "cancelled": 2,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 72,
+      "name": "Sara Batista",
+      "email": "sarabatista72@example.com",
+      "phone": "+351943320037",
+      "visits": 7,
+      "last_visit_date": "2025-02-03",
+      "reservations": {
+        "made": 6,
+        "cancelled": 3,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 73,
+      "name": "Rui Faria",
+      "email": "ruifaria73@example.com",
+      "phone": "+351936763201",
+      "visits": 18,
+      "last_visit_date": "2025-05-09",
+      "reservations": {
+        "made": 19,
+        "cancelled": 1,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 74,
+      "name": "Ana Leite",
+      "email": "analeite74@example.com",
+      "phone": "+351917278895",
+      "visits": 7,
+      "last_visit_date": "2025-04-30",
+      "reservations": {
+        "made": 13,
+        "cancelled": 3,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 75,
+      "name": "Sílvia Fernandes",
+      "email": "silviafernandes75@example.com",
+      "phone": "+351974348734",
+      "visits": 15,
+      "last_visit_date": "2025-05-01",
+      "reservations": {
+        "made": 14,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 76,
+      "name": "Gustavo Pinto",
+      "email": "gustavopinto76@example.com",
+      "phone": "+351958122362",
+      "visits": 10,
+      "last_visit_date": "2024-12-16",
+      "reservations": {
+        "made": 11,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 77,
+      "name": "Rafael Mendes",
+      "email": "rafaelmendes77@example.com",
+      "phone": "+351976036690",
+      "visits": 17,
+      "last_visit_date": "2025-02-21",
+      "reservations": {
+        "made": 21,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 78,
+      "name": "Fernando Teixeira",
+      "email": "fernandoteixeira78@example.com",
+      "phone": "+351968893734",
+      "visits": 12,
+      "last_visit_date": "2025-05-03",
+      "reservations": {
+        "made": 17,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 79,
+      "name": "Susana Neves",
+      "email": "susananeves79@example.com",
+      "phone": "+351927298069",
+      "visits": 12,
+      "last_visit_date": "2025-02-27",
+      "reservations": {
+        "made": 10,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 80,
+      "name": "Tiago Antunes",
+      "email": "tiagoantunes80@example.com",
+      "phone": "+351904653755",
+      "visits": 5,
+      "last_visit_date": "2025-06-01",
+      "reservations": {
+        "made": 7,
+        "cancelled": 3,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 81,
+      "name": "Matilde Costa",
+      "email": "matildecosta81@example.com",
+      "phone": "+351908053100",
+      "visits": 15,
+      "last_visit_date": "2025-08-08",
+      "reservations": {
+        "made": 16,
+        "cancelled": 0,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 82,
+      "name": "Gustavo Jesus",
+      "email": "gustavojesus82@example.com",
+      "phone": "+351919374529",
+      "visits": 15,
+      "last_visit_date": "2025-02-05",
+      "reservations": {
+        "made": 14,
+        "cancelled": 1,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 83,
+      "name": "Bruno Castro",
+      "email": "brunocastro83@example.com",
+      "phone": "+351949663193",
+      "visits": 0,
+      "last_visit_date": "2025-10-21",
+      "reservations": {
+        "made": 2,
+        "cancelled": 2,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 84,
+      "name": "Tomás Ramos",
+      "email": "tomasramos84@example.com",
+      "phone": "+351958651850",
+      "visits": 1,
+      "last_visit_date": "2025-05-11",
+      "reservations": {
+        "made": 6,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 85,
+      "name": "Cátia Faria",
+      "email": "catiafaria85@example.com",
+      "phone": "+351926284987",
+      "visits": 14,
+      "last_visit_date": "2025-04-18",
+      "reservations": {
+        "made": 18,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 86,
+      "name": "Paulo Almeida",
+      "email": "pauloalmeida86@example.com",
+      "phone": "+351947379965",
+      "visits": 2,
+      "last_visit_date": "2025-11-28",
+      "reservations": {
+        "made": 7,
+        "cancelled": 2,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 87,
+      "name": "Tatiana Lopes",
+      "email": "tatianalopes87@example.com",
+      "phone": "+351945494808",
+      "visits": 11,
+      "last_visit_date": "2025-09-06",
+      "reservations": {
+        "made": 10,
+        "cancelled": 1,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 88,
+      "name": "Tatiana Leite",
+      "email": "tatianaleite88@example.com",
+      "phone": "+351977701436",
+      "visits": 7,
+      "last_visit_date": "2024-12-23",
+      "reservations": {
+        "made": 8,
+        "cancelled": 2,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 89,
+      "name": "Alexandre Leite",
+      "email": "alexandreleite89@example.com",
+      "phone": "+351956855744",
+      "visits": 16,
+      "last_visit_date": "2025-08-06",
+      "reservations": {
+        "made": 17,
+        "cancelled": 0,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 90,
+      "name": "Paulo Martins",
+      "email": "paulomartins90@example.com",
+      "phone": "+351923374989",
+      "visits": 17,
+      "last_visit_date": "2025-07-21",
+      "reservations": {
+        "made": 16,
+        "cancelled": 1,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 91,
+      "name": "Inês Barros",
+      "email": "inesbarros91@example.com",
+      "phone": "+351940824008",
+      "visits": 5,
+      "last_visit_date": "2025-07-16",
+      "reservations": {
+        "made": 5,
+        "cancelled": 5,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 92,
+      "name": "Bruno Silva",
+      "email": "brunosilva92@example.com",
+      "phone": "+351947775204",
+      "visits": 18,
+      "last_visit_date": "2025-04-12",
+      "reservations": {
+        "made": 17,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 93,
+      "name": "Tatiana Oliveira",
+      "email": "tatianaoliveira93@example.com",
+      "phone": "+351902294131",
+      "visits": 18,
+      "last_visit_date": "2025-03-02",
+      "reservations": {
+        "made": 22,
+        "cancelled": 4,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 94,
+      "name": "Leonor Duarte",
+      "email": "leonorduarte94@example.com",
+      "phone": "+351977496499",
+      "visits": 12,
+      "last_visit_date": "2025-11-12",
+      "reservations": {
+        "made": 11,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 95,
+      "name": "Helena Neves",
+      "email": "helenaneves95@example.com",
+      "phone": "+351923281206",
+      "visits": 2,
+      "last_visit_date": "2025-04-26",
+      "reservations": {
+        "made": 7,
+        "cancelled": 2,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 96,
+      "name": "Inês Carvalho",
+      "email": "inescarvalho96@example.com",
+      "phone": "+351971349361",
+      "visits": 9,
+      "last_visit_date": "2025-03-09",
+      "reservations": {
+        "made": 10,
+        "cancelled": 5,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 97,
+      "name": "Marco Pinto",
+      "email": "marcopinto97@example.com",
+      "phone": "+351910249947",
+      "visits": 4,
+      "last_visit_date": "2025-10-10",
+      "reservations": {
+        "made": 9,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 98,
+      "name": "Débora Figueiredo",
+      "email": "deborafigueiredo98@example.com",
+      "phone": "+351988771906",
+      "visits": 8,
+      "last_visit_date": "2025-06-30",
+      "reservations": {
+        "made": 10,
+        "cancelled": 0,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 99,
+      "name": "Inês Lima",
+      "email": "ineslima99@example.com",
+      "phone": "+351990490278",
+      "visits": 18,
+      "last_visit_date": "2025-01-13",
+      "reservations": {
+        "made": 23,
+        "cancelled": 2,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 100,
+      "name": "Artur Vieira",
+      "email": "arturvieira100@example.com",
+      "phone": "+351971756551",
+      "visits": 23,
+      "last_visit_date": "2025-09-21",
+      "reservations": {
+        "made": 23,
+        "cancelled": 3,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 101,
+      "name": "Ricardo Neves",
+      "email": "ricardoneves101@example.com",
+      "phone": "+351980715451",
+      "visits": 12,
+      "last_visit_date": "2025-05-20",
+      "reservations": {
+        "made": 18,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 102,
+      "name": "Rafael Pereira",
+      "email": "rafaelpereira102@example.com",
+      "phone": "+351985977034",
+      "visits": 6,
+      "last_visit_date": "2025-03-06",
+      "reservations": {
+        "made": 6,
+        "cancelled": 2,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 103,
+      "name": "Rui Pires",
+      "email": "ruipires103@example.com",
+      "phone": "+351910932480",
+      "visits": 15,
+      "last_visit_date": "2025-03-05",
+      "reservations": {
+        "made": 19,
+        "cancelled": 0,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 104,
+      "name": "Matilde Martins",
+      "email": "matildemartins104@example.com",
+      "phone": "+351912748467",
+      "visits": 14,
+      "last_visit_date": "2025-04-15",
+      "reservations": {
+        "made": 15,
+        "cancelled": 3,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 105,
+      "name": "Diogo Gomes",
+      "email": "diogogomes105@example.com",
+      "phone": "+351982146584",
+      "visits": 19,
+      "last_visit_date": "2025-12-11",
+      "reservations": {
+        "made": 21,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 106,
+      "name": "Matilde Castro",
+      "email": "matildecastro106@example.com",
+      "phone": "+351972787558",
+      "visits": 18,
+      "last_visit_date": "2025-03-09",
+      "reservations": {
+        "made": 22,
+        "cancelled": 3,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 107,
+      "name": "Gabriela Gomes",
+      "email": "gabrielagomes107@example.com",
+      "phone": "+351996360576",
+      "visits": 7,
+      "last_visit_date": "2025-05-29",
+      "reservations": {
+        "made": 7,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 108,
+      "name": "Tiago Fonseca",
+      "email": "tiagofonseca108@example.com",
+      "phone": "+351951718702",
+      "visits": 18,
+      "last_visit_date": "2025-05-17",
+      "reservations": {
+        "made": 18,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 109,
+      "name": "Tomás Ribeiro",
+      "email": "tomasribeiro109@example.com",
+      "phone": "+351996158657",
+      "visits": 10,
+      "last_visit_date": "2025-03-10",
+      "reservations": {
+        "made": 8,
+        "cancelled": 4,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 110,
+      "name": "Gustavo Faria",
+      "email": "gustavofaria110@example.com",
+      "phone": "+351931611724",
+      "visits": 9,
+      "last_visit_date": "2025-11-28",
+      "reservations": {
+        "made": 7,
+        "cancelled": 2,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 111,
+      "name": "Ricardo Rocha",
+      "email": "ricardorocha111@example.com",
+      "phone": "+351962386922",
+      "visits": 11,
+      "last_visit_date": "2025-09-14",
+      "reservations": {
+        "made": 10,
+        "cancelled": 4,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 112,
+      "name": "Daniel Lima",
+      "email": "daniellima112@example.com",
+      "phone": "+351979237474",
+      "visits": 7,
+      "last_visit_date": "2025-01-05",
+      "reservations": {
+        "made": 5,
+        "cancelled": 3,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 113,
+      "name": "Nuno Borges",
+      "email": "nunoborges113@example.com",
+      "phone": "+351917594647",
+      "visits": 5,
+      "last_visit_date": "2025-07-11",
+      "reservations": {
+        "made": 6,
+        "cancelled": 3,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 114,
+      "name": "Bruno Almeida",
+      "email": "brunoalmeida114@example.com",
+      "phone": "+351995944064",
+      "visits": 12,
+      "last_visit_date": "2025-12-08",
+      "reservations": {
+        "made": 10,
+        "cancelled": 4,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 115,
+      "name": "Matilde Carvalho",
+      "email": "matildecarvalho115@example.com",
+      "phone": "+351995339421",
+      "visits": 7,
+      "last_visit_date": "2025-01-25",
+      "reservations": {
+        "made": 5,
+        "cancelled": 2,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 116,
+      "name": "Miguel Castro",
+      "email": "miguelcastro116@example.com",
+      "phone": "+351921456232",
+      "visits": 11,
+      "last_visit_date": "2025-03-11",
+      "reservations": {
+        "made": 14,
+        "cancelled": 4,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 117,
+      "name": "Matilde Fernandes",
+      "email": "matildefernandes117@example.com",
+      "phone": "+351974517123",
+      "visits": 8,
+      "last_visit_date": "2024-12-31",
+      "reservations": {
+        "made": 12,
+        "cancelled": 4,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 118,
+      "name": "Sara Figueiredo",
+      "email": "sarafigueiredo118@example.com",
+      "phone": "+351948175496",
+      "visits": 0,
+      "last_visit_date": "2025-01-20",
+      "reservations": {
+        "made": 3,
+        "cancelled": 0,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 119,
+      "name": "Alexandre Santos",
+      "email": "alexandresantos119@example.com",
+      "phone": "+351985931746",
+      "visits": 19,
+      "last_visit_date": "2025-10-14",
+      "reservations": {
+        "made": 19,
+        "cancelled": 0,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 120,
+      "name": "Marta Tavares",
+      "email": "martatavares120@example.com",
+      "phone": "+351913826758",
+      "visits": 3,
+      "last_visit_date": "2025-05-12",
+      "reservations": {
+        "made": 3,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 121,
+      "name": "Matilde Tavares",
+      "email": "matildetavares121@example.com",
+      "phone": "+351964053773",
+      "visits": 19,
+      "last_visit_date": "2025-06-10",
+      "reservations": {
+        "made": 18,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 122,
+      "name": "Filipa Cunha",
+      "email": "filipacunha122@example.com",
+      "phone": "+351906431713",
+      "visits": 11,
+      "last_visit_date": "2025-01-18",
+      "reservations": {
+        "made": 9,
+        "cancelled": 0,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 123,
+      "name": "Gustavo Jesus",
+      "email": "gustavojesus123@example.com",
+      "phone": "+351931839335",
+      "visits": 18,
+      "last_visit_date": "2025-09-28",
+      "reservations": {
+        "made": 16,
+        "cancelled": 2,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 124,
+      "name": "Tiago Borges",
+      "email": "tiagoborges124@example.com",
+      "phone": "+351921020539",
+      "visits": 8,
+      "last_visit_date": "2025-06-30",
+      "reservations": {
+        "made": 6,
+        "cancelled": 1,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 125,
+      "name": "Ana Jesus",
+      "email": "anajesus125@example.com",
+      "phone": "+351981177589",
+      "visits": 13,
+      "last_visit_date": "2025-10-18",
+      "reservations": {
+        "made": 18,
+        "cancelled": 4,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 126,
+      "name": "Daniel Ferreira",
+      "email": "danielferreira126@example.com",
+      "phone": "+351947007661",
+      "visits": 16,
+      "last_visit_date": "2025-04-05",
+      "reservations": {
+        "made": 21,
+        "cancelled": 0,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 127,
+      "name": "Paulo Dias",
+      "email": "paulodias127@example.com",
+      "phone": "+351912499856",
+      "visits": 4,
+      "last_visit_date": "2025-02-10",
+      "reservations": {
+        "made": 10,
+        "cancelled": 2,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 128,
+      "name": "Nelson Dias",
+      "email": "nelsondias128@example.com",
+      "phone": "+351911836736",
+      "visits": 13,
+      "last_visit_date": "2025-06-22",
+      "reservations": {
+        "made": 18,
+        "cancelled": 3,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 129,
+      "name": "Patrícia Rodrigues",
+      "email": "patriciarodrigues129@example.com",
+      "phone": "+351965452711",
+      "visits": 10,
+      "last_visit_date": "2025-10-30",
+      "reservations": {
+        "made": 9,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 130,
+      "name": "Samuel Reis",
+      "email": "samuelreis130@example.com",
+      "phone": "+351928098851",
+      "visits": 11,
+      "last_visit_date": "2025-05-16",
+      "reservations": {
+        "made": 14,
+        "cancelled": 5,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 131,
+      "name": "Gabriela Coelho",
+      "email": "gabrielacoelho131@example.com",
+      "phone": "+351949451983",
+      "visits": 1,
+      "last_visit_date": "2025-09-24",
+      "reservations": {
+        "made": 6,
+        "cancelled": 1,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 132,
+      "name": "Fernando Leite",
+      "email": "fernandoleite132@example.com",
+      "phone": "+351914936899",
+      "visits": 11,
+      "last_visit_date": "2025-01-01",
+      "reservations": {
+        "made": 17,
+        "cancelled": 0,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 133,
+      "name": "Carla Gonçalves",
+      "email": "carlagoncalves133@example.com",
+      "phone": "+351945502296",
+      "visits": 8,
+      "last_visit_date": "2025-11-07",
+      "reservations": {
+        "made": 8,
+        "cancelled": 5,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 134,
+      "name": "Sara Reis",
+      "email": "sarareis134@example.com",
+      "phone": "+351936675254",
+      "visits": 16,
+      "last_visit_date": "2025-06-29",
+      "reservations": {
+        "made": 15,
+        "cancelled": 0,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 135,
+      "name": "Carlos Batista",
+      "email": "carlosbatista135@example.com",
+      "phone": "+351901476797",
+      "visits": 19,
+      "last_visit_date": "2025-05-14",
+      "reservations": {
+        "made": 21,
+        "cancelled": 1,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 136,
+      "name": "Fernando Vieira",
+      "email": "fernandovieira136@example.com",
+      "phone": "+351949784036",
+      "visits": 3,
+      "last_visit_date": "2025-02-09",
+      "reservations": {
+        "made": 1,
+        "cancelled": 0,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 137,
+      "name": "Marta Lopes",
+      "email": "martalopes137@example.com",
+      "phone": "+351944510762",
+      "visits": 4,
+      "last_visit_date": "2025-10-07",
+      "reservations": {
+        "made": 8,
+        "cancelled": 4,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 138,
+      "name": "Nelson Leite",
+      "email": "nelsonleite138@example.com",
+      "phone": "+351916060715",
+      "visits": 11,
+      "last_visit_date": "2025-02-21",
+      "reservations": {
+        "made": 15,
+        "cancelled": 4,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 139,
+      "name": "Vítor Faria",
+      "email": "vitorfaria139@example.com",
+      "phone": "+351941605297",
+      "visits": 13,
+      "last_visit_date": "2024-12-24",
+      "reservations": {
+        "made": 16,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 140,
+      "name": "Duarte Rodrigues",
+      "email": "duarterodrigues140@example.com",
+      "phone": "+351969681645",
+      "visits": 7,
+      "last_visit_date": "2025-08-21",
+      "reservations": {
+        "made": 10,
+        "cancelled": 1,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 141,
+      "name": "Nelson Faria",
+      "email": "nelsonfaria141@example.com",
+      "phone": "+351988355231",
+      "visits": 3,
+      "last_visit_date": "2025-09-29",
+      "reservations": {
+        "made": 5,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 142,
+      "name": "Luciana Sousa",
+      "email": "lucianasousa142@example.com",
+      "phone": "+351912779979",
+      "visits": 20,
+      "last_visit_date": "2025-01-17",
+      "reservations": {
+        "made": 23,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 143,
+      "name": "Beatriz Freitas",
+      "email": "beatrizfreitas143@example.com",
+      "phone": "+351977449058",
+      "visits": 2,
+      "last_visit_date": "2025-11-05",
+      "reservations": {
+        "made": 4,
+        "cancelled": 3,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 144,
+      "name": "Miguel Pereira",
+      "email": "miguelpereira144@example.com",
+      "phone": "+351941199867",
+      "visits": 11,
+      "last_visit_date": "2025-02-18",
+      "reservations": {
+        "made": 17,
+        "cancelled": 5,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 145,
+      "name": "Eduardo Ramos",
+      "email": "eduardoramos145@example.com",
+      "phone": "+351935978207",
+      "visits": 20,
+      "last_visit_date": "2025-10-21",
+      "reservations": {
+        "made": 23,
+        "cancelled": 5,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 146,
+      "name": "Nelson Cunha",
+      "email": "nelsoncunha146@example.com",
+      "phone": "+351903778892",
+      "visits": 5,
+      "last_visit_date": "2025-06-09",
+      "reservations": {
+        "made": 8,
+        "cancelled": 2,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 147,
+      "name": "Rafael Moreira",
+      "email": "rafaelmoreira147@example.com",
+      "phone": "+351990515186",
+      "visits": 10,
+      "last_visit_date": "2025-07-20",
+      "reservations": {
+        "made": 12,
+        "cancelled": 5,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 148,
+      "name": "Susana Costa",
+      "email": "susanacosta148@example.com",
+      "phone": "+351925462914",
+      "visits": 18,
+      "last_visit_date": "2025-03-01",
+      "reservations": {
+        "made": 22,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 149,
+      "name": "Afonso Jesus",
+      "email": "afonsojesus149@example.com",
+      "phone": "+351916850542",
+      "visits": 16,
+      "last_visit_date": "2025-08-25",
+      "reservations": {
+        "made": 19,
+        "cancelled": 3,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 150,
+      "name": "Inês Jesus",
+      "email": "inesjesus150@example.com",
+      "phone": "+351914188805",
+      "visits": 4,
+      "last_visit_date": "2025-01-30",
+      "reservations": {
+        "made": 4,
+        "cancelled": 4,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 151,
+      "name": "Beatriz Fernandes",
+      "email": "beatrizfernandes151@example.com",
+      "phone": "+351992706537",
+      "visits": 5,
+      "last_visit_date": "2025-02-03",
+      "reservations": {
+        "made": 7,
+        "cancelled": 5,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 152,
+      "name": "Inês Borges",
+      "email": "inesborges152@example.com",
+      "phone": "+351947359774",
+      "visits": 7,
+      "last_visit_date": "2025-05-31",
+      "reservations": {
+        "made": 13,
+        "cancelled": 4,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 153,
+      "name": "Carlos Gomes",
+      "email": "carlosgomes153@example.com",
+      "phone": "+351924075818",
+      "visits": 19,
+      "last_visit_date": "2025-10-10",
+      "reservations": {
+        "made": 21,
+        "cancelled": 0,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 154,
+      "name": "Joana Freitas",
+      "email": "joanafreitas154@example.com",
+      "phone": "+351926137506",
+      "visits": 16,
+      "last_visit_date": "2025-11-15",
+      "reservations": {
+        "made": 20,
+        "cancelled": 4,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 155,
+      "name": "Gustavo Nunes",
+      "email": "gustavonunes155@example.com",
+      "phone": "+351953051522",
+      "visits": 2,
+      "last_visit_date": "2025-11-23",
+      "reservations": {
+        "made": 4,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 156,
+      "name": "Catarina Azevedo",
+      "email": "catarinaazevedo156@example.com",
+      "phone": "+351979010432",
+      "visits": 15,
+      "last_visit_date": "2025-03-07",
+      "reservations": {
+        "made": 21,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 157,
+      "name": "Leonor Carvalho",
+      "email": "leonorcarvalho157@example.com",
+      "phone": "+351941036971",
+      "visits": 7,
+      "last_visit_date": "2025-10-17",
+      "reservations": {
+        "made": 12,
+        "cancelled": 4,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 158,
+      "name": "Raquel Fonseca",
+      "email": "raquelfonseca158@example.com",
+      "phone": "+351932460953",
+      "visits": 18,
+      "last_visit_date": "2025-02-23",
+      "reservations": {
+        "made": 22,
+        "cancelled": 1,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 159,
+      "name": "Sandra Barros",
+      "email": "sandrabarros159@example.com",
+      "phone": "+351988888067",
+      "visits": 2,
+      "last_visit_date": "2025-11-20",
+      "reservations": {
+        "made": 6,
+        "cancelled": 2,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 160,
+      "name": "Samuel Santos",
+      "email": "samuelsantos160@example.com",
+      "phone": "+351915319520",
+      "visits": 11,
+      "last_visit_date": "2025-06-15",
+      "reservations": {
+        "made": 17,
+        "cancelled": 2,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 161,
+      "name": "Matilde Moreira",
+      "email": "matildemoreira161@example.com",
+      "phone": "+351972217043",
+      "visits": 14,
+      "last_visit_date": "2025-11-20",
+      "reservations": {
+        "made": 15,
+        "cancelled": 0,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 162,
+      "name": "Teresa Teixeira",
+      "email": "teresateixeira162@example.com",
+      "phone": "+351968740345",
+      "visits": 16,
+      "last_visit_date": "2025-11-18",
+      "reservations": {
+        "made": 19,
+        "cancelled": 2,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 163,
+      "name": "Francisca Barros",
+      "email": "franciscabarros163@example.com",
+      "phone": "+351967652775",
+      "visits": 13,
+      "last_visit_date": "2025-03-22",
+      "reservations": {
+        "made": 15,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 164,
+      "name": "Sara Vieira",
+      "email": "saravieira164@example.com",
+      "phone": "+351928451154",
+      "visits": 19,
+      "last_visit_date": "2025-07-09",
+      "reservations": {
+        "made": 24,
+        "cancelled": 4,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 165,
+      "name": "Carlos Pires",
+      "email": "carlospires165@example.com",
+      "phone": "+351957059640",
+      "visits": 14,
+      "last_visit_date": "2025-11-04",
+      "reservations": {
+        "made": 18,
+        "cancelled": 2,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 166,
+      "name": "Carla Sousa",
+      "email": "carlasousa166@example.com",
+      "phone": "+351970213556",
+      "visits": 19,
+      "last_visit_date": "2025-02-25",
+      "reservations": {
+        "made": 17,
+        "cancelled": 4,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 167,
+      "name": "Nuno Freitas",
+      "email": "nunofreitas167@example.com",
+      "phone": "+351957192856",
+      "visits": 11,
+      "last_visit_date": "2025-07-05",
+      "reservations": {
+        "made": 13,
+        "cancelled": 1,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 168,
+      "name": "Carla Reis",
+      "email": "carlareis168@example.com",
+      "phone": "+351978681447",
+      "visits": 5,
+      "last_visit_date": "2025-08-25",
+      "reservations": {
+        "made": 7,
+        "cancelled": 5,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 169,
+      "name": "André Martins",
+      "email": "andremartins169@example.com",
+      "phone": "+351917271551",
+      "visits": 4,
+      "last_visit_date": "2025-03-06",
+      "reservations": {
+        "made": 10,
+        "cancelled": 2,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 170,
+      "name": "Duarte Fernandes",
+      "email": "duartefernandes170@example.com",
+      "phone": "+351925831323",
+      "visits": 20,
+      "last_visit_date": "2025-04-04",
+      "reservations": {
+        "made": 18,
+        "cancelled": 2,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 171,
+      "name": "Isabel Leite",
+      "email": "isabelleite171@example.com",
+      "phone": "+351991146786",
+      "visits": 4,
+      "last_visit_date": "2025-05-17",
+      "reservations": {
+        "made": 3,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 172,
+      "name": "Hugo Oliveira",
+      "email": "hugooliveira172@example.com",
+      "phone": "+351978528922",
+      "visits": 14,
+      "last_visit_date": "2025-05-05",
+      "reservations": {
+        "made": 21,
+        "cancelled": 0,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 173,
+      "name": "Sandra Sousa",
+      "email": "sandrasousa173@example.com",
+      "phone": "+351922535841",
+      "visits": 9,
+      "last_visit_date": "2025-08-06",
+      "reservations": {
+        "made": 10,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 174,
+      "name": "Tiago Faria",
+      "email": "tiagofaria174@example.com",
+      "phone": "+351998182992",
+      "visits": 9,
+      "last_visit_date": "2025-09-16",
+      "reservations": {
+        "made": 12,
+        "cancelled": 4,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 175,
+      "name": "Afonso Santos",
+      "email": "afonsosantos175@example.com",
+      "phone": "+351909439690",
+      "visits": 2,
+      "last_visit_date": "2025-04-02",
+      "reservations": {
+        "made": 8,
+        "cancelled": 2,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 176,
+      "name": "Alexandre Almeida",
+      "email": "alexandrealmeida176@example.com",
+      "phone": "+351947102767",
+      "visits": 12,
+      "last_visit_date": "2025-04-19",
+      "reservations": {
+        "made": 13,
+        "cancelled": 2,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 177,
+      "name": "Paulo Azevedo",
+      "email": "pauloazevedo177@example.com",
+      "phone": "+351956258815",
+      "visits": 10,
+      "last_visit_date": "2025-08-11",
+      "reservations": {
+        "made": 15,
+        "cancelled": 0,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 178,
+      "name": "Eduardo Almeida",
+      "email": "eduardoalmeida178@example.com",
+      "phone": "+351910469632",
+      "visits": 4,
+      "last_visit_date": "2025-06-28",
+      "reservations": {
+        "made": 7,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 179,
+      "name": "Tatiana Fonseca",
+      "email": "tatianafonseca179@example.com",
+      "phone": "+351974701687",
+      "visits": 14,
+      "last_visit_date": "2025-08-11",
+      "reservations": {
+        "made": 15,
+        "cancelled": 4,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 180,
+      "name": "Ana Pereira",
+      "email": "anapereira180@example.com",
+      "phone": "+351979748016",
+      "visits": 9,
+      "last_visit_date": "2025-10-05",
+      "reservations": {
+        "made": 11,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 181,
+      "name": "Catarina Figueiredo",
+      "email": "catarinafigueiredo181@example.com",
+      "phone": "+351906098358",
+      "visits": 11,
+      "last_visit_date": "2025-07-18",
+      "reservations": {
+        "made": 10,
+        "cancelled": 3,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 182,
+      "name": "Catarina Leite",
+      "email": "catarinaleite182@example.com",
+      "phone": "+351999121655",
+      "visits": 8,
+      "last_visit_date": "2025-03-02",
+      "reservations": {
+        "made": 11,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 183,
+      "name": "Luciana Fonseca",
+      "email": "lucianafonseca183@example.com",
+      "phone": "+351980002578",
+      "visits": 12,
+      "last_visit_date": "2025-04-23",
+      "reservations": {
+        "made": 12,
+        "cancelled": 4,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 184,
+      "name": "Paulo Matos",
+      "email": "paulomatos184@example.com",
+      "phone": "+351926949588",
+      "visits": 10,
+      "last_visit_date": "2025-03-15",
+      "reservations": {
+        "made": 15,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 185,
+      "name": "Alexandre Santos",
+      "email": "alexandresantos185@example.com",
+      "phone": "+351951694097",
+      "visits": 11,
+      "last_visit_date": "2025-07-30",
+      "reservations": {
+        "made": 12,
+        "cancelled": 5,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 186,
+      "name": "Artur Monteiro",
+      "email": "arturmonteiro186@example.com",
+      "phone": "+351989623091",
+      "visits": 5,
+      "last_visit_date": "2025-09-06",
+      "reservations": {
+        "made": 3,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 187,
+      "name": "Rafael Sousa",
+      "email": "rafaelsousa187@example.com",
+      "phone": "+351936897028",
+      "visits": 13,
+      "last_visit_date": "2025-08-28",
+      "reservations": {
+        "made": 19,
+        "cancelled": 2,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 188,
+      "name": "Sandra Nunes",
+      "email": "sandranunes188@example.com",
+      "phone": "+351927858549",
+      "visits": 10,
+      "last_visit_date": "2025-04-09",
+      "reservations": {
+        "made": 11,
+        "cancelled": 1,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 189,
+      "name": "Henrique Teixeira",
+      "email": "henriqueteixeira189@example.com",
+      "phone": "+351944375758",
+      "visits": 7,
+      "last_visit_date": "2025-07-25",
+      "reservations": {
+        "made": 9,
+        "cancelled": 0,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 190,
+      "name": "Sílvia Figueiredo",
+      "email": "silviafigueiredo190@example.com",
+      "phone": "+351924041574",
+      "visits": 11,
+      "last_visit_date": "2025-04-11",
+      "reservations": {
+        "made": 12,
+        "cancelled": 1,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 191,
+      "name": "Teresa Leite",
+      "email": "teresaleite191@example.com",
+      "phone": "+351921993308",
+      "visits": 8,
+      "last_visit_date": "2025-08-19",
+      "reservations": {
+        "made": 9,
+        "cancelled": 0,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 192,
+      "name": "Rafael Mendes",
+      "email": "rafaelmendes192@example.com",
+      "phone": "+351912082677",
+      "visits": 15,
+      "last_visit_date": "2025-01-13",
+      "reservations": {
+        "made": 16,
+        "cancelled": 2,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 193,
+      "name": "Ricardo Cunha",
+      "email": "ricardocunha193@example.com",
+      "phone": "+351919380262",
+      "visits": 1,
+      "last_visit_date": "2025-11-24",
+      "reservations": {
+        "made": 5,
+        "cancelled": 3,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 194,
+      "name": "Teresa Reis",
+      "email": "teresareis194@example.com",
+      "phone": "+351900499154",
+      "visits": 9,
+      "last_visit_date": "2025-04-24",
+      "reservations": {
+        "made": 15,
+        "cancelled": 4,
+        "no_shows": 3
+      }
+    },
+    {
+      "id": 195,
+      "name": "Rui Jesus",
+      "email": "ruijesus195@example.com",
+      "phone": "+351974315274",
+      "visits": 16,
+      "last_visit_date": "2025-09-08",
+      "reservations": {
+        "made": 14,
+        "cancelled": 5,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 196,
+      "name": "Tomás Carvalho",
+      "email": "tomascarvalho196@example.com",
+      "phone": "+351932966851",
+      "visits": 18,
+      "last_visit_date": "2025-05-21",
+      "reservations": {
+        "made": 17,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    },
+    {
+      "id": 197,
+      "name": "Alexandre Correia",
+      "email": "alexandrecorreia197@example.com",
+      "phone": "+351904637454",
+      "visits": 7,
+      "last_visit_date": "2025-02-17",
+      "reservations": {
+        "made": 5,
+        "cancelled": 2,
+        "no_shows": 2
+      }
+    },
+    {
+      "id": 198,
+      "name": "Débora Almeida",
+      "email": "deboraalmeida198@example.com",
+      "phone": "+351917426841",
+      "visits": 1,
+      "last_visit_date": "2025-01-19",
+      "reservations": {
+        "made": 3,
+        "cancelled": 2,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 199,
+      "name": "Inês Jesus",
+      "email": "inesjesus199@example.com",
+      "phone": "+351927956878",
+      "visits": 15,
+      "last_visit_date": "2025-01-06",
+      "reservations": {
+        "made": 16,
+        "cancelled": 1,
+        "no_shows": 0
+      }
+    },
+    {
+      "id": 200,
+      "name": "Sandra Freitas",
+      "email": "sandrafreitas200@example.com",
+      "phone": "+351951910883",
+      "visits": 16,
+      "last_visit_date": "2025-02-22",
+      "reservations": {
+        "made": 22,
+        "cancelled": 1,
+        "no_shows": 1
+      }
+    }
+  ]
 }

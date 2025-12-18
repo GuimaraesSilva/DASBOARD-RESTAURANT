@@ -16,7 +16,15 @@ export interface Product {
 }
 
 export interface Customer {
+  id: number;
   name: string;
+  email: string;
+  phone: string;
   visits: number;
-  email?: string;
+  last_visit_date: string;
+  reservations: {
+    made: number;
+    cancelled: number;
+    no_shows: number;
+  };
 }

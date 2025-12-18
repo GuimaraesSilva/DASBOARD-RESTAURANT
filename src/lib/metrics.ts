@@ -1,9 +1,10 @@
-import ordersData from './orders.json';
-import productsData from './products.json';
-import customersData from './customers.json';
-import reservationsData from './reservations.json';
-import reviewsData from './reviews.json';
+import ordersData from '../data/orders.json';
+import productsData from '../data/products.json';
+import customersData from '../data/customers.json';
+import reservationsData from '../data/reservations.json';
+import reviewsData from '../data/reviews.json';
 import { DashboardMetric, TopProduct, VIPCustomer } from '@/types/dashboard';
+import type { Customer } from '@/types/metric';
 
 // Extrair arrays dos objetos wrapper
 const ordersList = (ordersData as any).orders || [];
@@ -265,7 +266,7 @@ export function getTopProducts(period: string = 'today'): TopProduct[] {
     .map(([productId, data]) => ({
       productId,
       sales: data.quantity,
-      revenue: data.revenue
+      revenue: data.revenue,
     }));
 
   return topProductIds
@@ -340,4 +341,84 @@ export function getVIPCustomers(period: string = 'today'): VIPCustomer[] {
       };
     })
     .filter((item): item is VIPCustomer => item !== null);
+}
+
+// ============================================
+// UTILITY FUNCTIONS FOR CUSTOMER METRICS
+// ============================================
+
+export function clamp01(n: number) {
+  if (!Number.isFinite(n)) return 0;
+  return Math.max(0, Math.min(1, n));
+}
+
+export function safeDiv(a: number, b: number) {
+  if (!b) return 0;
+  return a / b;
+}
+
+export function cancelRate(c: Customer) {
+  return clamp01(safeDiv(c.reservations.cancelled, c.reservations.made));
+}
+
+export function noShowRate(c: Customer) {
+  return clamp01(safeDiv(c.reservations.no_shows, c.reservations.made));
+}
+
+export function daysSince(dateISO: string, now = new Date()) {
+  const d = new Date(dateISO);
+  const ms = now.getTime() - d.getTime();
+  return Math.floor(ms / (1000 * 60 * 60 * 24));
+}
+
+export function maskEmail(email?: string | null) {
+  if (!email) return "—";
+  const [user, domain] = email.split("@");
+  if (!domain) return "—";
+  const u = user.length <= 2 ? user[0] + "*" : user.slice(0, 2) + "***";
+  return `${u}@${domain}`;
+}
+
+export function maskPhone(phone?: string | null) {
+  if (!phone) return "—";
+  const digits = phone.replace(/\s+/g, "");
+  if (digits.length <= 6) return phone;
+  return digits.slice(0, 4) + "****" + digits.slice(-2);
+}
+
+export function formatDatePT(dateISO: string) {
+  const d = new Date(dateISO);
+  return new Intl.DateTimeFormat("pt-PT", { year: "numeric", month: "short", day: "2-digit" }).format(d);
+}
+
+export function computeKpis(customers: Customer[]) {
+  const totalCustomers = customers.length;
+  const totalVisits = customers.reduce((s, c) => s + (c.visits ?? 0), 0);
+  const avgVisits = totalCustomers ? totalVisits / totalCustomers : 0;
+
+  const totals = customers.reduce(
+    (acc, c) => {
+      acc.made += c.reservations.made ?? 0;
+      acc.cancelled += c.reservations.cancelled ?? 0;
+      acc.noShows += c.reservations.no_shows ?? 0;
+      return acc;
+    },
+    { made: 0, cancelled: 0, noShows: 0 }
+  );
+
+  const cancelRateTotal = clamp01(safeDiv(totals.cancelled, totals.made));
+  const noShowRateTotal = clamp01(safeDiv(totals.noShows, totals.made));
+
+  return {
+    totalCustomers,
+    totalVisits,
+    avgVisits,
+    totals,
+    cancelRateTotal,
+    noShowRateTotal,
+  };
+}
+
+export function activeCount(customers: Customer[], daysWindow: number, now = new Date()) {
+  return customers.filter((c) => daysSince(c.last_visit_date, now) <= daysWindow).length;
 }

@@ -11,12 +11,6 @@ export const CustomersCard: React.FC<CustomersCardProps> = ({ customers }) => {
     return name.split(' ').map(n => n[0]).join('').slice(0, 2);
   };
 
-  const avatarColors = [
-    'from-purple-400 to-pink-400',
-    'from-blue-400 to-cyan-400',
-    'from-orange-400 to-red-400'
-  ];
-
   return (
     <Card>
       <CardHeader>
@@ -24,23 +18,27 @@ export const CustomersCard: React.FC<CustomersCardProps> = ({ customers }) => {
       </CardHeader>
       <CardContent>
         <div className="space-y-3">
-          {customers.map((customer, idx) => (
-            <div 
-              key={idx} 
-              className="bg-[#D4C5BE] rounded-lg p-4 flex items-center justify-between"
+          {customers.map((customer) => (
+            <div
+              key={customer.id}
+              className="bg-[#D4C5BE] rounded-lg p-4 flex items-center gap-4"
             >
-              <div className="flex items-center gap-3">
-                <div className={`w-10 h-10 rounded-full bg-[#263321] ${avatarColors[idx % avatarColors.length]} flex items-center justify-center text-white font-semibold shadow-sm`}>
-                  {getInitials(customer.name)}
-                </div>
-                <div>
-                  <p className="font-semibold text-[#3C3838] text-lg">{customer.name}</p>
-                  <p className="text-sm text-[#3C3838]/70">{customer.email || 'cliente@example.com'}</p>
-                </div>
+              <div className="w-12 h-12 rounded-full bg-[#263321] flex items-center justify-center text-white font-semibold shadow-sm">
+                {getInitials(customer.name)}
               </div>
-              <div className="text-right">
-                <span className="font-semibold text-[#3C3838] block">{customer.visits}</span>
-                <span className="text-sm text-[#3C3838]/70">visits</span>
+              <div className="flex-1">
+                <p className="font-semibold text-[#3C3838]">{customer.name}</p>
+                <p className="text-sm text-[#3C3838]/70">{customer.email}</p>
+              </div>
+              <div className="text-left">
+                <div className="flex justify-center items-center gap-1 pt-1">
+                  <p className="font-bold text-[#3C3838]">{customer.reservations.made}</p>
+                  <p className="text-xs text-[#3C3838]/70">reservations</p>
+                </div>
+                <div className="flex justify-center items-center gap-1 pt-1 border-t border-[#3C3838]/20">
+                  <p className="text-sm font-medium text-[#3C3838]">{customer.visits}</p>
+                  <p className="text-xs text-[#3C3838]/70">visits</p>
+                </div>
               </div>
             </div>
           ))}

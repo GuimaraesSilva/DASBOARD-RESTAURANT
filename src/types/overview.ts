@@ -1,6 +1,19 @@
 import { Product } from './products';
-import { Client } from './clients';
 import { PaymentMethod } from './payment';
+
+export interface Customer {
+  id: number;
+  name: string;
+  email: string;
+  phone: string;
+  visits: number;
+  last_visit_date: string;
+  reservations: {
+    made: number;
+    cancelled: number;
+    no_shows: number;
+  };
+}
 
 export interface DashboardData {
   metrics: {
@@ -18,7 +31,7 @@ export interface DashboardData {
     averageRating: number;
   };
   topProducts: Product[];
-  topClients: Client[];
+  topClients: Customer[];
   paymentMethods: PaymentMethod[];
 }
 
