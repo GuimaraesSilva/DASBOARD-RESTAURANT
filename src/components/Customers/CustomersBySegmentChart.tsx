@@ -8,7 +8,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts";
 
 export function CustomersBySegmentChart({ customers }: { customers: Customer[] }) {
   const bySegment = customers.reduce<Record<string, number>>((acc, c) => {
@@ -29,20 +29,43 @@ export function CustomersBySegmentChart({ customers }: { customers: Customer[] }
           Clientes por segmento
         </CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="p-2 sm:p-6">
         <ChartContainer
           config={{
             count: { label: "Clientes" },
           }}
-          className="h-[280px]"
+          className="h-[280px] w-full"
         >
-          <BarChart data={segmentData}>
-            <CartesianGrid vertical={false} />
-            <XAxis dataKey="segment" tickLine={false} axisLine={false} />
-            <YAxis allowDecimals={false} />
-            <ChartTooltip content={<ChartTooltipContent />} />
-            <Bar dataKey="count" radius={6} />
-          </BarChart>
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart 
+              data={segmentData}
+              margin={{ top: 5, right: 5, left: 10, bottom: 5 }}
+            >
+              <CartesianGrid vertical={false} strokeDasharray="3 3" />
+              <XAxis 
+                dataKey="segment" 
+                tickLine={false} 
+                axisLine={false}
+                tick={{ fontSize: 10 }}
+                angle={-30}
+                textAnchor="end"
+                height={50}
+              />
+              <YAxis 
+                allowDecimals={false}
+                tickLine={false}
+                axisLine={false}
+                tick={{ fontSize: 10 }}
+                width={36} // <-- Mais espaço para os números
+              />
+              <ChartTooltip content={<ChartTooltipContent />} />
+              <Bar 
+                dataKey="count" 
+                radius={[6, 6, 0, 0]}
+                fill="#607C5F"
+              />
+            </BarChart>
+          </ResponsiveContainer>
         </ChartContainer>
       </CardContent>
     </Card>

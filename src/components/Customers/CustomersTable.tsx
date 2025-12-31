@@ -15,15 +15,6 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-  PaginationEllipsis,
-} from "@/components/ui/pagination";
 
 import {
   Table,
@@ -49,14 +40,11 @@ const segmentOptions: (Segment | "Todos")[] = [
   "Regular",
 ];
 
-const ITEMS_PER_PAGE = 10;
-
 export function CustomersTable({ customers }: { customers: Customer[] }) {
   const [query, setQuery] = React.useState("");
   const [segmentFilter, setSegmentFilter] = React.useState<Segment | "Todos">("Todos");
   const [selected, setSelected] = React.useState<Customer | null>(null);
   const [open, setOpen] = React.useState(false);
-  const [currentPage, setCurrentPage] = React.useState(1);
 
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -73,60 +61,10 @@ export function CustomersTable({ customers }: { customers: Customer[] }) {
       .sort((a, b) => (b.visits ?? 0) - (a.visits ?? 0));
   }, [customers, query, segmentFilter]);
 
-  // Reset to page 1 when filters change
-  React.useEffect(() => {
-    setCurrentPage(1);
-  }, [query, segmentFilter]);
-
-  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const endIndex = startIndex + ITEMS_PER_PAGE;
-  const paginatedCustomers = filtered.slice(startIndex, endIndex);
-
   function openCustomer(c: Customer) {
     setSelected(c);
     setOpen(true);
   }
-
-  function handlePageChange(page: number) {
-    setCurrentPage(page);
-  }
-
-  // Generate page numbers to display
-  const getPageNumbers = () => {
-    const pages: (number | string)[] = [];
-    const maxPagesToShow = 5;
-
-    if (totalPages <= maxPagesToShow) {
-      for (let i = 1; i <= totalPages; i++) {
-        pages.push(i);
-      }
-    } else {
-      if (currentPage <= 3) {
-        for (let i = 1; i <= 4; i++) {
-          pages.push(i);
-        }
-        pages.push('ellipsis');
-        pages.push(totalPages);
-      } else if (currentPage >= totalPages - 2) {
-        pages.push(1);
-        pages.push('ellipsis');
-        for (let i = totalPages - 3; i <= totalPages; i++) {
-          pages.push(i);
-        }
-      } else {
-        pages.push(1);
-        pages.push('ellipsis');
-        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
-          pages.push(i);
-        }
-        pages.push('ellipsis');
-        pages.push(totalPages);
-      }
-    }
-
-    return pages;
-  };
 
   return (
     <div className="space-y-3">
@@ -182,7 +120,7 @@ export function CustomersTable({ customers }: { customers: Customer[] }) {
           </TableHeader>
 
           <TableBody>
-            {paginatedCustomers.map((c) => {
+            {filtered.map((c) => {
               const seg = segmentOf(c);
               const ds = daysSince(c.last_visit_date);
 
@@ -229,7 +167,7 @@ export function CustomersTable({ customers }: { customers: Customer[] }) {
               );
             })}
 
-            {!paginatedCustomers.length && (
+            {!filtered.length && (
               <TableRow>
                 <TableCell colSpan={7} className="py-8 text-center text-sm text-muted-foreground">
                   Sem resultados.
@@ -239,48 +177,6 @@ export function CustomersTable({ customers }: { customers: Customer[] }) {
           </TableBody>
         </Table>
       </div>
-
-      {totalPages > 1 && (
-        <div className="flex items-center justify-between">
-          <div className="text-sm text-muted-foreground">
-            Mostrando {startIndex + 1} a {Math.min(endIndex, filtered.length)} de {filtered.length} clientes
-          </div>
-
-          <Pagination>
-            <PaginationContent>
-              <PaginationItem>
-                <PaginationPrevious
-                  onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
-                  className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
-                />
-              </PaginationItem>
-
-              {getPageNumbers().map((page, index) => (
-                <PaginationItem key={index}>
-                  {page === 'ellipsis' ? (
-                    <PaginationEllipsis />
-                  ) : (
-                    <PaginationLink
-                      onClick={() => handlePageChange(page as number)}
-                      isActive={currentPage === page}
-                      className="cursor-pointer"
-                    >
-                      {page}
-                    </PaginationLink>
-                  )}
-                </PaginationItem>
-              ))}
-
-              <PaginationItem>
-                <PaginationNext
-                  onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
-                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
-                />
-              </PaginationItem>
-            </PaginationContent>
-          </Pagination>
-        </div>
-      )}
 
       <CustomerSheet open={open} onOpenChange={setOpen} customer={selected} />
     </div>

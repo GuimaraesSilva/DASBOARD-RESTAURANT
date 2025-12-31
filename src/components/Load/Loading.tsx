@@ -9,7 +9,7 @@ export const Loading = () => {
       </div>
       
       {/* Progress bar container */}
-      <div className="relative w-full max-w-[500px] h-12">
+      <div className="relative w-full max-w-[400px] h-12">
         {/* Outer rounded border */}
         <div className="absolute inset-0 rounded-full border-2 border-[#263321]" />
         
