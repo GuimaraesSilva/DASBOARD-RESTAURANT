@@ -19,7 +19,7 @@ export default function Products() {
         <div className="md:col-span-5">
           <Header onMenuClick={() => setSidebarOpen(true)} />
         </div>
-        <div className="flex-1 md:col-span-5 bg-[#FFFCF8] rounded-md p-6">Products content</div>
+        <div className="flex-1 md:col-span-5 bg-[#F5F5F5] rounded-md p-6">Products content</div>
       </div>
     </div>
   );

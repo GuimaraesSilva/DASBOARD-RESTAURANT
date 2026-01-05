@@ -36,6 +36,12 @@ const categoryColors: Record<string, string> = {
   "Sobremesas": "#8C7A6B",
 }
 
+// Função para truncar texto longo
+const truncateText = (text: string, maxLength: number = 10): string => {
+  if (text.length <= maxLength) return text
+  return text.substring(0, maxLength) + '...'
+}
+
 export function SalesByCategoryChart() {
   // Calcular vendas por categoria baseado nos pedidos reais
   // Primeiro, criar um mapa de categoria por produto para melhor performance
@@ -73,6 +79,7 @@ export function SalesByCategoryChart() {
 
   const chartData = Object.entries(salesByCategory).map(([category, revenue]) => ({
     category,
+    categoryFull: category, // Nome completo para o tooltip
     revenue: Number(revenue.toFixed(2)),
     fill: categoryColors[category] || "#2C3E2D",
   }))
@@ -93,10 +100,20 @@ export function SalesByCategoryChart() {
               tickLine={false}
               tickMargin={10}
               axisLine={false}
+              tick={{ fontSize: 12 }}
+              tickFormatter={(value) => truncateText(value, 8)}
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent formatter={(value) => `€${value}`} />}
+              content={<ChartTooltipContent 
+                labelFormatter={(_, payload) => {
+                  if (payload && payload[0]) {
+                    return payload[0].payload.categoryFull
+                  }
+                  return ''
+                }}
+                formatter={(value) => `€${value}`} 
+              />}
             />
             <Bar dataKey="revenue" radius={8} />
           </BarChart>

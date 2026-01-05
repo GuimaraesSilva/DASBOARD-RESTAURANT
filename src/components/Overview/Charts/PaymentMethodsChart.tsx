@@ -19,6 +19,7 @@ import {
   ChartLegendContent,
 } from "@/components/ui/chart"
 import { PaymentMethod } from "@/types/payment"
+import ordersData from "@/data/orders.json"
 
 interface PaymentMethodsChartProps {
   data: PaymentMethod[]
@@ -51,18 +52,19 @@ const chartConfig = {
 } satisfies ChartConfig
 
 export function PaymentMethodsChart({ data }: PaymentMethodsChartProps) {
-  console.log('Payment Methods Data:', data); // Debug
-  
+  // Se não houver data, calcular dos pedidos
+  const chartData = data || calculatePaymentMethods();
+
   const totalTransactions = React.useMemo(() => {
-    return data.reduce((acc, curr) => acc + curr.transactions, 0)
-  }, [data])
+    return chartData.reduce((acc, curr) => acc + curr.transactions, 0)
+  }, [chartData])
 
   const topMethod = React.useMemo(() => {
-    if (data.length === 0) return null
-    return data.reduce((prev, current) => 
+    if (chartData.length === 0) return null
+    return chartData.reduce((prev, current) => 
       current.transactions > prev.transactions ? current : prev
     )
-  }, [data])
+  }, [chartData])
 
   const getColor = (method: string): string => {
     const config = chartConfig[method as keyof typeof chartConfig]
@@ -92,13 +94,13 @@ export function PaymentMethodsChart({ data }: PaymentMethodsChartProps) {
               verticalAlign="bottom"
             />
             <Pie
-              data={data}
+              data={chartData}
               dataKey="transactions"
               nameKey="method"
               innerRadius={55}
               strokeWidth={10}
             >
-              {data.map((entry, index) => (
+              {chartData.map((entry, index) => (
                 <Cell 
                   key={`cell-${index}`} 
                   fill={entry.fill}
@@ -150,4 +152,29 @@ export function PaymentMethodsChart({ data }: PaymentMethodsChartProps) {
       </CardFooter>
     </Card>
   )
+}
+
+// Adicionar função para calcular se data não for fornecido
+function calculatePaymentMethods() {
+  const paymentCounts: Record<string, number> = {};
+  
+  ordersData.orders.forEach(order => {
+    paymentCounts[order.payment_method] = (paymentCounts[order.payment_method] || 0) + 1;
+  });
+
+  return Object.entries(paymentCounts).map(([method, count]) => ({
+    method,
+    count,
+    fill: getPaymentMethodColor(method),
+  }));
+}
+
+function getPaymentMethodColor(method: string): string {
+  const colors: Record<string, string> = {
+    "Credit Card": "#2C3E2D",
+    "Debit Card": "#607C5F",
+    "Cash": "#8B9687",
+    "MBWay": "#C2BDB0",
+  };
+  return colors[method] || "#8C7A6B";
 }
