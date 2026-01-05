@@ -66,6 +66,16 @@ export function CustomersTable({ customers }: { customers: Customer[] }) {
     setOpen(true);
   }
 
+  function getSegmentColor(segment: string) {
+    const colors: Record<string, string> = {
+      VIP: "bg-purple-100 text-purple-800 border-purple-200",
+      Regular: "bg-blue-100 text-blue-800 border-blue-200",
+      Novo: "bg-green-100 text-green-800 border-green-200",
+      Inativo: "bg-gray-100 text-gray-800 border-gray-200",
+    };
+    return colors[segment] || "bg-gray-100 text-gray-800";
+  }
+
   return (
     <div className="space-y-3">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
@@ -129,7 +139,12 @@ export function CustomersTable({ customers }: { customers: Customer[] }) {
                   <TableCell>
                     <div className="flex items-center gap-2">
                       <div className="font-medium">{c.name}</div>
-                      <Badge variant="secondary">{seg}</Badge>
+                      <Badge
+                        variant="outline"
+                        className={`${getSegmentColor(seg)} font-semibold`}
+                      >
+                        {seg}
+                      </Badge>
                     </div>
                     <div className="text-xs text-muted-foreground">
                       {c.email ?? c.phone ?? "—"}
