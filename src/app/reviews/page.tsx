@@ -2,6 +2,13 @@
 
 import { Header } from "@/components/Header/Header";
 import { Navbar } from "@/components/Navbar/Navbar";
+import { ReviewsKpis } from "@/components/Reviews/ReviewsKpis";
+import { ReviewsTable } from "@/components/Reviews/ReviewsTable";
+import { ReviewsRatingChart } from "@/components/Overview/Charts/ReviewsRatingChart";
+import { ReviewsRatingDistribution } from "@/components/Reviews/ReviewsRatingDistribution";
+import { ReviewsTrendChart } from "@/components/Reviews/ReviewsTrendChart";
+import { TopReviewedCustomers } from "@/components/Reviews/TopReviewedCustomers";
+import { RecentReviews } from "@/components/Reviews/RecentReviews";
 import { useState } from "react";
 
 export default function Reviews() {
@@ -19,7 +26,19 @@ export default function Reviews() {
         <div className="md:col-span-5">
           <Header onMenuClick={() => setSidebarOpen(true)} />
         </div>
-        <div className="flex-1 md:col-span-5 bg-[#F5F5F5] rounded-md p-6">Reviews content</div>
+        <div className="flex-1 md:col-span-5 bg-[#F5F5F5] rounded-md overflow-y-auto scrollbar-hide">
+          <div className="p-4 space-y-4">
+            <ReviewsKpis />
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              <ReviewsRatingDistribution />
+              <TopReviewedCustomers />
+              <ReviewsRatingChart />
+            </div>
+            <ReviewsTrendChart />
+            <RecentReviews />
+            <ReviewsTable />
+          </div>
+        </div>
       </div>
     </div>
   );
