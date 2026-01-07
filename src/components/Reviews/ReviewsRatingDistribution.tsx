@@ -21,11 +21,11 @@ export function ReviewsRatingDistribution() {
   };
 
   const getBarColor = (rating: number) => {
-    if (rating === 5) return "bg-green-500";
-    if (rating === 4) return "bg-lime-500";
-    if (rating === 3) return "bg-yellow-500";
-    if (rating === 2) return "bg-orange-500";
-    return "bg-red-500";
+    if (rating === 5) return "bg-[#2C3E2D]"; // Verde escuro
+    if (rating === 4) return "bg-[#607C5F]"; // Verde médio
+    if (rating === 3) return "bg-[#8B9687]"; // Verde acinzentado
+    if (rating === 2) return "bg-[#8C7A6B]"; // Bege/marrom
+    return "bg-[#412A22]"; // Marrom escuro
   };
 
   return (
@@ -43,7 +43,7 @@ export function ReviewsRatingDistribution() {
               <div className="flex items-center justify-between text-sm">
                 <div className="flex items-center gap-2">
                   <span className="font-medium w-3">{rating}</span>
-                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" />
                 </div>
                 <div className="flex items-center gap-4">
                   <span className="text-muted-foreground">{count} reviews</span>
@@ -52,7 +52,7 @@ export function ReviewsRatingDistribution() {
                   </span>
                 </div>
               </div>
-              <div className="relative h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div className="relative h-2 bg-[#C2BDB0]/30 rounded-full overflow-hidden">
                 <div
                   className={`h-full ${getBarColor(rating)} transition-all duration-500`}
                   style={{ width: `${percentage}%` }}

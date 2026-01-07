@@ -41,7 +41,7 @@ export function NavbarMobile({ sidebarOpen, setSidebarOpen }: NavbarMobileProps)
                       <Link
                         href={item.href}
                         className={`flex items-center gap-6 rounded-md p-2 font-medium transition-colors ${isActive
-                          ? "bg-[#CDDBC8] text-white"
+                          ? "bg-[#CDDBC8] text-black"
                           : "text-white hover:bg-[#CDDBC8] hover:text-black"
                           }`}
                       >
