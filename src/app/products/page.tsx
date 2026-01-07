@@ -2,6 +2,12 @@
 
 import { Header } from "@/components/Header/Header";
 import { Navbar } from "@/components/Navbar/Navbar";
+import { ProductsKpis } from "@/components/Products/ProductsKpis";
+import { ProductsTable } from "@/components/Products/ProductsTable";
+import { ProductsByCategoryChart } from "@/components/Products/ProductsByCategoryChart";
+import { ProfitMarginChart } from "@/components/Products/ProfitMarginChart";
+import { StockAlertsCard } from "@/components/Products/StockAlertsCard";
+import { TopSellingProducts } from "@/components/Products/TopSellingProducts";
 import { useState } from "react";
 
 export default function Products() {
@@ -19,7 +25,23 @@ export default function Products() {
         <div className="md:col-span-5">
           <Header onMenuClick={() => setSidebarOpen(true)} />
         </div>
-        <div className="flex-1 md:col-span-5 bg-[#F5F5F5] rounded-md p-6">Products content</div>
+        <div className="flex-1 md:col-span-5 bg-[#F5F5F5] rounded-md overflow-y-auto scrollbar-hide">
+          <div className="p-4 space-y-4">
+            <ProductsKpis />
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <StockAlertsCard />
+              <TopSellingProducts />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ProductsByCategoryChart />
+              <ProfitMarginChart />
+            </div>
+            
+            <ProductsTable />
+          </div>
+        </div>
       </div>
     </div>
   );
