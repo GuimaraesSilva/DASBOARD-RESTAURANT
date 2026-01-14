@@ -32,7 +32,7 @@ export function ReservationsTable() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl font-bold flex items-center gap-2">
+        <CardTitle className="text-xl font-bold flex items-center gap-2">
           <Calendar className="w-6 h-6" />
           Todas as Reservas
         </CardTitle>

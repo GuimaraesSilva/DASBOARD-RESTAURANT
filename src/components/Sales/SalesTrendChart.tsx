@@ -62,7 +62,7 @@ export function SalesTrendChart() {
     <Card>
       <CardHeader className="flex items-center gap-2 space-y-0 sm:flex-row">
         <div className="grid flex-1 gap-1">
-          <CardTitle className="text-2xl font-bold">Sales Trend</CardTitle>
+          <CardTitle className="text-xl font-bold">Sales Trend</CardTitle>
           <CardDescription>
             Daily revenue and orders analysis
           </CardDescription>

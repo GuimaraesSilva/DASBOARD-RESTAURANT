@@ -51,7 +51,7 @@ export function RecentOrdersTable() {
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
-          <CardTitle className="text-2xl font-bold">Recent Orders</CardTitle>
+          <CardTitle className="text-xl font-bold">Recent Orders</CardTitle>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <ShoppingBag className="h-4 w-4" />
             <span>{orders.length} orders</span>

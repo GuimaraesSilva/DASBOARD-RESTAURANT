@@ -49,107 +49,119 @@ export function ProductsTable() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">All Products</CardTitle>
+        <CardTitle className="text-xl font-bold">All Products</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between mb-4">
-          <Input
-            placeholder="Search by product name..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            className="sm:max-w-sm"
-          />
+        <div className="space-y-3">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <Input
+              placeholder="Search by product name..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="sm:max-w-sm"
+            />
 
-          <div className="flex items-center gap-2">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline">Category: {categoryFilter}</Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                {categories.map((cat, idx) =>
-                  cat === "All" ? (
-                    <React.Fragment key={cat}>
-                      <DropdownMenuItem onClick={() => setCategoryFilter("All")}>
-                        All
+            <div className="flex items-center gap-2">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline">Category: {categoryFilter}</Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  {categories.map((cat) =>
+                    cat === "All" ? (
+                      <React.Fragment key={cat}>
+                        <DropdownMenuItem onClick={() => setCategoryFilter("All")}>
+                          All
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator />
+                      </React.Fragment>
+                    ) : (
+                      <DropdownMenuItem key={cat} onClick={() => setCategoryFilter(cat)}>
+                        {cat}
                       </DropdownMenuItem>
-                      <DropdownMenuSeparator />
-                    </React.Fragment>
-                  ) : (
-                    <DropdownMenuItem key={cat} onClick={() => setCategoryFilter(cat)}>
-                      {cat}
-                    </DropdownMenuItem>
-                  )
-                )}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                    )
+                  )}
+                </DropdownMenuContent>
+              </DropdownMenu>
 
-            <Button variant="outline" onClick={() => { setQuery(""); setCategoryFilter("All"); }}>
-              Clear
-            </Button>
+              <Button variant="outline" onClick={() => { setQuery(""); setCategoryFilter("All"); }}>
+                Clear
+              </Button>
+            </div>
           </div>
-        </div>
 
-        <div className="rounded-lg border">
-          <Table>
-            <TableHeader>
-              <TableRow className="bg-muted/50">
-                <TableHead>Product</TableHead>
-                <TableHead>Category</TableHead>
-                <TableHead className="text-right">Price</TableHead>
-                <TableHead className="text-right">Cost</TableHead>
-                <TableHead className="text-right">Margin</TableHead>
-                <TableHead className="text-right">Stock</TableHead>
-                <TableHead className="text-right">Stock Value</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {filtered.map((product) => {
-                const margin = parseFloat(calculateMargin(product.price, product.cost));
-                const stockValue = product.price * product.stock;
-                const isLowStock = product.stock < 10;
+          <div className="rounded-lg border">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Product</TableHead>
+                  <TableHead className="hidden md:table-cell">Price / Cost</TableHead>
+                  <TableHead className="text-right">Margin</TableHead>
+                  <TableHead className="text-right">Stock</TableHead>
+                  <TableHead className="text-right">Stock Value</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {filtered.map((product) => {
+                  const margin = parseFloat(calculateMargin(product.price, product.cost));
+                  const stockValue = product.price * product.stock;
+                  const isLowStock = product.stock < 10;
 
-                return (
-                  <TableRow key={product.id}>
-                    <TableCell className="font-medium">{product.name}</TableCell>
-                    <TableCell>
-                      <Badge variant="outline" className={categoryColors[product.category] || "bg-gray-100"}>
-                        {product.category}
-                      </Badge>
-                    </TableCell>
-                    <TableCell className="text-right font-medium">
-                      €{product.price.toFixed(2)}
-                    </TableCell>
-                    <TableCell className="text-right text-muted-foreground">
-                      €{product.cost.toFixed(2)}
-                    </TableCell>
-                    <TableCell className="text-right">
-                      <div className={`flex items-center justify-end gap-1 ${margin > 50 ? 'text-green-600' : margin > 30 ? 'text-yellow-600' : 'text-red-600'}`}>
-                        <TrendingUp className="w-3 h-3" />
-                        <span className="font-medium">{margin}%</span>
-                      </div>
-                    </TableCell>
-                    <TableCell className="text-right">
-                      <div className={`flex items-center justify-end gap-1 ${isLowStock ? 'text-red-600' : ''}`}>
-                        {isLowStock && <AlertTriangle className="w-3 h-3" />}
-                        <span className="font-medium">{product.stock}</span>
-                      </div>
-                    </TableCell>
-                    <TableCell className="text-right font-semibold text-green-600">
-                      €{stockValue.toFixed(2)}
+                  return (
+                    <TableRow key={product.id}>
+                      <TableCell>
+                        <div className="flex items-center gap-2">
+                          <div className="font-medium">{product.name}</div>
+                          <Badge
+                            variant="outline"
+                            className={`${categoryColors[product.category] || "bg-gray-100"} font-semibold`}
+                          >
+                            {product.category}
+                          </Badge>
+                        </div>
+                        <div className="text-xs text-muted-foreground md:hidden">
+                          €{product.price.toFixed(2)} / €{product.cost.toFixed(2)}
+                        </div>
+                      </TableCell>
+
+                      <TableCell className="hidden md:table-cell">
+                        <div className="text-sm font-medium">€{product.price.toFixed(2)}</div>
+                        <div className="text-xs text-muted-foreground">Cost: €{product.cost.toFixed(2)}</div>
+                      </TableCell>
+
+                      <TableCell className="text-right">
+                        <div className={`flex items-center justify-end gap-1 font-medium ${
+                          margin > 50 ? 'text-green-600' : margin > 30 ? 'text-orange-600' : 'text-red-600'
+                        }`}>
+                          <TrendingUp className="w-3 h-3" />
+                          {margin}%
+                        </div>
+                      </TableCell>
+
+                      <TableCell className="text-right">
+                        <div className={`flex items-center justify-end gap-1 ${isLowStock ? 'text-red-600' : ''}`}>
+                          {isLowStock && <AlertTriangle className="w-3 h-3" />}
+                          <span className="font-medium">{product.stock}</span>
+                        </div>
+                      </TableCell>
+
+                      <TableCell className="text-right font-medium">
+                        €{stockValue.toFixed(2)}
+                      </TableCell>
+                    </TableRow>
+                  );
+                })}
+
+                {!filtered.length && (
+                  <TableRow>
+                    <TableCell colSpan={5} className="py-8 text-center text-sm text-muted-foreground">
+                      No results found.
                     </TableCell>
                   </TableRow>
-                );
-              })}
-
-              {!filtered.length && (
-                <TableRow>
-                  <TableCell colSpan={7} className="py-8 text-center text-sm text-muted-foreground">
-                    No results found.
-                  </TableCell>
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
+                )}
+              </TableBody>
+            </Table>
+          </div>
         </div>
       </CardContent>
     </Card>

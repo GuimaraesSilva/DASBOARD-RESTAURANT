@@ -123,7 +123,7 @@ export function SalesByTimeChart() {
       <CardHeader>
         <div className="flex items-center justify-between">
           <div>
-            <CardTitle className="text-2xl font-bold">Sales by Time of Day</CardTitle>
+            <CardTitle className="text-xl font-bold">Sales by Time of Day</CardTitle>
             <CardDescription>Detailed hourly analysis of revenue and orders</CardDescription>
           </div>
           <div className="flex items-center gap-2 text-sm font-medium">

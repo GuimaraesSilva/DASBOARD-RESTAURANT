@@ -70,7 +70,7 @@ export function StockAlertsCard() {
         <CardHeader>
           <div className="flex items-start justify-between">
             <div>
-              <CardTitle className="text-2xl font-bold flex items-center gap-2">
+              <CardTitle className="text-xl font-bold flex items-center gap-2">
                 <AlertTriangle className="h-6 w-6 text-red-600" />
                 Stock Alerts
               </CardTitle>

@@ -66,8 +66,8 @@ export function TopSellingProducts() {
       <CardHeader>
         <div className="flex items-start justify-between">
           <div>
-            <CardTitle className="text-2xl font-bold flex items-center gap-2">
-              <Trophy className="h-6 w-6 text-yellow-600" />
+            <CardTitle className="text-xl font-bold flex items-center gap-2">
+              {/* <Trophy className="h-6 w-6 text-yellow-600" /> */}
               Top Selling Products
             </CardTitle>
             <CardDescription>Based on revenue generated</CardDescription>

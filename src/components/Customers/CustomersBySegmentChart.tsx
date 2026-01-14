@@ -25,7 +25,7 @@ export function CustomersBySegmentChart({ customers }: { customers: Customer[] }
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-sm font-medium">
+        <CardTitle className="text-xl font-medium">
           Clientes por segmento
         </CardTitle>
       </CardHeader>

@@ -37,7 +37,7 @@ export function ReviewsTable() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">All Reviews</CardTitle>
+        <CardTitle className="text-xl font-bold">All Reviews</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="rounded-lg border">

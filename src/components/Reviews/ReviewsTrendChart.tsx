@@ -90,9 +90,9 @@ export function ReviewsTrendChart() {
 
   return (
     <Card className="col-span-full">
-      <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
+      <CardHeader className="flex items-center gap-2 space-y-0 py-2 sm:flex-row">
         <div className="grid flex-1 gap-1 text-left">
-          <CardTitle>Tendência de Avaliações</CardTitle>
+          <CardTitle className="text-xl font-bold">Tendência de Avaliações</CardTitle>
           <CardDescription>
             Evolução das avaliações e número de reviews ao longo do tempo
           </CardDescription>

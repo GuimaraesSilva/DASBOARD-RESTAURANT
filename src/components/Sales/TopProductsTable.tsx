@@ -67,7 +67,7 @@ export function TopProductsTable() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">Top 10 Best-Selling Products</CardTitle>
+        <CardTitle className="text-xl font-bold">Top 10 Best-Selling Products</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="rounded-lg border">

@@ -70,7 +70,7 @@ export function ProductsByCategoryChart() {
       <CardHeader>
         <div className="flex items-start justify-between">
           <div>
-            <CardTitle className="text-2xl font-bold flex items-center gap-2">
+            <CardTitle className="text-xl font-bold flex items-center gap-2">
               <Package className="h-6 w-6 text-[#2C3E2D]" />
               Products by Category
             </CardTitle>

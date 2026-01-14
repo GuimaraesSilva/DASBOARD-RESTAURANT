@@ -50,7 +50,7 @@ export function SalesHeatmapChart() {
   return (
     <Card className="flex flex-col">
       <CardHeader className="pb-3">
-        <CardTitle className="text-lg font-bold flex items-center gap-2">
+        <CardTitle className="text-xl font-bold flex items-center gap-2">
           Sales Heatmap
         </CardTitle>
       </CardHeader>

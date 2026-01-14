@@ -38,7 +38,7 @@ export function ProfitMarginChart() {
       <CardHeader>
         <div className="flex items-start justify-between">
           <div>
-            <CardTitle className="text-2xl font-bold flex items-center gap-2">
+            <CardTitle className="text-xl font-bold flex items-center gap-2">
               <TrendingUp className="h-6 w-6 text-green-600" />
               Top 10 Profit Margins
             </CardTitle>

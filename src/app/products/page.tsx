@@ -48,7 +48,6 @@ export default function Products() {
               <ProductsByCategoryChart />
               <ProfitMarginChart />
             </div>
-            
             <ProductsTable />
           </div>
         </div>
