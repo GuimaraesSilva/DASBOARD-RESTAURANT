@@ -31,7 +31,7 @@ const chartConfig = {
 const categoryColors: Record<string, string> = {
   "Carne": "#2C3E2D",
   "Bebidas": "#607C5F",
-  "Acompanhamento": "#8B9687",
+  "Monitoring": "#8B9687",
   "Entrada": "#C2BDB0",
   "Sobremesas": "#8C7A6B",
 }

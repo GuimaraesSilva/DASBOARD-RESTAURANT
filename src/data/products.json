@@ -6,7 +6,8 @@
       "category": "Carne",
       "price": 22.00,
       "stock": 35,
-      "cost": 10.00
+      "cost": 10.00,
+      "image": "/products/ribeye-steak.png"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "category": "Carne",
       "price": 26.00,
       "stock": 28,
-      "cost": 12.00
+      "cost": 12.00,
+      "image": "/products/tbone-steak.png"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "category": "Carne",
       "price": 19.00,
       "stock": 40,
-      "cost": 8.50
+      "cost": 8.50,
+      "image": "/products/picanha.png"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "category": "Carne",
       "price": 24.00,
       "stock": 22,
-      "cost": 11.00
+      "cost": 11.00,
+      "image": "/products/filet-mignon.png"
     },
     {
       "id": 5,
@@ -38,15 +42,17 @@
       "category": "Carne",
       "price": 13.00,
       "stock": 50,
-      "cost": 5.00
+      "cost": 5.00,
+      "image": "/products/hamburguer-angus.png"
     },
     {
       "id": 6,
       "name": "Batatas Fritas",
-      "category": "Acompanhamento",
+      "category": "Monitoring",
       "price": 4.00,
       "stock": 80,
-      "cost": 1.20
+      "cost": 1.20,
+      "image": "/products/batata-frita.png"
     },
     {
       "id": 7,
@@ -54,7 +60,8 @@
       "category": "Bebidas",
       "price": 2.50,
       "stock": 120,
-      "cost": 0.60
+      "cost": 0.60,
+      "image": "/products/coca-cola.png"
     },
     {
       "id": 8,
@@ -62,7 +69,8 @@
       "category": "Bebidas",
       "price": 1.20,
       "stock": 200,
-      "cost": 0.10
+      "cost": 0.10,
+      "image": "/products/agua.png"
     },
     {
       "id": 9,
@@ -70,7 +78,8 @@
       "category": "Bebidas",
       "price": 4.00,
       "stock": 60,
-      "cost": 1.50
+      "cost": 1.50,
+      "image": "/products/malbec.png"
     },
     {
       "id": 10,
@@ -78,15 +87,17 @@
       "category": "Bebidas",
       "price": 3.00,
       "stock": 90,
-      "cost": 1.00
+      "cost": 1.00,
+      "image": "/products/cerveja-artesanal.png"
     },
     {
       "id": 11,
-      "name": "Salada Caesar",
-      "category": "Acompanhamento",
+      "name": "Salada Cesar",
+      "category": "Monitoring",
       "price": 5.50,
       "stock": 30,
-      "cost": 2.00
+      "cost": 2.00,
+      "image": "/products/salada-cesar.png"
     },
     {
       "id": 12,
@@ -94,7 +105,8 @@
       "category": "Entrada",
       "price": 3.50,
       "stock": 40,
-      "cost": 1.00
+      "cost": 1.00,
+      "image": "/products/sopa-cebola.png"
     },
     {
       "id": 13,
@@ -102,7 +114,8 @@
       "category": "Sobremesas",
       "price": 4.50,
       "stock": 20,
-      "cost": 1.50
+      "cost": 1.50,
+      "image": "/products/brownie.png"
     },
     {
       "id": 14,
@@ -110,7 +123,8 @@
       "category": "Carne",
       "price": 16.00,
       "stock": 32,
-      "cost": 7.00
+      "cost": 7.00,
+      "image": "/products/frango.png"
     },
     {
       "id": 15,
@@ -118,23 +132,26 @@
       "category": "Carne",
       "price": 21.00,
       "stock": 25,
-      "cost": 9.50
+      "cost": 9.50,
+      "image": "/products/costeleta-bbq.png"
     },
     {
       "id": 16,
       "name": "Salada Mediterrânea",
-      "category": "Acompanhamento",
+      "category": "Monitoring",
       "price": 6.00,
       "stock": 25,
-      "cost": 2.50
+      "cost": 2.50,
+      "image": "/products/salada-mediterranea.png"
     },
     {
       "id": 17,
       "name": "Batata Assada",
-      "category": "Acompanhamento",
+      "category": "Monitoring",
       "price": 4.50,
       "stock": 40,
-      "cost": 1.30
+      "cost": 1.30,
+      "image": "/products/batata-assada.png"
     },
     {
       "id": 18,
@@ -142,7 +159,8 @@
       "category": "Bebidas",
       "price": 4.00,
       "stock": 50,
-      "cost": 1.40
+      "cost": 1.40,
+      "image": "/products/vinho-branco-copo.png"
     },
     {
       "id": 19,
@@ -150,7 +168,8 @@
       "category": "Bebidas",
       "price": 2.80,
       "stock": 70,
-      "cost": 0.80
+      "cost": 0.80,
+      "image": "/products/sumo-laranja.png"
     },
     {
       "id": 20,
@@ -158,7 +177,8 @@
       "category": "Sobremesas",
       "price": 5.00,
       "stock": 18,
-      "cost": 1.80
+      "cost": 1.80,
+      "image": "/products/cheesecake.png"
     },
     {
       "id": 21,
@@ -166,7 +186,8 @@
       "category": "Sobremesas",
       "price": 3.50,
       "stock": 25,
-      "cost": 1.00
+      "cost": 1.00,
+      "image": "/products/gelado-baunilha.png"
     },
     {
       "id": 22,
@@ -174,7 +195,8 @@
       "category": "Entrada",
       "price": 3.00,
       "stock": 35,
-      "cost": 0.90
+      "cost": 0.90,
+      "image": "/products/sopa-tomate.png"
     },
     {
       "id": 23,
@@ -182,7 +204,8 @@
       "category": "Entrada",
       "price": 4.00,
       "stock": 30,
-      "cost": 1.20
+      "cost": 1.20,
+      "image": "/products/bruschetta.png"
     },
     {
       "id": 24,
@@ -190,7 +213,8 @@
       "category": "Carne",
       "price": 12.00,
       "stock": 20,
-      "cost": 4.50
+      "cost": 4.50,
+      "image": "/products/hamburger-vegetariano.png"
     },
     {
       "id": 25,
@@ -198,15 +222,17 @@
       "category": "Carne",
       "price": 18.00,
       "stock": 15,
-      "cost": 8.00
+      "cost": 8.00,
+      "image": "/products/espetada-mista.png"
     },
     {
       "id": 26,
       "name": "Arroz de Cogumelos",
-      "category": "Acompanhamento",
+      "category": "Monitoring",
       "price": 5.00,
       "stock": 22,
-      "cost": 1.70
+      "cost": 1.70,
+      "image": "/products/arroz-cogumelos.png"
     },
     {
       "id": 27,
@@ -214,7 +240,8 @@
       "category": "Bebidas",
       "price": 5.00,
       "stock": 40,
-      "cost": 2.00
+      "cost": 2.00,
+      "image": "/products/vinho-tinto-reserva.png"
     },
     {
       "id": 28,
@@ -222,7 +249,8 @@
       "category": "Bebidas",
       "price": 2.80,
       "stock": 100,
-      "cost": 0.90
+      "cost": 0.90,
+      "image": "/products/cerveja-lager.png"
     },
     {
       "id": 29,
@@ -230,7 +258,8 @@
       "category": "Sobremesas",
       "price": 4.00,
       "stock": 15,
-      "cost": 1.40
+      "cost": 1.40,
+      "image": "/products/tarte-maca.png"
     },
     {
       "id": 30,
@@ -238,7 +267,8 @@
       "category": "Sobremesas",
       "price": 3.80,
       "stock": 20,
-      "cost": 1.20
+      "cost": 1.20,
+      "image": "/products/salada-fruta.png"
     }
   ]
 }

@@ -19,7 +19,7 @@ import { AlertTriangle, TrendingUp } from "lucide-react";
 const categoryColors: Record<string, string> = {
   "Carne": "bg-[#3C2F2C] text-white border-[#3C2F2C]",
   "Bebidas": "bg-[#536657] text-white border-[#536657]",
-  "Acompanhamento": "bg-[#8B9687] text-white border-[#8B9687]",
+  "Monitoring": "bg-[#8B9687] text-white border-[#8B9687]",
   "Entrada": "bg-[#263321] text-white border-[#263321]",
   "Sobremesas": "bg-[#BDA69F] text-[#3C2F2C] border-[#BDA69F]",
 };

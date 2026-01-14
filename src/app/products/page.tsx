@@ -8,6 +8,7 @@ import { ProductsByCategoryChart } from "@/components/Products/ProductsByCategor
 import { ProfitMarginChart } from "@/components/Products/ProfitMarginChart";
 import { StockAlertsCard } from "@/components/Products/StockAlertsCard";
 import { TopSellingProducts } from "@/components/Products/TopSellingProducts";
+import { ProductsGallery } from "@/components/Products/ProductsGallery";
 import { useState } from "react";
 
 export default function Products() {
@@ -29,9 +30,18 @@ export default function Products() {
           <div className="p-4 space-y-4">
             <ProductsKpis />
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              {/* <div className="md:col-span-1">
+                <StockAlertsCard />
+              </div>
+              <div className="md:col-span-2">
+                <TopSellingProducts />
+              </div> */}
+
               <StockAlertsCard />
               <TopSellingProducts />
+              <ProductsGallery />
+
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

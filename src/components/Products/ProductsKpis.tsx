@@ -20,8 +20,8 @@ function calculateProductsMetrics() {
     return sum + margin;
   }, 0) / products.length;
   
-  // Produtos com stock baixo (menos de 10 unidades)
-  const lowStockProducts = products.filter(p => p.stock < 10).length;
+  // Produtos com stock baixo (menos de 20 unidades)
+  const lowStockProducts = products.filter(p => p.stock < 20).length;
   
   // Calcular produto mais vendido
   const productSales = new Map<number, number>();
@@ -117,7 +117,7 @@ export function ProductsKpis() {
                 {metrics.lowStockProducts}
               </h3>
               <div className="text-xs text-muted-foreground mt-2">
-                Products below 10 units
+                Products below 20 units
               </div>
             </div>
             <div className="p-2 rounded-full bg-red-100">
