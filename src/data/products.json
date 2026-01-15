@@ -48,7 +48,7 @@
     {
       "id": 6,
       "name": "Batatas Fritas",
-      "category": "Monitoring",
+      "category": "Acompanhamento",
       "price": 4.00,
       "stock": 80,
       "cost": 1.20,
@@ -93,7 +93,7 @@
     {
       "id": 11,
       "name": "Salada Cesar",
-      "category": "Monitoring",
+      "category": "Acompanhamento",
       "price": 5.50,
       "stock": 30,
       "cost": 2.00,
@@ -138,7 +138,7 @@
     {
       "id": 16,
       "name": "Salada Mediterrânea",
-      "category": "Monitoring",
+      "category": "Acompanhamento",
       "price": 6.00,
       "stock": 25,
       "cost": 2.50,
@@ -147,7 +147,7 @@
     {
       "id": 17,
       "name": "Batata Assada",
-      "category": "Monitoring",
+      "category": "Acompanhamento",
       "price": 4.50,
       "stock": 40,
       "cost": 1.30,
@@ -228,7 +228,7 @@
     {
       "id": 26,
       "name": "Arroz de Cogumelos",
-      "category": "Monitoring",
+      "category": "Acompanhamento",
       "price": 5.00,
       "stock": 22,
       "cost": 1.70,

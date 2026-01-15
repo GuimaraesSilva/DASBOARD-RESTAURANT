@@ -139,7 +139,7 @@ export function StockAlertsCard() {
 
       {/* Dialog */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="max-w-md md:max-w-2xl max-h-[80vh]">
+        <DialogContent className="max-w-[calc(100%-2rem)] md:max-w-2xl w-[calc(100%-2rem)] md:max-h-[80vh]">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <AlertTriangle className={`h-5 w-5 ${

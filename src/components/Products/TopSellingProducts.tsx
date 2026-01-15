@@ -52,7 +52,7 @@ function calculateTopProducts(): ProductSales[] {
 const categoryColors: Record<string, string> = {
   "Carne": "bg-[#3C2F2C] text-white border-[#3C2F2C]",
   "Bebidas": "bg-[#536657] text-white border-[#536657]",
-  "Monitoring": "bg-[#8B9687] text-white border-[#8B9687]",
+  "Acompanhamento": "bg-[#8B9687] text-white border-[#8B9687]",
   "Entrada": "bg-[#263321] text-white border-[#263321]",
   "Sobremesas": "bg-[#BDA69F] text-[#3C2F2C] border-[#BDA69F]",
 };
@@ -64,17 +64,16 @@ export function TopSellingProducts() {
   return (
     <Card>
       <CardHeader>
-        <div className="flex items-start justify-between">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
           <div>
-            <CardTitle className="text-xl font-bold flex items-center gap-2">
-              {/* <Trophy className="h-6 w-6 text-yellow-600" /> */}
+            <CardTitle className="text-lg md:text-xl font-bold flex items-center gap-2">
               Top Selling Products
             </CardTitle>
             <CardDescription>Based on revenue generated</CardDescription>
           </div>
-          <div className="text-right">
+          <div className="text-left md:text-right">
             <p className="text-xs text-muted-foreground">Total Revenue</p>
-            <p className="text-xl font-bold text-green-600">
+            <p className="text-lg md:text-xl font-bold text-green-600">
               €{totalRevenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </p>
           </div>
@@ -85,49 +84,52 @@ export function TopSellingProducts() {
           {topProducts.map((product, index) => (
             <div 
               key={product.id} 
-              className={`flex items-center gap-4 p-4 rounded-lg border ${
+              className={`flex flex-col md:flex-row md:items-center gap-3 md:gap-4 p-3 md:p-4 rounded-lg border ${
                 index === 0 ? 'bg-yellow-50 border-yellow-300' : 
                 index === 1 ? 'bg-gray-50 border-gray-300' : 
                 index === 2 ? 'bg-orange-50 border-orange-300' : 
                 'bg-white'
               }`}
             >
-              {/* Ranking */}
-              <div className="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-[#2C3E2D] text-white font-bold text-lg">
-                {index === 0 && <Trophy className="h-5 w-5 text-yellow-400" />}
-                {index === 1 && <Star className="h-5 w-5 text-gray-400" />}
-                {index === 2 && <Star className="h-5 w-5 text-orange-400" />}
-                {index > 2 && <span>{index + 1}</span>}
+              {/* Top row on mobile: Ranking + Product Info */}
+              <div className="flex items-center gap-3 md:gap-4">
+                {/* Ranking */}
+                <div className="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-[#2C3E2D] text-white font-bold text-lg">
+                  {index === 0 && <Trophy className="h-5 w-5 text-yellow-400" />}
+                  {index === 1 && <Star className="h-5 w-5 text-gray-400" />}
+                  {index === 2 && <Star className="h-5 w-5 text-orange-400" />}
+                  {index > 2 && <span>{index + 1}</span>}
+                </div>
+
+                {/* Product Info */}
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold text-sm truncate">{product.name}</p>
+                  <Badge 
+                    variant="outline" 
+                    className={`${categoryColors[product.category] || 'bg-gray-100'} mt-1 text-xs`}
+                  >
+                    {product.category}
+                  </Badge>
+                </div>
               </div>
 
-              {/* Product Info */}
-              <div className="flex-1 min-w-0">
-                <p className="font-semibold text-sm truncate">{product.name}</p>
-                <Badge 
-                  variant="outline" 
-                  className={`${categoryColors[product.category] || 'bg-gray-100'} mt-1`}
-                >
-                  {product.category}
-                </Badge>
-              </div>
-
-              {/* Metrics */}
-              <div className="flex items-center gap-6">
-                <div className="text-right">
-                  <p className="text-xs text-muted-foreground">Qty Sold</p>
-                  <p className="text-lg font-bold">{product.quantitySold}</p>
+              {/* Metrics - Grid on mobile, flex on desktop */}
+              <div className="grid grid-cols-3 gap-3 md:flex md:items-center md:gap-6 md:ml-auto">
+                <div className="text-center md:text-right">
+                  <p className="text-xs text-muted-foreground">Qty</p>
+                  <p className="text-sm md:text-lg font-bold">{product.quantitySold}</p>
                 </div>
                 
-                <div className="text-right">
+                <div className="text-center md:text-right">
                   <p className="text-xs text-muted-foreground">Orders</p>
-                  <p className="text-lg font-semibold">{product.orderCount}</p>
+                  <p className="text-sm md:text-lg font-semibold">{product.orderCount}</p>
                 </div>
 
-                <div className="text-right min-w-[100px]">
+                <div className="text-center md:text-right md:min-w-[100px]">
                   <p className="text-xs text-muted-foreground">Revenue</p>
-                  <div className="flex items-center gap-1">
-                    <TrendingUp className="h-4 w-4 text-green-600" />
-                    <p className="text-lg font-bold text-green-600">
+                  <div className="flex items-center justify-center md:justify-end gap-1">
+                    <TrendingUp className="h-3 w-3 md:h-4 md:w-4 text-green-600" />
+                    <p className="text-sm md:text-lg font-bold text-green-600">
                       €{product.revenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
                     </p>
                   </div>

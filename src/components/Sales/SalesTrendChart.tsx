@@ -87,23 +87,23 @@ export function SalesTrendChart() {
           </SelectContent>
         </Select>
       </CardHeader>
-      <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
-        <div className="grid grid-cols-3 gap-4 mb-6">
+      <CardContent className="px-2 pt-4 md:px-6 md:pt-6">
+        <div className="grid grid-cols-3 gap-1 md:gap-4 mb-6">
           <div>
-            <div className="text-sm text-muted-foreground mb-1">Total Revenue</div>
-            <div className="text-lg md:text-2xl font-bold text-[#2C3E2D]">
+            <div className="text-xs md:text-sm text-muted-foreground mb-1">Total Revenue</div>
+            <div className="text-base md:text-2xl font-bold text-[#2C3E2D]">
               €{totalRevenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </div>
           </div>
           <div>
-            <div className="text-sm text-muted-foreground mb-1">Total Orders</div>
-            <div className="text-lg md:text-2xl font-bold text-[#607C5F]">
+            <div className="text-xs md:text-sm text-muted-foreground mb-1">Total Orders</div>
+            <div className="text-base md:text-2xl font-bold text-[#607C5F]">
               {totalOrders}
             </div>
           </div>
           <div>
-            <div className="text-sm text-muted-foreground mb-1">Avg Daily Revenue</div>
-            <div className="text-lg md:text-2xl font-bold text-gray-700">
+            <div className="text-xs md:text-sm text-muted-foreground mb-1">Avg Daily Revenue</div>
+            <div className="text-base md:text-2xl font-bold text-gray-700">
               €{averageRevenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </div>
           </div>
@@ -144,7 +144,7 @@ export function SalesTrendChart() {
               orientation="left"
               tickLine={false}
               axisLine={false}
-              tickMargin={8}
+              tickMargin={10}
               tickFormatter={(value) => `€${value}`}
             />
             <YAxis
@@ -152,7 +152,7 @@ export function SalesTrendChart() {
               orientation="right"
               tickLine={false}
               axisLine={false}
-              tickMargin={8}
+              tickMargin={10}
             />
             <ChartTooltip
               cursor={false}
@@ -198,7 +198,7 @@ export function SalesTrendChart() {
           </AreaChart>
         </ChartContainer>
 
-        <div className="flex items-center gap-2 mt-4 text-sm">
+        <div className="flex items-center gap-2 mt-4 text-xs md:text-sm">
           <TrendingUp className="h-4 w-4 text-green-600" />
           <span className="font-medium">
             Showing sales trend for {timeRange === "7d" ? "last 7 days" : timeRange === "30d" ? "last 30 days" : "last 90 days"}

@@ -27,7 +27,7 @@ export default function Reviews() {
           <Header onMenuClick={() => setSidebarOpen(true)} />
         </div>
         <div className="flex-1 md:col-span-5 bg-[#F5F5F5] rounded-md overflow-y-auto scrollbar-hide">
-          <div className="p-4 flex flex-col gap-2 md:gap-4">
+          <div className="p-2 md:p-4 flex flex-col gap-2 md:gap-4">
             <ReviewsKpis />
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-4">
               <ReviewsRatingDistribution />

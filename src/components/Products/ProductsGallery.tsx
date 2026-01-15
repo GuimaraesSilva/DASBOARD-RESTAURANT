@@ -29,7 +29,7 @@ import { Eye, Package, ChevronLeft, ChevronRight } from "lucide-react";
 const categoryColors: Record<string, string> = {
   "Carne": "bg-[#3C2F2C] text-white border-[#3C2F2C]",
   "Bebidas": "bg-[#536657] text-white border-[#536657]",
-  "Monitoring": "bg-[#8B9687] text-white border-[#8B9687]",
+  "Acompanhamento": "bg-[#8B9687] text-white border-[#8B9687]",
   "Entrada": "bg-[#263321] text-white border-[#263321]",
   "Sobremesas": "bg-[#BDA69F] text-[#3C2C2D] border-[#BDA69F]",
 };
@@ -218,7 +218,7 @@ export function ProductsGallery() {
 
       {/* Dialog for Product Details */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="max-w-md md:max-w-2xl">
+        <DialogContent className="max-w-[calc(100%-2rem)] md:max-w-2xl w-[calc(100%-2rem)]">
           {selectedProduct && (
             <>
               <DialogHeader>

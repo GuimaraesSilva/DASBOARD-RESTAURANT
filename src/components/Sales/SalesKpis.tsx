@@ -46,13 +46,13 @@ export function SalesKpis() {
     const metrics = calculateSalesMetrics();
 
     return (
-        <div className="grid gap-4 grid-cols-2 md:grid-cols-4">
+        <div className="grid gap-2 md:gap-4 grid-cols-1 md:grid-cols-4">
             <Card>
                 <CardContent>
                     <div className="flex items-start justify-between">
                         <div className="flex flex-col w-full">
-                            <p className="text-sm md:font-medium text-gray-600 mb-4">Total Revenue</p>
-                            <h3 className="text-lg md:text-2xl font-bold text-gray-900">
+                            <p className="font-medium text-gray-600 mb-2 md:mb-4">Total Revenue</p>
+                            <h3 className="text-2xl md:text-2xl font-bold text-gray-900">
                                 €{metrics.totalRevenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
                             </h3>
                             <div className="flex items-center gap-1 text-xs text-muted-foreground mt-2">
@@ -81,8 +81,8 @@ export function SalesKpis() {
                 <CardContent>
                     <div className="flex items-start justify-between">
                         <div className="flex flex-col w-full">
-                            <p className="text-sm md:font-medium text-gray-600 mb-4">Total Orders</p>
-                            <h3 className="text-lg md:text-2xl font-bold text-gray-900">
+                            <p className="font-medium text-gray-600 mb-2 md:mb-4">Total Orders</p>
+                            <h3 className="text-2xl md:text-2xl font-bold text-gray-900">
                                 {metrics.totalOrders}
                             </h3>
                             <div className="flex items-center gap-1 text-xs text-muted-foreground mt-2">
@@ -105,8 +105,8 @@ export function SalesKpis() {
                 <CardContent>
                     <div className="flex items-start justify-between">
                         <div className="flex flex-col w-full">
-                            <p className="text-sm md:font-medium text-gray-600 mb-4">Average Ticket</p>
-                            <h3 className="text-lg md:text-2xl font-bold text-gray-900">
+                            <p className="font-medium text-gray-600 mb-2 md:mb-4">Average Ticket</p>
+                            <h3 className="text-2xl md:text-2xl font-bold text-gray-900">
                                 €{metrics.averageTicket.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
                             </h3>
                             <div className="flex items-center gap-1 text-xs text-muted-foreground mt-2">
@@ -129,8 +129,8 @@ export function SalesKpis() {
                 <CardContent>
                     <div className="flex items-start justify-between">
                         <div className="flex flex-col w-full">
-                            <p className="text-sm md:font-medium text-gray-600 mb-4">Payment Methods</p>
-                            <h3 className="text-lg md:text-2xl font-bold text-gray-900">
+                            <p className="font-medium text-gray-600 mb-2 md:mb-4">Payment Methods</p>
+                            <h3 className="text-2xl md:text-2xl font-bold text-gray-900">
                                 {metrics.paymentMethods}
                             </h3>
                             <div className="flex items-center gap-1 text-xs text-muted-foreground mt-2">

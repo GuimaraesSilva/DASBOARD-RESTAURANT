@@ -79,14 +79,14 @@ export function ReservationsByDayChart() {
 
   return (
     <Card>
-      <CardHeader className="flex items-center gap-2 space-y-0 py-2 sm:flex-row">
+      <CardHeader className="flex flex-col md:flex-row md:items-center gap-2 space-y-0 py-2 sm:flex-row">
         <div className="grid flex-1 gap-1 text-left">
           <CardTitle className="text-xl">Reservations per Day</CardTitle>
           <CardDescription>Confirmed vs Cancelled reservations</CardDescription>
         </div>
         <Select value={timeRange} onValueChange={setTimeRange}>
           <SelectTrigger
-            className="w-40 rounded-lg sm:ml-auto"
+            className="w-32 md:w-40 rounded-lg sm:ml-auto"
             aria-label="Select time range"
           >
             <SelectValue placeholder="All time" />

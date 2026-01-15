@@ -93,118 +93,120 @@ export function CustomerSheet({
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent className="sm:max-w-sm overflow-y-auto px-4 bg-[#F5F5F5]">
-        <SheetHeader className="space-y-3 pt-20">
-          <div className="flex items-start justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-[#263321] flex items-center justify-center text-white font-semibold shadow-sm">
+      <SheetContent className="max-w-[90vw] sm:max-w-md overflow-y-auto px-3 sm:px-4 bg-[#F5F5F5]">
+        <SheetHeader className="space-y-3 pt-16 sm:pt-20 pb-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#263321] flex items-center justify-center text-white font-semibold shadow-sm shrink-0">
                 {getInitials(customer.name)}
               </div>
-              <SheetTitle className="text-2xl font-bold">
+              <SheetTitle className="text-xl sm:text-2xl font-bold wrap-break-word">
                 {customer.name}
               </SheetTitle>
             </div>
             <Badge
               variant="outline"
-              className={`${getSegmentColor(seg)} font-semibold`}
+              className={`${getSegmentColor(seg)} font-semibold text-xs sm:text-sm self-start sm:self-auto`}
             >
               {seg}
             </Badge>
           </div>
-          <SheetDescription className="flex items-center gap-2 text-sm">
-            <Calendar className="h-4 w-4" />
-            Última visita: {formatDatePT(customer.last_visit_date)}
-            <span className="text-muted-foreground">({ds} dias)</span>
+          <SheetDescription className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-xs sm:text-sm">
+            <div className="flex items-center gap-2">
+              <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
+              Última visita: {formatDatePT(customer.last_visit_date)}
+            </div>
+            <span className="text-muted-foreground ml-5 sm:ml-0">({ds} dias)</span>
           </SheetDescription>
         </SheetHeader>
 
-        <div className="space-y-2">
+        <div className="space-y-3 sm:space-y-4 pb-6">
           {/* Informações de Contato */}
-          <Card className="p-4 bg-muted/30">
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+          <Card className="p-3 sm:p-4 bg-muted/30">
+            <h3 className="text-xs sm:text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-3">
               Informações de Contato
             </h3>
-            <div className="space-y-2">
-              <div className="flex items-center gap-3">
-                <Mail className="h-6 w-6 text-muted-foreground" />
-                <div>
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-muted-foreground shrink-0" />
+                <div className="min-w-0 flex-1">
                   <div className="text-xs text-muted-foreground">Email</div>
-                  <div className="font-medium">{customer.email || "—"}</div>
+                  <div className="font-medium text-sm sm:text-base break-all">{customer.email || "—"}</div>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-6 w-6 text-muted-foreground" />
-                <div>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-muted-foreground shrink-0" />
+                <div className="min-w-0 flex-1">
                   <div className="text-xs text-muted-foreground">Telefone</div>
-                  <div className="font-medium">{formatPhone(customer.phone)}</div>
+                  <div className="font-medium text-sm sm:text-base">{formatPhone(customer.phone)}</div>
                 </div>
               </div>
             </div>
           </Card>
 
           {/* Estatísticas de Visitas */}
-          <Card className="p-4 bg-muted/30">
-            <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+          <Card className="p-3 sm:p-4 bg-muted/30">
+            <h3 className="text-xs sm:text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
               Histórico de Reservas
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <TrendingUp className="h-6 w-6 text-blue-600" />
+                  <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
                   <div className="text-xs text-muted-foreground">Visitas</div>
                 </div>
-                <div className="text-2xl font-bold text-blue-600">
+                <div className="text-xl sm:text-2xl font-bold text-blue-600">
                   {customer.visits}
                 </div>
               </div>
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <Calendar className="h-6 w-6 text-green-600" />
+                  <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-green-600" />
                   <div className="text-xs text-muted-foreground">
-                    Reservas feitas
+                    Reservas
                   </div>
                 </div>
-                <div className="text-2xl font-bold text-green-600">
+                <div className="text-xl sm:text-2xl font-bold text-green-600">
                   {customer.reservations.made}
                 </div>
               </div>
             </div>
           </Card>
 
-          <Separator />
+          <Separator className="my-2 sm:my-4"/>
 
           {/* Métricas de Comportamento */}
           <div>
-            <h3 className="text-sm font-semibold mt-4 mb-2 text-muted-foreground uppercase tracking-wide">
+            <h3 className="text-xs sm:text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
               Métricas de Comportamento
             </h3>
-            <div className="grid grid-cols-3 gap-3">
-              <Card className="p-4 text-center hover:shadow-md transition-shadow">
-                <XCircle className="h-8 w-8 text-orange-500 mx-auto" />
-                <div className="text-sm text-muted-foreground">
-                  Canceladas
+            <div className="grid grid-cols-3 gap-2 sm:gap-3">
+              <Card className="p-3 sm:p-4 text-center hover:shadow-md transition-shadow">
+                <XCircle className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500 mx-auto" />
+                <div className="text-xs text-muted-foreground mt-1 sm:mt-2">
+                  Cancel.
                 </div>
-                <div className="text-xl font-bold">
+                <div className="text-lg sm:text-xl font-bold mt-1">
                   {customer.reservations.cancelled}
                 </div>
               </Card>
 
-              <Card className="p-4 text-center hover:shadow-md transition-shadow">
-                <AlertCircle className="h-8 w-8 text-red-500 mx-auto" />
-                <div className="text-sm text-muted-foreground">
-                  No-shows
+              <Card className="p-3 sm:p-4 text-center hover:shadow-md transition-shadow">
+                <AlertCircle className="h-6 w-6 sm:h-8 sm:w-8 text-red-500 mx-auto" />
+                <div className="text-xs text-muted-foreground mt-1 sm:mt-2">
+                  No-show
                 </div>
-                <div className="text-xl font-bold">
+                <div className="text-lg sm:text-xl font-bold mt-1">
                   {customer.reservations.no_shows}
                 </div>
               </Card>
 
-              <Card className="p-4 text-center hover:shadow-md transition-shadow">
-                <Award className="h-8 w-8 text-purple-500 mx-auto" />
-                <div className="text-sm text-muted-foreground">
+              <Card className="p-3 sm:p-4 text-center hover:shadow-md transition-shadow">
+                <Award className="h-6 w-6 sm:h-8 sm:w-8 text-purple-500 mx-auto" />
+                <div className="text-xs text-muted-foreground mt-1 sm:mt-2">
                   Score
                 </div>
-                <div className={`text-xl font-bold ${getScoreColor(Number(score))}`}>
+                <div className={`text-lg sm:text-xl font-bold mt-1 ${getScoreColor(Number(score))}`}>
                   {score}
                 </div>
               </Card>

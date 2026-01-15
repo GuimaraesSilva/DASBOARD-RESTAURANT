@@ -48,14 +48,14 @@ export function ProductsKpis() {
   const metrics = calculateProductsMetrics();
   
   return (
-    <div className="grid gap-4 grid-cols-1 md:grid-cols-4">
+    <div className="grid gap-2 md:gap-4 grid-cols-1 md:grid-cols-4">
       {/* Total Products */}
       <Card>
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="text-sm md:font-medium text-gray-600 mb-4">Total Products</p>
-              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{metrics.totalProducts}</h3>
+              <p className="font-medium text-gray-600 mb-2 md:mb-4">Total Products</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{metrics.totalProducts}</h3>
               <div className="text-xs text-muted-foreground mt-2">
                 Active in menu
               </div>
@@ -72,8 +72,8 @@ export function ProductsKpis() {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="text-sm md:font-medium text-gray-600 mb-4">Stock Value</p>
-              <h3 className="text-lg md:text-2xl font-bold text-gray-900">
+              <p className="font-medium text-gray-600 mb-2 md:mb-4">Stock Value</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
                 €{metrics.totalStockValue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
               </h3>
               <div className="text-xs text-muted-foreground mt-2">
@@ -92,8 +92,8 @@ export function ProductsKpis() {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="text-sm md:font-medium text-gray-600 mb-4">Avg Profit Margin</p>
-              <h3 className="text-lg md:text-2xl font-bold text-gray-900">
+              <p className="font-medium text-gray-600 mb-2 md:mb-4">Avg Profit Margin</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
                 {metrics.avgProfitMargin.toFixed(1)}%
               </h3>
               <div className="text-xs text-muted-foreground mt-2">
@@ -112,8 +112,8 @@ export function ProductsKpis() {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="text-sm md:font-medium text-gray-600 mb-4">Low Stock Alert</p>
-              <h3 className="text-lg md:text-2xl font-bold text-red-600">
+              <p className="font-medium text-gray-600 mb-2 md:mb-4">Low Stock Alert</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-red-600">
                 {metrics.lowStockProducts}
               </h3>
               <div className="text-xs text-muted-foreground mt-2">

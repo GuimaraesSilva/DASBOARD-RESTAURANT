@@ -19,7 +19,7 @@ import { AlertTriangle, TrendingUp } from "lucide-react";
 const categoryColors: Record<string, string> = {
   "Carne": "bg-[#3C2F2C] text-white border-[#3C2F2C]",
   "Bebidas": "bg-[#536657] text-white border-[#536657]",
-  "Monitoring": "bg-[#8B9687] text-white border-[#8B9687]",
+  "Acompanhamento": "bg-[#8B9687] text-white border-[#8B9687]",
   "Entrada": "bg-[#263321] text-white border-[#263321]",
   "Sobremesas": "bg-[#BDA69F] text-[#3C2F2C] border-[#BDA69F]",
 };
@@ -61,10 +61,12 @@ export function ProductsTable() {
               className="sm:max-w-sm"
             />
 
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline">Category: {categoryFilter}</Button>
+                  <Button variant="outline" className="w-full sm:w-auto">
+                    Category: {categoryFilter}
+                  </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
                   {categories.map((cat) =>
@@ -84,7 +86,11 @@ export function ProductsTable() {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <Button variant="outline" onClick={() => { setQuery(""); setCategoryFilter("All"); }}>
+              <Button 
+                variant="outline" 
+                onClick={() => { setQuery(""); setCategoryFilter("All"); }}
+                className="w-full sm:w-auto"
+              >
                 Clear
               </Button>
             </div>
@@ -110,7 +116,7 @@ export function ProductsTable() {
                   return (
                     <TableRow key={product.id}>
                       <TableCell>
-                        <div className="flex items-center gap-2">
+                        <div className="flex flex-col md:flex-row md:items-center gap-2">
                           <div className="font-medium">{product.name}</div>
                           <Badge
                             variant="outline"
@@ -119,7 +125,7 @@ export function ProductsTable() {
                             {product.category}
                           </Badge>
                         </div>
-                        <div className="text-xs text-muted-foreground md:hidden">
+                        <div className="text-xs text-muted-foreground">
                           €{product.price.toFixed(2)} / €{product.cost.toFixed(2)}
                         </div>
                       </TableCell>

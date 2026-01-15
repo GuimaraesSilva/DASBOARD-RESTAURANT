@@ -15,7 +15,7 @@ export const MetricCard: React.FC<MetricCardProps> = ({
     <Card>
       <CardContent>
         <div className="flex items-start justify-between">
-          <div className="flex flex-col">
+          <div className="flex flex-col w-full">
             <p className="font-medium text-gray-600 mb-2 md:mb-4">{title}</p>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{value}</h3>
             

@@ -68,50 +68,54 @@ export function VisitsChart({ customers }: { customers: Customer[] }) {
   return (
     <Card>
       <CardHeader>
-        <div className="flex items-start justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
           <div>
-            <CardTitle className="text-xl font-bold flex items-center gap-2">
-              <Users className="h-5 w-5 text-[#2C3E2D]" />
+            <CardTitle className="text-lg md:text-xl font-bold flex items-center gap-2">
+              <Users className="h-4 w-4 md:h-5 md:w-5 text-[#2C3E2D]" />
               Top 10 Customers by Visits
             </CardTitle>
-            <CardDescription className="mt-1">
+            <CardDescription className="mt-1 text-xs md:text-sm">
               Most frequent customers in the last period
             </CardDescription>
           </div>
-          <div className="text-right">
+          <div className="text-left sm:text-right">
             <p className="text-xs text-muted-foreground">Total Visits</p>
-            <p className="text-xl font-bold text-[#2C3E2D]">{stats.totalVisits}</p>
+            <p className="text-lg md:text-xl font-bold text-[#2C3E2D]">{stats.totalVisits}</p>
           </div>
         </div>
       </CardHeader>
 
-      <CardContent className="p-2 sm:p-6">
+      <CardContent className="p-2 md:p-6">
         {/* Stats Cards */}
         <div className="grid grid-cols-3 gap-2 mb-4">
-          <div className="bg-[#F0F4EF] p-3 rounded-lg">
+          <div className="bg-[#F0F4EF] p-2 md:p-3 rounded-lg">
             <div className="flex items-center gap-1 text-xs text-muted-foreground mb-1">
-              <Award className="h-3 w-3" />
-              <span>Top Customer</span>
+              <Award className="h-3 w-3 shrink-0" />
+              <span className="hidden sm:inline">Top Customer</span>
+              <span className="sm:hidden">Top</span>
             </div>
-            <p className="text-sm font-semibold truncate">{stats.topCustomer}</p>
+            <p className="text-xs md:text-sm font-semibold truncate" title={stats.topCustomer}>
+              {stats.topCustomer}
+            </p>
             <p className="text-xs text-muted-foreground">{stats.topVisits} visits</p>
           </div>
 
-          <div className="bg-[#F0F4EF] p-3 rounded-lg">
+          <div className="bg-[#F0F4EF] p-2 md:p-3 rounded-lg">
             <div className="flex items-center gap-1 text-xs text-muted-foreground mb-1">
-              <TrendingUp className="h-3 w-3" />
-              <span>Average</span>
+              <TrendingUp className="h-3 w-3 shrink-0" />
+              <span className="hidden sm:inline">Average</span>
+              <span className="sm:hidden">Avg</span>
             </div>
-            <p className="text-lg font-bold text-[#607C5F]">{stats.avgVisits}</p>
+            <p className="text-base md:text-lg font-bold text-[#607C5F]">{stats.avgVisits}</p>
             <p className="text-xs text-muted-foreground">visits/customer</p>
           </div>
 
-          <div className="bg-[#F0F4EF] p-3 rounded-lg">
+          <div className="bg-[#F0F4EF] p-2 md:p-3 rounded-lg">
             <div className="flex items-center gap-1 text-xs text-muted-foreground mb-1">
-              <Users className="h-3 w-3" />
+              <Users className="h-3 w-3 shrink-0" />
               <span>Customers</span>
             </div>
-            <p className="text-lg font-bold text-[#8B9687]">{chartData.length}</p>
+            <p className="text-base md:text-lg font-bold text-[#8B9687]">{chartData.length}</p>
             <p className="text-xs text-muted-foreground">in top 10</p>
           </div>
         </div>
@@ -119,12 +123,17 @@ export function VisitsChart({ customers }: { customers: Customer[] }) {
         {/* Chart */}
         <ChartContainer
           config={chartConfig}
-          className="h-[280px] w-full"
+          className="h-[250px] md:h-[280px] w-full"
         >
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={chartData}
-              margin={{ top: 10, right: 10, left: 0, bottom: 30 }}
+              margin={{ 
+                top: 10, 
+                right: 5, 
+                left: -15, 
+                bottom: 40 
+              }}
             >
               <CartesianGrid 
                 vertical={false} 
@@ -135,8 +144,8 @@ export function VisitsChart({ customers }: { customers: Customer[] }) {
                 dataKey="name"
                 tickLine={false}
                 axisLine={false}
-                tick={{ fontSize: 11, fill: "#6B7280" }}
-                angle={-30}
+                tick={{ fontSize: 10, fill: "#6B7280" }}
+                angle={-45}
                 textAnchor="end"
                 height={60}
                 interval={0}
@@ -144,13 +153,13 @@ export function VisitsChart({ customers }: { customers: Customer[] }) {
               <YAxis
                 tickLine={false}
                 axisLine={false}
-                tick={{ fontSize: 11, fill: "#6B7280" }}
-                width={35}
+                tick={{ fontSize: 10, fill: "#6B7280" }}
+                width={30}
                 label={{ 
                   value: 'Visits', 
                   angle: -90, 
                   position: 'insideLeft',
-                  style: { fontSize: 11, fill: '#6B7280' }
+                  style: { fontSize: 10, fill: '#6B7280' }
                 }}
               />
               <ChartTooltip
@@ -162,8 +171,10 @@ export function VisitsChart({ customers }: { customers: Customer[] }) {
                         const data = payload[0].payload;
                         return (
                           <div className="space-y-1">
-                            <p className="font-semibold">{data.fullName}</p>
-                            <p className="text-xs text-muted-foreground">{data.email}</p>
+                            <p className="font-semibold text-sm">{data.fullName}</p>
+                            <p className="text-xs text-muted-foreground truncate max-w-[200px]">
+                              {data.email}
+                            </p>
                             <div className="flex items-center gap-2 pt-1">
                               <span className="text-xs">Rank #{data.rank}</span>
                             </div>
@@ -178,7 +189,7 @@ export function VisitsChart({ customers }: { customers: Customer[] }) {
               <Bar
                 dataKey="visits"
                 radius={[6, 6, 0, 0]}
-                maxBarSize={40}
+                maxBarSize={35}
               >
                 {chartData.map((_, index) => (
                   <Cell key={`cell-${index}`} fill={getBarColor(index)} />
@@ -189,9 +200,9 @@ export function VisitsChart({ customers }: { customers: Customer[] }) {
         </ChartContainer>
 
         {/* Legend/Footer */}
-        <div className="flex items-center gap-2 pt-4 text-sm border-t mt-4">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-1 md:gap-2 pt-4 text-xs md:text-sm border-t mt-4">
           <div className="flex items-center gap-1.5 font-medium text-[#607C5F]">
-            <TrendingUp className="h-4 w-4" />
+            <TrendingUp className="h-3 w-3 md:h-4 md:w-4 shrink-0" />
             Top performers
           </div>
           <div className="text-muted-foreground">

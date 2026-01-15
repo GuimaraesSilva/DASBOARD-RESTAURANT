@@ -142,7 +142,7 @@ The project uses a realistic JSON dataset with:
 - Beverages (Bebidas)
 - Starters (Entradas)
 - Desserts (Sobremesas)
-- Monitoring
+- Acompanhamento
 
 ### Payment Methods
 - MBWay
@@ -429,7 +429,7 @@ O projeto utiliza um dataset realista em JSON com:
 - Bebidas
 - Entradas
 - Sobremesas
-- Monitoring
+- Acompanhamento
 
 ### Métodos de Pagamento
 - MBWay

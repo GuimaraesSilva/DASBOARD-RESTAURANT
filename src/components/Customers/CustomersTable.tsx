@@ -86,7 +86,7 @@ export function CustomersTable({ customers }: { customers: Customer[] }) {
           className="sm:max-w-sm"
         />
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline">Segmento: {segmentFilter}</Button>

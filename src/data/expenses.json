@@ -29,7 +29,7 @@
         },
         {
             "id": 4,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 480,
             "month": "2025-01",
             "description": "Compra de batatas, arroz e saladas",
@@ -110,7 +110,7 @@
         },
         {
             "id": 13,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 510,
             "month": "2025-02",
             "description": "Compra de batatas, arroz e saladas",
@@ -191,7 +191,7 @@
         },
         {
             "id": 22,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 495,
             "month": "2025-03",
             "description": "Compra de batatas, arroz e saladas",
@@ -299,7 +299,7 @@
         },
         {
             "id": 34,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 483,
             "month": "2025-04",
             "description": "Compra de batatas, arroz e saladas",
@@ -380,7 +380,7 @@
         },
         {
             "id": 43,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 496,
             "month": "2025-05",
             "description": "Compra de batatas, arroz e saladas",
@@ -461,7 +461,7 @@
         },
         {
             "id": 52,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 527,
             "month": "2025-06",
             "description": "Compra de batatas, arroz e saladas",
@@ -542,7 +542,7 @@
         },
         {
             "id": 61,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 460,
             "month": "2025-07",
             "description": "Compra de batatas, arroz e saladas",
@@ -623,7 +623,7 @@
         },
         {
             "id": 70,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 448,
             "month": "2025-08",
             "description": "Compra de batatas, arroz e saladas",
@@ -704,7 +704,7 @@
         },
         {
             "id": 79,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 474,
             "month": "2025-09",
             "description": "Compra de batatas, arroz e saladas",
@@ -785,7 +785,7 @@
         },
         {
             "id": 88,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 504,
             "month": "2025-10",
             "description": "Compra de batatas, arroz e saladas",
@@ -866,7 +866,7 @@
         },
         {
             "id": 97,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 965,
             "month": "2025-11",
             "description": "Compra de batatas, arroz e saladas",
@@ -947,7 +947,7 @@
         },
         {
             "id": 106,
-            "category": "Monitorings",
+            "category": "Acompanhamentos",
             "amount": 951,
             "month": "2025-12",
             "description": "Compra de batatas, arroz e saladas",
