@@ -57,7 +57,7 @@ export function ReservationsByTimeChart() {
       
       <CardContent className="space-y-4">
         {/* KPIs Principais */}
-        <div className="grid grid-cols-6 gap-3">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
           <div className="bg-[#F5EDE8] p-3 rounded-lg border border-[#BDA69F]">
             <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1">
               <TrendingUp className="w-3 h-3 text-[#89726B]" />

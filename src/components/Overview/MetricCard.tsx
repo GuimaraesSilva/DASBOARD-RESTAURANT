@@ -16,8 +16,8 @@ export const MetricCard: React.FC<MetricCardProps> = ({
       <CardContent>
         <div className="flex items-start justify-between">
           <div className="flex flex-col">
-            <p className="font-medium text-gray-600 mb-4">{title}</p>
-            <h3 className="text-3xl font-bold text-gray-900">{value}</h3>
+            <p className="font-medium text-gray-600 mb-2 md:mb-4">{title}</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{value}</h3>
             
             {change && (
               <div className="flex items-center gap-1">

@@ -33,7 +33,7 @@ export function Header({ onMenuClick }: HeaderProps) {
           </div>
         </Button>
       </div>
-      <h1 className="text-base md:text-3xl font-semibold truncate pl-2">{pageTitle}</h1>
+      <h1 className="text-xl md:text-3xl font-semibold truncate pl-2">{pageTitle}</h1>
       <div className="flex items-center gap-4">
         {/* <TabsSelector
           defaultTab="Today"

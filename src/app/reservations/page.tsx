@@ -14,8 +14,8 @@ export default function Reservations() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="w-full h-screen bg-[#CDDBC8] p-4">
-      <div className="flex flex-col md:grid md:grid-cols-6 md:grid-rows-[auto_1fr] gap-4 h-full">
+    <div className="w-full h-screen bg-[#CDDBC8] p-2 md:p-4">
+      <div className="flex flex-col md:grid md:grid-cols-6 md:grid-rows-[auto_1fr] gap-2 md:gap-4 h-full">
         <div className="md:row-span-2">
           <Navbar
             sidebarOpen={sidebarOpen}
@@ -26,15 +26,15 @@ export default function Reservations() {
           <Header onMenuClick={() => setSidebarOpen(true)} />
         </div>
         <div className="flex-1 md:col-span-5 bg-[#F5F5F5] rounded-md overflow-y-auto scrollbar-hide">
-          <div className="p-4 space-y-4">
+          <div className="p-4 flex flex-col gap-2 md:gap-4">
             <ReservationsKpis />
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-4">
               <div className="lg:col-span-2 space-y-4">
                 <ReservationsByTimeChart />
               </div>
               <UpcomingReservations />
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4">
               <ReservationsCancellationAnalysis />
               <ReservationsByDayChart />
             </div>

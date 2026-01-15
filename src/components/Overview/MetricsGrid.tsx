@@ -40,30 +40,30 @@ export function MetricsGrid({ dashboardData }: MetricsGridProps) {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-4">
       <MetricCard
-        title="Receita Total"
+        title="Total Revenue"
         value={formatCurrency(dashboardData.metrics.totalRevenue)}
         change={formatChange(dashboardData.changes.totalRevenue)}
         changeType={getChangeType(dashboardData.changes.totalRevenue)}
         icon={Euro}
       />
       <MetricCard
-        title="Pedidos"
+        title="Total Orders"
         value={dashboardData.metrics.orders.toString()}
         change={formatChange(dashboardData.changes.orders)}
         changeType={getChangeType(dashboardData.changes.orders)}
         icon={ShoppingCart}
       />
       <MetricCard
-        title="Ticket Médio"
+        title="Average Ticket"
         value={formatCurrency(dashboardData.metrics.averageTicket)}
         change={formatChange(dashboardData.changes.averageTicket)}
         changeType={getChangeType(dashboardData.changes.averageTicket)}
         icon={TrendingUp}
       />
       <MetricCard
-        title="Taxa de Ocupação"
+        title="Occupancy Rate"
         value={formatPercentage(dashboardData.metrics.occupancyRate)}
         change={formatChange(dashboardData.changes.occupancyRate)}
         changeType={getChangeType(dashboardData.changes.occupancyRate)}

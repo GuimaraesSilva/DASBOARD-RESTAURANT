@@ -25,13 +25,13 @@ export function NavbarMobile({ sidebarOpen, setSidebarOpen }: NavbarMobileProps)
                 alt="Logo"
                 width={200}
                 height={200}
-                className="object-contain pt-20"
+                className="object-contain pt-8 md:pt-20"
                 priority
               />
             </div>
 
             <nav className="mt-6 px-4">
-              <ul className="flex flex-col gap-10">
+              <ul className="flex flex-col gap-8">
                 {menuItems.map((item) => {
                   const Icon = item.icon;
                   const isActive = pathname === item.href;

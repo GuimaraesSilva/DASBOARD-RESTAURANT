@@ -25,8 +25,8 @@ export function ReservationsKpis() {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">Total Reservations</p>
-              <h3 className="text-3xl font-bold text-gray-900">{totalReservations}</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">Total Reservations</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{totalReservations}</h3>
               
               <div className="space-y-1 mt-3">
                 <div className="flex items-center justify-between text-xs">
@@ -58,8 +58,8 @@ export function ReservationsKpis() {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">Confirmed</p>
-              <h3 className="text-3xl font-bold text-gray-900">{confirmed}</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">Confirmed</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{confirmed}</h3>
               
               <div className="space-y-1 mt-3">
                 <div className="flex items-center gap-1 text-green-600">
@@ -98,8 +98,8 @@ export function ReservationsKpis() {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">Pending</p>
-              <h3 className="text-3xl font-bold text-gray-900">{pending}</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">Pending</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{pending}</h3>
               
               <div className="space-y-1 mt-3">
                 <div className="flex items-center justify-between text-xs">
@@ -131,8 +131,8 @@ export function ReservationsKpis() {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">Cancelled</p>
-              <h3 className="text-3xl font-bold text-gray-900">{cancelled}</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">Cancelled</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{cancelled}</h3>
               
               <div className="space-y-1 mt-3">
                 <div className="flex items-center justify-between text-xs">

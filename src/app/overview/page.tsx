@@ -32,8 +32,8 @@ export default function Overview() {
   }
 
   return (
-    <div className="w-full h-screen bg-[#CDDBC8] p-4">
-      <div className="flex flex-col md:grid md:grid-cols-6 md:grid-rows-[auto_1fr] gap-4 h-full">
+    <div className="w-full h-screen bg-[#CDDBC8] p-3 md:p-4">
+      <div className="flex flex-col md:grid md:grid-cols-6 md:grid-rows-[auto_1fr] gap-3 md:gap-4 h-full">
         <div className="md:row-span-2">
           <Navbar
             sidebarOpen={sidebarOpen}
@@ -44,15 +44,15 @@ export default function Overview() {
           <Header onMenuClick={() => setSidebarOpen(true)} />
         </div>
         <div className="flex-1 md:col-span-5 bg-[#F5F5F5] rounded-md overflow-y-auto scrollbar-hide">
-          <div className="p-4 space-y-4">
+          <div className="p-3 md:p-4 flex flex-col gap-2 md:gap-4">
             <MetricsGrid dashboardData={dashboardData} />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
               <ProductsCard products={dashboardData.topProducts} />
               <PaymentMethodsChart data={dashboardData.paymentMethods} />
               <CustomersCard customers={dashboardData.topClients} />
             </div>
             <BusinessOverviewChart />
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:gap-4">
               <ReviewsRatingChart />
               <div className="md:col-span-2">
                 <ReservationsStatusChart />

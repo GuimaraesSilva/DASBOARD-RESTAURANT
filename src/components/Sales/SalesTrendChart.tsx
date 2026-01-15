@@ -91,19 +91,19 @@ export function SalesTrendChart() {
         <div className="grid grid-cols-3 gap-4 mb-6">
           <div>
             <div className="text-sm text-muted-foreground mb-1">Total Revenue</div>
-            <div className="text-2xl font-bold text-[#2C3E2D]">
+            <div className="text-lg md:text-2xl font-bold text-[#2C3E2D]">
               €{totalRevenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </div>
           </div>
           <div>
             <div className="text-sm text-muted-foreground mb-1">Total Orders</div>
-            <div className="text-2xl font-bold text-[#607C5F]">
+            <div className="text-lg md:text-2xl font-bold text-[#607C5F]">
               {totalOrders}
             </div>
           </div>
           <div>
             <div className="text-sm text-muted-foreground mb-1">Avg Daily Revenue</div>
-            <div className="text-2xl font-bold text-gray-700">
+            <div className="text-lg md:text-2xl font-bold text-gray-700">
               €{averageRevenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </div>
           </div>

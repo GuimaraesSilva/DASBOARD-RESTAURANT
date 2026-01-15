@@ -44,16 +44,16 @@ export function BusinessOverviewChart() {
   return (
     <Card className="col-span-full">
       <CardHeader>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <div>
             <CardTitle>Business Overview</CardTitle>
             <CardDescription>
               Monthly analysis of revenue and expenses
             </CardDescription>
           </div>
-          <div className="text-right">
+          <div className="mt-2 md:mt-0">
             <div className="text-sm text-muted-foreground mb-1">Total Profit</div>
-            <div className={`text-2xl font-bold ${totalProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+            <div className={`text-lg md:text-2xl font-bold ${totalProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
               €{totalProfit.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </div>
             <div className="flex items-center gap-1 text-sm text-muted-foreground mt-1">
@@ -158,7 +158,7 @@ export function BusinessOverviewChart() {
         <div className="mt-6 grid grid-cols-3 gap-4">
           <div className="space-y-1">
             <p className="text-sm text-muted-foreground">Total Revenue</p>
-            <p className="text-2xl font-bold text-[#536657]">
+            <p className="text-sm md:text-2xl font-bold text-[#536657]">
               €{totalRevenue.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </p>
             <p className="text-xs text-muted-foreground">
@@ -166,8 +166,8 @@ export function BusinessOverviewChart() {
             </p>
           </div>
           <div className="space-y-1">
-            <p className="text-sm text-muted-foreground">Total Expenses</p>
-            <p className="text-2xl font-bold text-[#89726B]">
+            <p className="text-xs text-muted-foreground">Total Expenses</p>
+            <p className="text-sm md:text-2xl font-bold text-[#89726B]">
               €{totalExpenses.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </p>
             <p className="text-xs text-muted-foreground">
@@ -175,8 +175,8 @@ export function BusinessOverviewChart() {
             </p>
           </div>
           <div className="space-y-1">
-            <p className="text-sm text-muted-foreground">Net Profit</p>
-            <p className={`text-2xl font-bold ${totalProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+            <p className="text-xs text-muted-foreground">Net Profit</p>
+            <p className={`text-sm md:text-2xl font-bold ${totalProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
               €{totalProfit.toLocaleString('pt-PT', { minimumFractionDigits: 2 })}
             </p>
             <p className="text-xs text-muted-foreground">

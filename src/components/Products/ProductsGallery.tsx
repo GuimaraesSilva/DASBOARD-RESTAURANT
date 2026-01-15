@@ -218,7 +218,7 @@ export function ProductsGallery() {
 
       {/* Dialog for Product Details */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-md md:max-w-2xl">
           {selectedProduct && (
             <>
               <DialogHeader>

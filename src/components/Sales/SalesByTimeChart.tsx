@@ -133,7 +133,7 @@ export function SalesByTimeChart() {
         </div>
 
         {/* KPIs de Pico */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
           <div className="bg-[#F0F4EF] p-3 rounded-lg">
             <div className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
               <TrendingUp className="h-3 w-3" />

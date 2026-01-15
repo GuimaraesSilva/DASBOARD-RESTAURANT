@@ -21,14 +21,14 @@ export const CustomersCard: React.FC<CustomersCardProps> = ({ customers }) => {
           {customers.map((customer) => (
             <div
               key={customer.id}
-              className="bg-[#D4C5BE] rounded-lg p-4 flex items-center gap-4"
+              className="bg-[#D4C5BE] rounded-md p-2 md:p-4 flex items-center gap-2 md:gap-4"
             >
-              <div className="w-12 h-12 rounded-full bg-[#263321] flex items-center justify-center text-white font-semibold shadow-sm">
+              <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-[#263321] flex items-center justify-center text-white font-semibold shadow-sm">
                 {getInitials(customer.name)}
               </div>
               <div className="flex-1">
-                <p className="font-semibold text-[#3C3838]">{customer.name}</p>
-                <p className="text-sm text-[#3C3838]/70">{customer.email}</p>
+                <p className="text-sm md:text-lg font-semibold text-[#3C3838]">{customer.name}</p>
+                <p className="text-xs md:text-sm text-[#3C3838]/70">{customer.email}</p>
               </div>
               <div className="text-left">
                 <div className="flex justify-center items-center gap-1 pt-1">

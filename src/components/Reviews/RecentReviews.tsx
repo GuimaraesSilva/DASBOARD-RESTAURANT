@@ -41,7 +41,7 @@ export function RecentReviews() {
         <CardTitle className="text-xl">Recent Reviews</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="flex gap-2">
+        <div className="flex flex-col md:flex-row gap-2">
           {recentReviews.map((review) => (
             <div 
               key={review.id} 

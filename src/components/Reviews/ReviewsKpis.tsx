@@ -28,14 +28,14 @@ export function ReviewsKpis() {
     : 0;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
       {/* Card 1: Total Reviews */}
       <Card>
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">Total Reviews</p>
-              <h3 className="text-3xl font-bold text-gray-900">{totalReviews}</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">Total Reviews</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{totalReviews}</h3>
               
               <div className="space-y-1 mt-3">
                 <div className="flex items-center justify-between text-xs">
@@ -67,8 +67,8 @@ export function ReviewsKpis() {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">Average Rating</p>
-              <h3 className="text-3xl font-bold text-gray-900">{averageRating}</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">Average Rating</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{averageRating}</h3>
               
               <div className="space-y-1 mt-3">
                 <div className="flex items-center gap-1 text-yellow-500">
@@ -107,8 +107,8 @@ export function ReviewsKpis() {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">5 Star Reviews</p>
-              <h3 className="text-3xl font-bold text-gray-900">{fiveStarPercentage}%</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">5 Star Reviews</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{fiveStarPercentage}%</h3>
               
               <div className="space-y-1 mt-3">
                 <div className="flex items-center justify-between text-xs">
@@ -140,8 +140,8 @@ export function ReviewsKpis() {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">With Comments</p>
-              <h3 className="text-3xl font-bold text-gray-900">{withComments}</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">With Comments</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{withComments}</h3>
               
               <div className="space-y-1 mt-3">
                 <div className="flex items-center justify-between text-xs">

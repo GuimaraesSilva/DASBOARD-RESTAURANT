@@ -15,13 +15,13 @@ export function CustomersKpis({ customers }: { customers: Customer[] }) {
   const active90 = activeCount(customers, 90);
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-4 grid-cols-1 md:grid-cols-4">
       <Card>
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">Clients</p>
-              <h3 className="text-3xl font-bold text-gray-900">{k.totalCustomers}</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">Clients</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{k.totalCustomers}</h3>
               <div className="text-xs text-muted-foreground mt-2">
                 Active 30d: {active30} • Active 90d: {active90}
               </div>
@@ -37,8 +37,8 @@ export function CustomersKpis({ customers }: { customers: Customer[] }) {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">Visits</p>
-              <h3 className="text-3xl font-bold text-gray-900">{k.totalVisits}</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">Visits</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{k.totalVisits}</h3>
               <div className="text-xs text-muted-foreground mt-2">
                 Average per client: {k.avgVisits.toFixed(1)}
               </div>
@@ -54,8 +54,8 @@ export function CustomersKpis({ customers }: { customers: Customer[] }) {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">Reservations</p>
-              <h3 className="text-3xl font-bold text-gray-900">{k.totals.made}</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">Reservations</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{k.totals.made}</h3>
               <div className="text-xs text-muted-foreground mt-2">
                 Cancelled: {k.totals.cancelled} • No-shows: {k.totals.noShows}
               </div>
@@ -71,8 +71,8 @@ export function CustomersKpis({ customers }: { customers: Customer[] }) {
         <CardContent>
           <div className="flex items-start justify-between">
             <div className="flex flex-col">
-              <p className="font-medium text-gray-600 mb-4">Rates</p>
-              <h3 className="text-3xl font-bold text-gray-900">{pct(k.noShowRateTotal)}</h3>
+              <p className="text-sm md:font-medium text-gray-600 mb-4">Rates</p>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-900">{pct(k.noShowRateTotal)}</h3>
               <div className="text-xs text-muted-foreground mt-2">
                 No-show • Cancellation: {pct(k.cancelRateTotal)}
               </div>
